@@ -1,3 +1,4 @@
+<%@page import="com.smhrd.model.MembersDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -12,14 +13,46 @@
 
 </head>
 <body>
-<nav id="menu">	
+<%
+MembersDTO user = (MembersDTO)session.getAttribute("user");
+%>
+<div id="wrapper">
+
+			<!-- Header -->
+					<header id="header" class="alt">
+						<a href="index.html" class="logo"><strong>Forty</strong> <span>by HTML5 UP</span></a>
+						<nav>
+							<%if(user != null){ 
+                              // user로 묶은 것에서 email 가져오기 (로그인 성공시만)
+                              String id = user.getId();
+                              // 로그인 성공
+                              if(user.getId().equals("admin")){
+                              // 계정이 admin인지 확인 %>
+                              <a href="Select.do">회원관리</a>
+                              <a href="Logout.do">로그아웃</a>
+                              <%} else {
+                              // 계정이 일반 계정인 경우
+                             %> 
+                              <a href="GoUpdate.do">개인정보수정</a>
+                              <a href="Logout.do">로그아웃</a>
+                             <%}%>
+                            <% }else{ %><a href="#menu">로그인</a>
+                            <%} %>
+                    
+							<!-- 로그인 후 Logout.jsp로 이동할 수 있는'로그아웃'링크와 '개인정보수정'링크를 출력하시오. -->
+						</nav>
+					</header>
+					
+					
+					
+				<!-- Menu -->
+				<nav id="menu">	
 						<ul class="links">
-							<li><h5>로그인</h5></li>
 								<form action="Login.do" method="post">
 									<li><input type="text" name="id" placeholder="ID을 입력하세요"></li>
 									<li><input type="password" name="pw" placeholder="PW를 입력하세요"></li>
 									<li><input type="submit" value="LogIn" class="button fit"></li>
-								</form>
+								</form>.
 						</ul>
 						<ul class="actions vertical">
 							<li><h5>회원가입</h5></li>
@@ -33,7 +66,27 @@
 									<li><input type="submit" value="JoinUs" class="button fit"></li>
 								</form>
 						</ul>
-					</nav>			
+					</nav>		
+				
+				<!-- Banner -->
+					<section id="banner" class="major">
+						<div class="inner">
+							<header class="major">
+							<%   // 로그인 성공했다면
+								 if(user != null){%>
+								 <h1><%=user.getId() %>님 환영합니다 !</h1>
+								<% 	 
+								}else{ %>
+								<h1>로그인한 세션아이디를 출력해주세요</h1>
+								<%} %>  
+								
+								<!-- 로그인 후 로그인 한 사용자의 세션아이디로 바꾸시오.
+									 ex)smart님 환영합니다 -->
+							</header>
+							
+					</section>
+								
+	</div>		
 
 </body>
 </html>
