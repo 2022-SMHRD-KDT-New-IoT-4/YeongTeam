@@ -57,12 +57,12 @@ MembersDTO user = (MembersDTO)session.getAttribute("user");
 						<ul class="actions vertical">
 							<li><h5>회원가입</h5></li>
 								<form action="Join.do" method="post">
-									<li><input type="text"  placeholder="ID을 입력하세요" name = "eamil"></li>
+									<li><input type="text"  placeholder="ID을 입력하세요" name = "id"></li>
 									<li><input type="password"  placeholder="PW를 입력하세요" name = "pw"></li>
-									<li><input type="text"  placeholder="고양이이름을 입력하세요" name="catname"></li>
-									<li><input type="text"  placeholder="고양이 생년월일 입력하세요" name="catbirth"></li>
-									<li><input type="text"  placeholder="고양이 몸무게를 입력하세요" name="catweight"></li>
-									<li><input type="text"  placeholder="집주소를 입력하세요" name="address"></li>
+									<li><input type="text"  placeholder="고양이이름을 입력하세요" name="cat_Name"></li>
+									<li><input type="date"  placeholder="고양이 생년월일 입력하세요" name="cat_Birth"></li>
+									<li><input type="text"  placeholder="고양이 몸무게를 입력하세요" name="cat_Wt"></li>
+									<li><input type="text"  placeholder="집주소를 입력하세요" name="addr"></li>
 									<li><input type="submit" value="JoinUs" class="button fit"></li>
 								</form>
 						</ul>
