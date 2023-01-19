@@ -1,8 +1,8 @@
 package com.smhrd.model;
 
-import org.apache.ibatis.session.SqlSession;
+import java.util.List;
 
-import com.smhrd.db.SqlSessionManager;
+
 
 public class MembersDAO {
 
@@ -22,6 +22,8 @@ public class MembersDAO {
 				
 		return result;
 	}
+
+
 
 }
 
