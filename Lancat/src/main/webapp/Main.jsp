@@ -52,7 +52,7 @@ MembersDTO user = (MembersDTO)session.getAttribute("user");
 									<li><input type="text" name="id" placeholder="ID을 입력하세요"></li>
 									<li><input type="password" name="pw" placeholder="PW를 입력하세요"></li>
 									<li><input type="submit" value="LogIn" class="button fit"></li>
-								</form>.
+								</form>
 						</ul>
 						<ul class="actions vertical">
 							<li><h5>회원가입</h5></li>
