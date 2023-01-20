@@ -41,6 +41,21 @@ public class MembersDAO {
 				
 		return result;
 	}
+public int update(MembersDTO dto) {
+
+		
+		int row = 0;
+		SqlSession session = sqlSessionFactory.openSession(true);
+		try {
+			row = session.update("com.smhrd.model.MembersDAO.update", dto);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			session.close();
+		}
+		
+		return 0;
+	}
 
 }
 

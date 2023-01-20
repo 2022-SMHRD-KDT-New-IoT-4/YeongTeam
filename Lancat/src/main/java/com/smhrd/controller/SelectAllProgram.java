@@ -7,8 +7,9 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.smhrd.model.Cat_Diary_DAO;
-import com.smhrd.model.Cat_Diary_DTO;
+import com.smhrd.model.Cat_DiaryDAO;
+import com.smhrd.model.Cat_DiaryDTO;
+
 
 public class SelectAllProgram implements Command {
 
@@ -17,9 +18,9 @@ public class SelectAllProgram implements Command {
 	public String execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		Cat_Diary_DAO dao = new Cat_Diary_DAO();
+		Cat_DiaryDAO dao = new Cat_DiaryDAO();
 		
-		List<Cat_Diary_DTO> list = dao.selectAll(null);
+		List<Cat_DiaryDTO> list = dao.selectAll(null);
 		
 		if(list != null) {
 			request.setAttribute("user", list);

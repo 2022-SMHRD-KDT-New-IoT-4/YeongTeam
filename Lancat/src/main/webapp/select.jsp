@@ -1,4 +1,4 @@
-<%@page import="com.smhrd.model.Cat_Diary_DTO"%>
+<%@page import="com.smhrd.model.Cat_DiaryDTO"%>
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -11,7 +11,7 @@
 <body>
 
 <%
-   List<Cat_Diary_DTO> list = (List)request.getAttribute("user");
+   List<Cat_DiaryDTO> list = (List)request.getAttribute("user");
 %>
      <div>
      <nav id="Select">

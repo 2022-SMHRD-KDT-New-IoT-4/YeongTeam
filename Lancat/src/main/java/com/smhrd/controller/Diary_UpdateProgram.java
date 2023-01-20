@@ -8,8 +8,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.smhrd.model.Cat_Diary_DAO;
-import com.smhrd.model.Cat_Diary_DTO;
+import com.smhrd.model.Cat_DiaryDAO;
+import com.smhrd.model.Cat_DiaryDTO;
 import com.smhrd.model.MembersDTO;
 
 @WebServlet("/UpdateProgram")
@@ -24,16 +24,16 @@ public class Diary_UpdateProgram implements Command {
 		String d_file = request.getParameter("d_file");
 		
 		HttpSession session = request.getSession();
-		Cat_Diary_DTO user = (Cat_Diary_DTO)session.getAttribute("user");		
+		Cat_DiaryDTO user = (Cat_DiaryDTO)session.getAttribute("user");		
 		String id = user.getId();
 		
-		Cat_Diary_DTO dto = new Cat_Diary_DTO();
+		Cat_DiaryDTO dto = new Cat_DiaryDTO();
 		dto.setD_title(d_title);
 		dto.setD_content(d_content);
 		dto.setD_file(d_file);
 		
 		
-		Cat_Diary_DAO dao = new Cat_Diary_DAO();
+		Cat_DiaryDAO dao = new Cat_DiaryDAO();
 		
 		int row = dao.update(dto);
 		
