@@ -9,11 +9,16 @@ public class Cat_DiaryDTO {
 	private String d_content;
 	private String d_file;
 	private String id;
-    
-	public String getId() {
-		return id;
+	
+	
+	
+	public Cat_DiaryDTO() {
 	}
-	public void setId(String id) {
+	
+	public Cat_DiaryDTO(String d_title, String d_content, String d_file, String id) {
+		this.d_title = d_title;
+		this.d_content = d_content;
+		this.d_file = d_file;
 		this.id = id;
 	}
 	public String getD_title() {
@@ -34,15 +39,13 @@ public class Cat_DiaryDTO {
 	public void setD_file(String d_file) {
 		this.d_file = d_file;
 	}
-	public Cat_DiaryDTO(String d_title, String d_content, String d_file,String id) {
-		super();
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
 		this.id = id;
-		this.d_title = d_title;
-		this.d_content = d_content;
-		this.d_file = d_file;
 	}
     
-    
-    
+	
     
 }

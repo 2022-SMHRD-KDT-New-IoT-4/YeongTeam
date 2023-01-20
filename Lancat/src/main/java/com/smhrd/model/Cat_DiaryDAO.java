@@ -12,6 +12,7 @@ public class Cat_DiaryDAO {
 	public int Lancatinsert(Cat_DiaryDTO dto) {
 		
 		int row = 0;
+		
 		SqlSession session = sqlSessionFactory.openSession(true);
 		try {
 		 row = session.insert("com.smhrd.model.Cat_DiaryDAO.Lancatinsert", dto);

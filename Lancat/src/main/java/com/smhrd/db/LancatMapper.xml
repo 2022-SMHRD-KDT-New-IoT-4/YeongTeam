@@ -6,7 +6,7 @@
   
 <insert id="Lancatinsert" parameterType="Cat_DiaryDTO">
   insert into cat_diary (d_title, d_content, d_file, d_dt, id) 
-      values(#{d_title},${d_content},${d_file},sysdate,${id})
+      values(#{d_title},#{d_content},#{d_file},sysdate,#{id})
 </insert>
 
 </mapper>
