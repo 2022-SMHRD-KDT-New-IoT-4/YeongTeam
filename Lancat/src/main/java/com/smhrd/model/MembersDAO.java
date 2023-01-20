@@ -1,31 +1,10 @@
 package com.smhrd.model;
 
-<<<<<<< HEAD
+
 import java.util.List;
 
 
 
-public class MembersDAO {
-
-	private SqlSessionFactory sqlSessionFactory = SqlSessionManager.getSqlSession();
-	
-	public MembersDTO login(MembersDTO dto) {
-
-		MembersDTO result = null;
-		SqlSession sqlSession = sqlSessionFactory.openSession(true);
-		try {
-			result = sqlSession.selectOne("com.smhrd.model.MembersDAO.login", dto);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}finally {
-			sqlSession.close();
-		}
-				
-		return result;
-	}
-
-
-=======
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
@@ -62,7 +41,6 @@ public class MembersDAO {
 				
 		return result;
 	}
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-New-IoT-4/YeongTeam.git
 
 }
 

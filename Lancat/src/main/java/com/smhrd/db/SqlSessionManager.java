@@ -1,16 +1,8 @@
 package com.smhrd.db;
 
-<<<<<<< HEAD
-
-import java.io.InputStream;
-
-import javax.annotation.Resources;
-
-=======
 import java.io.InputStream;
 
 import org.apache.ibatis.io.Resources;
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-New-IoT-4/YeongTeam.git
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
