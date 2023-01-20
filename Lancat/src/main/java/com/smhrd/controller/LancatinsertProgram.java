@@ -22,8 +22,11 @@ public class LancatinsertProgram implements Command {
 		MembersDTO user = (MembersDTO) request.getSession().getAttribute("user");
 		String id = user.getId();
 		
-		Cat_DiaryDTO dto =  new Cat_DiaryDTO(d_title, d_content, d_file, id);
-		
+		Cat_DiaryDTO dto =  new Cat_DiaryDTO();
+		dto.setD_title(d_title);
+		dto.setD_content(d_content);
+		dto.setD_file(d_file);
+		dto.setId(id);
 		Cat_DiaryDAO dao = new Cat_DiaryDAO();
 		
 		int row = dao.Lancatinsert(dto);
