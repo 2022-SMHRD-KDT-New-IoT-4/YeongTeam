@@ -75,7 +75,8 @@ MembersDTO user = (MembersDTO)session.getAttribute("user");
 							<%   // 로그인 성공했다면
 								 if(user != null){%>
 								 <h1><%=user.getId() %>님 환영합니다 !</h1>
-								<% 	 
+								 <a href="Lancatbbs.jsp">육묘일기 작성</a>
+								 <% 	 
 								}else{ %>
 								<h1>로그인한 세션아이디를 출력해주세요</h1>
 								<%} %>  

@@ -11,13 +11,13 @@ public class MembersDAO {
 	
 	public int join(MembersDTO dto) {
 		int row = 0;
-		SqlSession session = sqlSessionFactory.openSession(true);
+		SqlSession sqlsession = sqlSessionFactory.openSession(true);
 		try {
-		 row = session.insert("com.smhrd.model.MembersDAO.join", dto);
+		 row = sqlsession.insert("com.smhrd.model.MembersDAO.join", dto);
 		} catch(Exception e) {
 			e.printStackTrace();
 		}finally {
-			session.close();
+			sqlsession.close();
 		}
 		return row;
 	}
@@ -25,13 +25,13 @@ public class MembersDAO {
 	public MembersDTO login(MembersDTO dto) {
 
 		MembersDTO result = null;
-		SqlSession sqlSession = sqlSessionFactory.openSession(true);
+		SqlSession sqlsession = sqlSessionFactory.openSession(true);
 		try {
-			result = sqlSession.selectOne("com.smhrd.model.MembersDAO.login", dto);
+			result = sqlsession.selectOne("com.smhrd.model.MembersDAO.login", dto);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}finally {
-			sqlSession.close();
+			sqlsession.close();
 		}
 				
 		return result;

@@ -14,8 +14,7 @@
   <insert id="join" parameterType="MembersDTO">
 		insert into members
 		values(#{id},#{pw},#{cat_Name},#{cat_Birth},#{cat_Wt},#{addr},sysdate,'1')
-	
-	</insert>
+</insert>
   
   
   
