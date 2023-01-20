@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="com.smhrd.model.Cat_Diary_DAO">
+  
+  
+  <select id="selectAll" parameterType="Cat_Diary_DTO" resultType="Cat_Diary_DTO">
+  select *
+  from CAT_DIARY
+  where ID=#{id}
+  </select>
+  
+  <update id="update" parameterType="Cat_Diary_DTO">
+  update CAT_DIARY
+  set d_title=#{d_title}, d_content=#{d_content}, d_file=#{d_file}, d_dt=#{d_dt}
+  where id=#{id}
+    and d_seq=#{d_seq}
+  </update>
+  
+  
+  
+  
+  </mapper>

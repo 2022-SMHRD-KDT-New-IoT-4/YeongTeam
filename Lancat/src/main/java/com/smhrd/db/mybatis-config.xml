@@ -52,5 +52,6 @@
   <mappers>
     <mapper resource="com/smhrd/db/MembersMapper.xml"/>
     <mapper resource="com/smhrd/db/LancatMapper.xml"/>
+    <mapper resource="com/smhrd/db/Cat_Diary_Mapper.xml"/>
   </mappers>
 </configuration>

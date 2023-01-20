@@ -11,9 +11,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.smhrd.controller.Command;
+import com.smhrd.controller.Diary_UpdateProgram;
 import com.smhrd.controller.JoinProgram;
 import com.smhrd.controller.LancatinsertProgram;
 import com.smhrd.controller.LoginProgram;
+import com.smhrd.controller.MainProgram;
+import com.smhrd.controller.Members_UpdateProgram;
+import com.smhrd.controller.SelectAllProgram;
 
 @WebServlet("*.do")
 public class FrontController extends HttpServlet {
@@ -27,6 +31,10 @@ public class FrontController extends HttpServlet {
 		 map.put("Join.do", new JoinProgram());
 		 map.put("Login.do", new LoginProgram());
 		 map.put("Lancatinsert.do", new LancatinsertProgram());
+		 map.put("Main.do", new MainProgram());
+		 map.put("Select.do", new SelectAllProgram());
+		 map.put("Diary_Update.do", new Diary_UpdateProgram());
+		 map.put("Members_Update.do", new Members_UpdateProgram());
 	 }
 	 
 	 
