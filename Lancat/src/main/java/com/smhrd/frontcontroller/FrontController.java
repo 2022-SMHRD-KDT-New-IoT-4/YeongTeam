@@ -11,6 +11,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.smhrd.controller.Command;
+<<<<<<< HEAD
+=======
+import com.smhrd.controller.JoinProgram;
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-New-IoT-4/YeongTeam.git
 import com.smhrd.controller.LoginProgram;
 
 @WebServlet("*.do")
@@ -22,6 +26,7 @@ public class FrontController extends HttpServlet {
 	 public void init() throws ServletException {
 		 map = new HashMap<>();
 		 
+		 map.put("Join.do", new JoinProgram());
 		 map.put("Login.do", new LoginProgram());
 	 }
 	 
