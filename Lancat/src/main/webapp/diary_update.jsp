@@ -1,6 +1,6 @@
-<%@page import="com.smhrd.model.Cat_DiaryDTO"%>
 <%@page import="org.eclipse.jdt.internal.compiler.ast.AND_AND_Expression"%>
 <%@page import="com.smhrd.model.MembersDTO"%>
+<%@page import="com.smhrd.model.Cat_Diary_DTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -11,7 +11,7 @@
 </head>
 <body>
 <%
-Cat_DiaryDTO user = (Cat_DiaryDTO)session.getAttribute("user");
+Cat_Diary_DTO user = (Cat_Diary_DTO)session.getAttribute("user");
 %>
       <div>
       <nav id="Update">

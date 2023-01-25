@@ -17,6 +17,7 @@
      <nav id="Select">
       <table>
       <caption><h2>게싯ㅅ시싯ㅅ시싯판</h2></caption>
+      <a href="Diary_Update.do">육묘일기수정</a>		
       <tr>
       <td>  </td>
       <td>날짜</td>
