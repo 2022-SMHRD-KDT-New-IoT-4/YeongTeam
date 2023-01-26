@@ -53,7 +53,7 @@ MembersDTO user = (MembersDTO)session.getAttribute("user");
                               // 로그인 성공
                               if(user.getId().equals("admin")){
                               // 계정이 admin인지 확인 %>
-                              <a href="Select.do">회원관리</a>
+                              <a href="">회원관리</a>
                               <a href="Logout.do">로그아웃</a>
                               <%} else {
                               // 계정이 일반 계정인 경우
@@ -76,10 +76,10 @@ MembersDTO user = (MembersDTO)session.getAttribute("user");
 							<%   // 로그인 성공했다면
 								 if(user != null){%>
 								 <% if (user.getId().equals("admin")){ %>
-								 <a href="dairy_selectAll.jsp">육묘일기 리스트</a>
-								 <a>육묘일기 삭제 리스트</a>
+								 <a href="Diary_Select.do">육묘일기 리스트</a>
+								 <a href="Diary_Delete.do">육묘일기 삭제 리스트</a>
 								 <%}else{ %>
-								  <a href="select.jsp"><%=user.getId() %>님의 게시판</a>
+								  <a href="Select.do"><%=user.getId() %>님의 게시판</a>
 								 <%}%>
 								<% 	 
 								}else{ %>

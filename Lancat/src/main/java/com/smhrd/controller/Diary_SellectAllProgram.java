@@ -8,24 +8,29 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.smhrd.model.Cat_DiaryDAO;
 import com.smhrd.model.Cat_DiaryDTO;
+import com.smhrd.model.MembersDTO;
 
-@WebServlet("/Diary_SellectAllProgram")
+@WebServlet("/Diary_SelectAllProgram")
 public class Diary_SellectAllProgram implements Command {
-	private static final long serialVersionUID = 1L;
-// 관리자 selectall
-	public String service(HttpServletRequest request, HttpServletResponse response)
+	
+
+	public String execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
+		// admin 계정 육묘일기 리스트
+		
+		// dao 생성
 		Cat_DiaryDAO dao = new Cat_DiaryDAO();
 		
-		List<Cat_DiaryDTO> list = dao.selectAll(null);
+		List<Cat_DiaryDTO> list = dao.selectAll();
 		
 		
 		if(list != null) {
-			request.setAttribute("admin", list);
+			request.setAttribute("user", list);
 			
 		}
 	
@@ -40,11 +45,8 @@ public class Diary_SellectAllProgram implements Command {
 	
 	}
 
-	@Override
-	public String execute(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	
+
+	
 
 }

@@ -11,13 +11,15 @@
 <body>
 
 <%
-   List<Cat_DiaryDTO> list = (List)request.getAttribute("user");
+
+
+List<Cat_DiaryDTO> list = (List)session.getAttribute("list");
 %>
      <div>
-     <nav id="Select">
+     <nav id="select">
       <table>
       <caption><h2>게싯ㅅ시싯ㅅ시싯판</h2></caption>
-      <a href="Diary_Update.do">육묘일기수정</a>		
+      <a href="diary_update.jsp">육묘일기수정</a>		
       <tr>
       <td>  </td>
       <td>날짜</td>
@@ -36,10 +38,7 @@
       <%
         }
       %>
-      
-      
-      
-      
+            
       
       </table>
       </nav>

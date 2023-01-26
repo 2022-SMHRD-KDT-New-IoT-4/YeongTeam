@@ -18,27 +18,27 @@ public class Diary_UpdateProgram implements Command {
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		
+		// 개인 육묘일기 수정
 		String d_title = request.getParameter("d_title");
 		String d_content = request.getParameter("d_content");
 		String d_file = request.getParameter("d_file");
 		
 		HttpSession session = request.getSession();
-		Cat_DiaryDTO user = (Cat_DiaryDTO)session.getAttribute("user");		
-		String id = user.getId();
+		MembersDTO user = (MembersDTO) session.getAttribute("user");
+//		String id = user.getId();
 		
 		Cat_DiaryDTO dto = new Cat_DiaryDTO();
 		dto.setD_title(d_title);
 		dto.setD_content(d_content);
 		dto.setD_file(d_file);
-		
+		dto.setId(user.getId());
 		
 		Cat_DiaryDAO dao = new Cat_DiaryDAO();
 		
 		int row = dao.update(dto);
 		
 		if(row > 0) {
-			session.setAttribute("user", dto);
+			session.setAttribute("change", dto);
 		}
 		
 		return "diary_update.jsp";

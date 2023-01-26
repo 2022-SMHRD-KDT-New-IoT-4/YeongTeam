@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.smhrd.controller.Command;
+import com.smhrd.controller.Diary_DeleteProgram;
 import com.smhrd.controller.Diary_SellectAllProgram;
 import com.smhrd.controller.JoinProgram;
 import com.smhrd.controller.LoginProgram;
@@ -34,7 +35,8 @@ public class FrontController extends HttpServlet {
 		 map.put("Diary_Update.do", new Diary_UpdateProgram());
 		 map.put("Members_Update.do", new Members_UpdateProgram());
 		 map.put("Join.do", new JoinProgram());
-		 map.put("Diary_Sellect.do", new Diary_SellectAllProgram());
+		 map.put("Diary_Select.do", new Diary_SellectAllProgram());
+		 map.put("Diary_Delete.do", new Diary_DeleteProgram());
 	 }
 	 
 	 
@@ -66,3 +68,4 @@ public class FrontController extends HttpServlet {
 	}
 
 }
+
