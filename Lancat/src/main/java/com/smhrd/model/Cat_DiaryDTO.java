@@ -1,10 +1,8 @@
 package com.smhrd.model;
 
-import java.sql.Date;
-
-// 육묘일기 
 public class Cat_DiaryDTO {
-	
+
+	// cat_diary
 	private int d_seq;
 	private String d_title;
 	private String d_content;
@@ -12,6 +10,31 @@ public class Cat_DiaryDTO {
 	private String d_dt;
 	private String id;
 	
+	// cat_diary_delete
+	private String delete_seq;
+	private String delete_time;
+	
+	public String getDelete_seq() {
+		return delete_seq;
+	}
+
+	public void setDelete_seq(String delete_seq) {
+		this.delete_seq = delete_seq;
+	}
+
+	public String getDelete_time() {
+		return delete_time;
+	}
+
+	public void setDelete_time(String delete_time) {
+		this.delete_time = delete_time;
+	}
+
+	public Cat_DiaryDTO(String delete_seq, String delete_time) {
+		super();
+		this.delete_seq = delete_seq;
+		this.delete_time = delete_time;
+	}
 	
 	public Cat_DiaryDTO(int d_seq, String d_title, String d_content, String d_file, String d_dt, String id) {
 		super();
@@ -83,6 +106,7 @@ public class Cat_DiaryDTO {
         this.d_file = param.getD_file();
         this.d_dt = param.getD_dt();
         this.id = param.getId();
+        
     }
 }
 

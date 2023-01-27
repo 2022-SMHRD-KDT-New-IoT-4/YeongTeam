@@ -19,7 +19,7 @@ public class Members_UpdateProgram implements Command {
 		String pw = request.getParameter("pw");
 		String Cat_Name = request.getParameter("cat_Name");
 		String Cat_Birth = request.getParameter("cat_Birth");
-		int Cat_Wt = Integer.parseInt(request.getParameter("cat_Wt")); // 지금 cat_wt이 null값이라 parstInt진행이 안되고 있음.
+		int Cat_Wt = Integer.parseInt(request.getParameter("cat_Wt"));
 		String addr = request.getParameter("addr");
 		
 		

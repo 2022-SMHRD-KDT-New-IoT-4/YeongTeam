@@ -2,23 +2,32 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
-  <mapper namespace="com.smhrd.model.Cat_Diary_DAO">
+  <mapper namespace="com.smhrd.model.Cat_DiaryDAO">
   
-  
-  <select id="selectAll" parameterType="Cat_Diary_DTO" resultType="Cat_Diary_DTO">
+  <!-- 일반 계정일 때 전체 게시글 목록 -->
+  <select id="select" parameterType="Cat_DiaryDTO" resultType="Cat_DiaryDTO">
   select *
   from CAT_DIARY
   where ID=#{id}
   </select>
   
-  <update id="update" parameterType="Cat_Diary_DTO">
+  <!--  육묘일기 수정 -->
+  <update id="update" parameterType="Cat_DiaryDTO">
   update CAT_DIARY
   set d_title=#{d_title}, d_content=#{d_content}, d_file=#{d_file}, d_dt=#{d_dt}
   where id=#{id}
     and d_seq=#{d_seq}
   </update>
   
+  <!-- admin 일 때 전체 게시글 목록  -->
+  <select id="selectAll" resultType="Cat_DiaryDTO">
+  select *
+  from CAT_DIARY
+  </select>
   
-  
-  
+  <!--  육묘일기 삭제 테이블 확인 -->
+  <select id="delete" resultType="Cat_DiaryDTO">
+  select *
+  from CAT_DIARY_DELETE
+  </select>
   </mapper>

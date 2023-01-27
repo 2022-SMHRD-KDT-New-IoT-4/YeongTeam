@@ -5,96 +5,143 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>랜선집사들 🐾Cat Days🐾</title>
 		<title>Forty by HTML5 UP</title>
 		<meta charset="UTF-8" />
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<link rel="stylesheet" href="assets/css/main.css" />
-
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+  		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  		<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+ 		<link rel = "stylesheet" href = "Main.css">
 </head>
-<body>
+<!--★★★★★★★★★★★★★★★★★★★★★★★★★★★★ 회원가입 페이지★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ -->
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 <%
 MembersDTO user = (MembersDTO)session.getAttribute("user");
 %>
-<div id="wrapper">
+ <!-- 반응형 Nav var(Navigation Bar) 
+      : 우리가 흔히 사용하는 메뉴(menu) 및 사이트로고, 여러링크 포함 -->
+	<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+    	<div class="navbar-header">
+    		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+    			<span class="icon-bar"></span>
+    			<span class="icon-bar"></span>
+    			<span class="icon-bar"></span>                        
+    		</button>
+        
+  <!-- 메인페이지 왼쪽 상단에 작성됨-->
+        	<a class="navbar-brand" href="#mypage" >랜선집사들</a>
+        	<img src="./img/ransom.png" width="29px"style="margin-top:10px;">
+		</div>
+		<div class="collapse navbar-collapse" id="myNavbar">
+        	<ul class="nav navbar-nav navbar-right">
+      			<!-- 메인페이지 우측 상단의 이동란-->
+				<li><a href="#BrandStory">브랜드 스토리</a></li>
+        		<!--JSP파일로 이동 시 경로 바꾸기-->
+        		<li><a href="http://121.147.185.221:5500/CatDays/loingPage.html">마이펫케어</a></li>
+        		<li><a href="diary_update.jsp">펫다이어리</a></li>
+        		<li><a href="http://121.147.185.221:5500/CatDays/catGoods.html">반려묘용품</a></li>
+        		<li><a href="http://121.147.185.221:5500/CatDays/catEncyclopedia_main_main.html">커뮤니티</a></li>
+        		<!--로그인, 회원가입-->
+        		<li>        		
+        		<a href="http://121.147.185.221:5500/CatDays/loingPage.html"><img src="/CatDays/img/login.png" width="20px" height="20px;"></a></li>
+        		<li><a href="http://121.147.185.221:5500/CatDays/joinPage.html"><img src="/CatDays/img/join.png" width="25px" height="25px;"></a></li>
+     		</ul>
+    	</div>
+	</div>
+	</nav>
+</body>	
 
+<!-- --------------------여기까지 뚜껑---------------------------------------- -->
+<!-- 개인정보 수정페이지 -->
+<div class="jumbotron text-center">
+    <!-- 홈페이지 이름 작성 -->
+    <br><h2>회원가입</h2><br>
+    <div class="spanTag">
+      <span>집사님 환영합니다. Cat Days와 함께해요 🐾 </span> 
+    </div>
+</div>
 
-					
-				<!-- Menu -->
-				<nav id="menu">	
-						<ul class="links">
-								<form action="Login.do" method="post">
-									<li><input type="text" name="id" placeholder="ID을 입력하세요"></li>
-									<li><input type="password" name="pw" placeholder="PW를 입력하세요"></li>
-									<li><input type="submit" value="LogIn" class="button fit"></li>
-								</form>
-						</ul>
-						<ul class="actions vertical">
-							<li><h5>회원가입</h5></li>
-								<form action="Join.do" method="post">
-									<li><input type="text"  placeholder="ID을 입력하세요" name = "eamil"></li>
-									<li><input type="password"  placeholder="PW를 입력하세요" name = "pw"></li>
-									<li><input type="text"  placeholder="고양이이름을 입력하세요" name="catname"></li>
-									<li><input type="text"  placeholder="고양이 생년월일 입력하세요" name="catbirth"></li>
-									<li><input type="text"  placeholder="고양이 몸무게를 입력하세요" name="catweight"></li>
-									<li><input type="text"  placeholder="집주소를 입력하세요" name="address"></li>
-									<li><input type="submit" value="JoinUs" class="button fit"></li>
-								</form>
-						</ul>
-					</nav>		
-					
-					
-					
-				<nav>
-							<%if(user != null){ 
-                              // user로 묶은 것에서 email 가져오기 (로그인 성공시만)
-                              String email = user.getId();%>
-                              <h1><%=user.getId() %>님 환영합니다 !</h1><%
-                              // 로그인 성공
-                              if(user.getId().equals("admin")){
-                              // 계정이 admin인지 확인 %>
-                              <a href="Select.do">회원관리</a>
-                              <a href="Logout.do">로그아웃</a>
-                              <%} else {
-                              // 계정이 일반 계정인 경우
-                             %> 
-                              <a href="members_update.jsp">개인정보수정</a>
-                              <a href="Logout.do">로그아웃</a>
-                             <%}%>
-                            <% }else{ %><a href="#menu"></a>
-                            <%} %>
-                    
-							<!-- 로그인 후 Logout.jsp로 이동할 수 있는'로그아웃'링크와 '개인정보수정'링크를 출력하시오. -->
-						</nav>
-						
-						
-						
-				<!-- Banner -->
-					<section id="banner" class="major">
-						<div class="inner">
-							<header class="major">
-							<%   // 로그인 성공했다면
-								 if(user != null){%>
-								 <% if (user.getId().equals("admin")){ %>
-								 <a href="dairy_selectAll.jsp">육묘일기 리스트</a>
-								 <a>육묘일기 삭제 리스트</a>
-								 <%}else{ %>
-								  <a href="select.jsp"><%=user.getId() %>님의 게시판</a>
-								 <%}%>
-								<% 	 
-								}else{ %>
-								<h1>로그인한 세션아이디를 출력해주세요</h1>
-								<%} %>  
-								
-								<!-- 로그인 후 로그인 한 사용자의 세션아이디로 바꾸시오.
-									 ex)smart님 환영합니다 -->
-							</header>
-							
-					</section>
-					
-					
-								
-	</div>		
+  <!-- 자바스크립트(유효성검사 해당) -->
+  <script src ="signUpjs3.js"></script> 
+  <!-- 다음 우편번호찾기 API -->
+  <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+<body>
+	<div id="wrapper" class="wrapper">
+        <form action="Login.do" method="post">
+          <!-- 회원가입 타이틀부분 -->
+           <header>
+				<div id="header">
+					<h1 class="h_loho">
+                    <span><img alt="" src="image/main.png"></span>
+                 	</h1>
+                </div>
+           </header>
 
+		<div class="container">
+			<div class="row_group">
+            <!-- 아이디 입력 -->
+            	<div class="userInput">
+               		<h3 class="list">아이디</h3>
+               		<span class="box int_id" ><input type="text" id="id" name = "id" class="int check"
+                  	maxlength="20" placeholder="아이디를 입력하세요"></span>
+            	</div>
+            	<!-- 비밀번호 입력 -->
+                <div class="userInput">
+                    <h3 class="list">비밀번호</h3>
+                    <span class="box int_id" ><input type="text" id="pw" name = "pw" class="int check"
+                       maxlength="20" placeholder="비밀번호를 입력하세요"></span>
+                </div>
+            	<!-- 주소 입력 -->
+				<div class="userInput">
+                    <h3 class="list">자택주소</h3>
+                    <span class="box int_id" ><input type="text" id="addr" name="addr" class="int check"
+                       maxlength="20" placeholder="집주소를 입력하세요"></span>
+                </div>
+            	<!-- 반려묘이름 입력 -->
+            	<h3 class="list" style="padding: 5%;" align="center">고양이 정보 등록 🐾</h3>
+                <div class="userInput">
+					<h3 class="list">반려묘 이름</h3>
+                    <span class="box int_id">
+                        <input type="text" id="name" name="cat_Name" class="int check" maxlength="20" placeholder="반려묘이름을 작성해주세요">
+                    </span>
+                </div>
+			</div>
+		</div>
+       	<!--고양이 정보 등록-->
+        <div class="userInput" align="center">
+			<div id="content">
+            	<h3 class="list">반려묘 몸무게(kg)</h3>
+                <span class="box int_weight">
+                	<input type="text" id="weight" name="cat_Wt" class="int" maxlength="5" 
+                     style="width:400px" placeholder="몸무게를 입력하세요.">kg
+                </span>
+                 	<!--생년월일 INPUT태그-->
+             	<div align="center">
+                	<h3>반려묘 생년월일</h3>
+                	<input type="date" name="cat_Birth">
+                </div>
+			</div>
+		</div>            
+			<div class="col-12" style="margin-top: 2%;" align="center">
+                    <span>
+                    	<input type="submit" value="완료" class="button fit" style="border: none; color: white;
+                    	background-color: rgb(189, 120, 212);">
+                    <br>
+                    <br>
+                    <br>
+                    </span>
+            </div>
+		</form>        
+	</div>
+	
+			
 </body>
 </html>

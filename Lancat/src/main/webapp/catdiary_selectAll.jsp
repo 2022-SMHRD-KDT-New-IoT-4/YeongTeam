@@ -11,13 +11,15 @@
 <body>
 
 <%
-   List<Cat_DiaryDTO> list =(List)session.getAttribute("admin");
-%>
 
-<div>
-     <nav id="SelectAll">
+
+List<Cat_DiaryDTO> list = (List)session.getAttribute("list");
+%>
+     <div>
+     <nav id="select">
       <table>
-      <caption><h2>관리자 게시판</h2></caption>
+      <caption><h2>게싯ㅅ시싯ㅅ시싯판</h2></caption>
+      <a href="diary_update.jsp">육묘일기수정</a>		
       <tr>
       <td>  </td>
       <td>날짜</td>
@@ -36,23 +38,11 @@
       <%
         }
       %>
-      
-      
-      
-      
+            
       
       </table>
       </nav>
       <a href="Main.do" >메인으로</a>
       </div>
-
-
-
-
-
-
-
-
-
 </body>
 </html>

@@ -1,0 +1,298 @@
+@charset "UTF-8";
+
+/* 메인 페이지 스타일*/
+
+
+body {
+    font: 400 15px Lato, sans-serif;
+    line-height: 1.8;
+    color: #818181;
+}
+h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #303030;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    color: #303030;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+
+
+
+/* ★★★★Cat Days 뒷 배경*/
+.jumbotron {
+    background-color:   rgb(245, 230, 251);
+    color: #303030;
+    padding: 100px 25px;
+    font-family: Montserrat, sans-serif;
+}
+.container-fluid {
+    padding: 60px 50px;
+}
+.bg-grey {
+  /* 메인페이지 IoT 고양이 화장실 배경 */
+    background-color:  rgb(245, 230, 251);
+}
+
+
+.carousel-control.right, .carousel-control.left {
+  /* 맨 밑에 후기 넘어가는 박스 창(버튼 컬러) */
+    background-image: none;
+    color: rgb(211, 136, 240);
+}
+
+/* 하단 후기 동그라미 아이콘 */
+.carousel-indicators li.active {
+    background-color:rgb(211, 136, 240);
+}
+
+/* 하단 후기 부분 화이트 박스 사이즈 조절 */
+.item h4 {
+    line-height: 1.375em;
+    font-weight: 400;
+    font-style: italic;
+    margin: 70px 0;
+    margin-bottom: 10%;
+}
+.item span {
+    font-style: normal;
+}
+.panel {
+    border: 1px solid  rgb(245, 230, 251); 
+    border-radius:0 !important;
+    transition: box-shadow 0.5s;
+}
+
+.panel-footer .btn:hover {
+    border: 1px solid  rgb(245, 230, 251);
+    background-color: #fff !important;
+    color:  rgb(245, 230, 251);
+}
+.panel-footer {
+    background-color: white !important;
+}
+.panel-footer h3 {
+    font-size: 32px;
+}
+.navbar {
+    margin-bottom: 0;
+    background-color:  rgb(245, 230, 251);
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+    font-family: Montserrat, sans-serif;
+}
+/* 메인탭 글씨*/
+.navbar li a, .navbar .navbar-brand {
+    color: black !important;
+    font-size: 15px;
+}
+/* 메인탭 메뉴 마우스 올렸을 때 글씨 컬러, 메뉴 컬러 변경*/
+.navbar-nav li a:hover, .navbar-nav li.active a {
+    color:  rgb(245, 230, 251)!important;
+    background-color:rgb(144, 81, 226)!important;
+}
+
+/* 하단 글자 조금만 아래쪽으로 */
+.carousel-inner{
+ margin-bottom: 0%;
+}
+
+
+/* 로그인 페이지 스타일 부분 */
+@media (min-width: 768px) {
+.login-form {
+    align-items: center;
+height: 50vh !important;
+}
+}
+@media (min-width: 769px) {
+.loginButton {
+background: rgb(189, 120, 212);
+border-top-right-radius: .3rem;
+border-bottom-right-radius: .3rem;
+}
+}
+
+.Button{
+    background: rgb(189, 120, 212);
+    text-align: center;
+}
+
+.joinButton{
+  word-wrap: normal;
+}
+
+.login-form{
+  position: absolute;
+  padding: 20px;
+  width: 1000px;
+  border-radius: 5px;
+  top: 40%;
+  left: 38%;
+ 
+}
+
+
+/*  회원가입 스타일 부분  */
+
+#join{
+  padding-bottom: 5%;
+}
+    
+h3 {       
+     font-size: 20px;
+    }      
+    
+/* 회원가입 회색 박스 스타일 */
+      input[type=text], input[type=password] {
+      width: 35%;
+      padding: 10px;
+      margin: 5px 0 22px 0;
+      display: inline-block;
+      border: none;
+      background-color:   rgb(235, 234, 236);
+    }
+
+    #pw{
+      width: 35%;
+      padding: 10px;
+      margin: 5px 0 22px 0;
+      display: inline-block;
+      border: none;
+      background-color:   rgb(235, 234, 236);
+    }
+    
+    input[type=text]:focus, input[type=password]:focus {
+      background-color: #ddd;
+      outline: none;
+    }
+
+    input{
+        margin:auto;
+        display: block;
+
+    }
+
+    /* 파란색 회원가입 버튼 (컬러바꿈, 가운데 정렬) */
+    button {
+      color: white;
+      padding: 20px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 15%;
+      opacity: 0.9;
+    }
+    
+    button:hover {
+      opacity:5;
+    }
+    
+    .container {  
+      text-align: center;
+    }
+    
+    /* Clear floats */
+    .clearfix::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+    
+    @media screen and (max-width: 300px) {
+      .cancelbtn, .signupbtn {
+        width: 100%;
+      }
+    }
+
+
+    label{
+      display: inline-block; width: 100px; line-height: 50px;
+    }
+
+    
+
+/*---그래프 CSS---*/
+
+#graph-container-01{
+    width:1000px;
+    height: 500px;
+}
+
+/*---반려묘용품 CSS---*/
+
+.flex-first, .flex-second{
+    display: flex;
+    justify-content: space-evenly;
+   
+}
+
+.flex-one, .flex-item{
+    width:400px;
+    height: 400px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    text-align: center;
+    border: 1px solid rgb(244, 218, 250);
+    cursor:pointer;
+}
+
+
+
+.color-gray{
+    background-color: rgb(240, 240, 240);
+}
+
+
+
+/* 애니메이션 키프레임 (css스타일로 부드럽게 전환) 아마도 하단?*/
+@keyframes slide {
+0% {
+  opacity: 0;
+  transform: translateY(70%);
+} 
+100% {
+  opacity: 1;
+  transform: translateY(0%);
+}
+}
+@-webkit-keyframes slide {
+0% {
+  opacity: 0;
+  -webkit-transform: translateY(70%);
+} 
+100% {
+  opacity: 1;
+  -webkit-transform: translateY(0%);
+}
+}
+@media screen and (max-width: 768px) {
+.col-sm-4 {
+  text-align: center;
+  margin: 25px 0;
+}
+.btn-lg {
+  width: 100%;
+  margin-bottom: 35px;
+}
+}
+
+/* 육묘일기css makepost.html */
+
+th, td {
+    text-align: center;
+    font-size: 18px;
+}
+
+

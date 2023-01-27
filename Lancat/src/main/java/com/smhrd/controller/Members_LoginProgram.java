@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.smhrd.model.MembersDAO;
 import com.smhrd.model.MembersDTO;
 
-public class LoginProgram implements Command {
+public class Members_LoginProgram implements Command {
 
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response)

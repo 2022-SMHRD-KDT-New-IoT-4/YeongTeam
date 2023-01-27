@@ -11,13 +11,26 @@
   and PW = #{pw}
   </select>
   
-  <insert id="join" parameterType="MembersDTO">
+  
+    <insert id="join" parameterType="MembersDTO">
 		insert into members
 		values(#{id},#{pw},#{cat_Name},#{cat_Birth},#{cat_Wt},#{addr},sysdate,'1')
-</insert>
+	
+	</insert>
   
   
+  <update id="update" parameterType="MembersDTO">
+  update members
+  set pw=#{pw}, cat_Name=#{cat_Name}, Cat_Birth=#{cat_Birth}, Cat_Wt=#{cat_Wt}, addr=#{addr}
+  where ID = #{id}
+  
+  </update>
   
   
+  <select id="Select" resultType="MembersDTO">
+  select *
+  from  members
+  where id != 'admin'
+  </select>
   
   </mapper>

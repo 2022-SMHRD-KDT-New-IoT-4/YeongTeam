@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.smhrd.model.MembersDAO;
 import com.smhrd.model.MembersDTO;
 
-public class JoinProgram implements Command {
+public class Members_JoinProgram implements Command {
 
 	
 	public String execute(HttpServletRequest request, HttpServletResponse response)
@@ -31,7 +31,7 @@ public class JoinProgram implements Command {
 		
 		if(row>0) {
 			request.setAttribute("id", id);
-		return "join_success.jsp";
+		return "members_join_success.jsp";
 		}else {
 			return "Main.jsp";
 		}
