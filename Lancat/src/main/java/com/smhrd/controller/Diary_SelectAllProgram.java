@@ -12,7 +12,7 @@ import com.smhrd.model.Cat_DiaryDAO;
 import com.smhrd.model.Cat_DiaryDTO;
 import com.smhrd.model.MembersDTO;
 
-public class SelectAllProgram implements Command {
+public class Diary_SelectAllProgram implements Command {
 
 
 	@Override
@@ -38,8 +38,7 @@ public class SelectAllProgram implements Command {
 			session.setAttribute("list", list);
 		}
 		
-		return "select.jsp";
-				
+		return "catdiary_selectAll.jsp";				
 		
 	}
 

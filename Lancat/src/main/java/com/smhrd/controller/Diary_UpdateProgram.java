@@ -41,7 +41,7 @@ public class Diary_UpdateProgram implements Command {
 			session.setAttribute("change", dto);
 		}
 		
-		return "diary_update.jsp";
+		return "catdiary_update.jsp";
 	}
 
 }

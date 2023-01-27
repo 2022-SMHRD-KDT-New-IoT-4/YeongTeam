@@ -11,13 +11,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.smhrd.controller.Command;
-import com.smhrd.controller.Diary_DeleteProgram;
-import com.smhrd.controller.Diary_SellectAllProgram;
-import com.smhrd.controller.JoinProgram;
-import com.smhrd.controller.LoginProgram;
+import com.smhrd.controller.admin_diaryDeleteProgram;
+import com.smhrd.controller.admin_diarySelectAllProgram;
+import com.smhrd.controller.Members_JoinProgram;
+import com.smhrd.controller.Members_LoginProgram;
 import com.smhrd.controller.MainProgram;
 import com.smhrd.controller.Members_UpdateProgram;
-import com.smhrd.controller.SelectAllProgram;
+import com.smhrd.controller.Diary_SelectAllProgram;
 import com.smhrd.controller.Diary_UpdateProgram;
 
 @WebServlet("*.do")
@@ -29,14 +29,14 @@ public class FrontController extends HttpServlet {
 	 public void init() throws ServletException {
 		 map = new HashMap<>();
 		 
-		 map.put("Login.do", new LoginProgram());
+		 map.put("Login.do", new Members_LoginProgram());
 		 map.put("Main.do", new MainProgram());
-		 map.put("Select.do", new SelectAllProgram());
+		 map.put("Select.do", new Diary_SelectAllProgram());
 		 map.put("Diary_Update.do", new Diary_UpdateProgram());
 		 map.put("Members_Update.do", new Members_UpdateProgram());
-		 map.put("Join.do", new JoinProgram());
-		 map.put("Diary_Select.do", new Diary_SellectAllProgram());
-		 map.put("Diary_Delete.do", new Diary_DeleteProgram());
+		 map.put("Join.do", new Members_JoinProgram());
+		 map.put("Diary_Select.do", new admin_diarySelectAllProgram());
+		 map.put("Diary_Delete.do", new admin_diaryDeleteProgram());
 	 }
 	 
 	 

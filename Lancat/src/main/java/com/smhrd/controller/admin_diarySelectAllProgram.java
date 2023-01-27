@@ -14,8 +14,8 @@ import com.smhrd.model.Cat_DiaryDAO;
 import com.smhrd.model.Cat_DiaryDTO;
 import com.smhrd.model.MembersDTO;
 
-@WebServlet("/Diary_SelectAllProgram")
-public class Diary_SellectAllProgram implements Command {
+@WebServlet("/admin_diary_SelectAllProgram")
+public class admin_diarySelectAllProgram implements Command {
 	
 
 	public String execute(HttpServletRequest request, HttpServletResponse response)
@@ -34,7 +34,7 @@ public class Diary_SellectAllProgram implements Command {
 			
 		}
 	
-		return "diary_selectAll.jsp";
+		return "admin_catdiary_selectAll.jsp";
 	
 	
 	
