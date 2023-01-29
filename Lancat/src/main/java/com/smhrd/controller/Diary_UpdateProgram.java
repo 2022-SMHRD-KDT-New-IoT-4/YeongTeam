@@ -35,7 +35,7 @@ public class Diary_UpdateProgram implements Command {
 		
 		Cat_DiaryDAO dao = new Cat_DiaryDAO();
 		
-		int row = dao.update(dto);
+		int row = dao.DiaryUpdate(dto);
 		
 		if(row > 0) {
 			session.setAttribute("change", dto);

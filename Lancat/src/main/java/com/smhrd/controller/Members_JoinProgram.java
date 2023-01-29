@@ -14,6 +14,7 @@ public class Members_JoinProgram implements Command {
 	
 	public String execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		
 		String id = request.getParameter("id");
 		String pw = request.getParameter("pw");
 		String cat_Name = request.getParameter("cat_Name");
@@ -29,12 +30,8 @@ public class Members_JoinProgram implements Command {
 		
 		int row = dao.join(dto);
 		
-		if(row>0) {
-			request.setAttribute("id", id);
-		return "members_join_success.jsp";
-		}else {
-			return "Main.jsp";
-		}
+		return "Main.jsp";
+			
 	}
 
 }

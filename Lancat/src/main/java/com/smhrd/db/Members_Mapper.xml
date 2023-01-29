@@ -3,34 +3,35 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
   <mapper namespace="com.smhrd.model.MembersDAO">
-  
+ 
+  <!-- 로그인 login -->
   <select id="login" parameterType="MembersDTO" resultType="MembersDTO">
-  select *
-  from MEMBERS
-  where ID = #{id}
-  and PW = #{pw}
+	  SELECT *
+	  FROM MEMBERS
+	  WHERE ID = #{id}
+	  AND PW = #{pw}
   </select>
   
-  
-    <insert id="join" parameterType="MembersDTO">
-		insert into members
-		values(#{id},#{pw},#{cat_Name},#{cat_Birth},#{cat_Wt},#{addr},sysdate,'1')
+  <!-- 회원가입 join -->
+  <insert id="join" parameterType="MembersDTO">
+	INSERT INTO members
+	VALUES (#{id},#{pw},#{cat_Name},#{cat_Birth},#{cat_Wt},#{addr},sysdate,'M')
 	
-	</insert>
+  </insert>
   
-  
+  <!-- 회원정보수정 update -->
   <update id="update" parameterType="MembersDTO">
-  update members
-  set pw=#{pw}, cat_Name=#{cat_Name}, Cat_Birth=#{cat_Birth}, Cat_Wt=#{cat_Wt}, addr=#{addr}
-  where ID = #{id}
+	  UPDATE MEMBERS
+	  SET pw=#{pw}, cat_Name=#{cat_Name}, Cat_Birth=#{cat_Birth}, Cat_Wt=#{cat_Wt}, addr=#{addr}
+	  WHERE ID = #{id}
   
   </update>
   
-  
+  <!-- admin 일때 전체 회원목록 select-->
   <select id="Select" resultType="MembersDTO">
-  select *
-  from  members
-  where id != 'admin'
+	  SELECT *
+	  FROM MEMBERS
+	  WHERE id != 'admin'
   </select>
   
   </mapper>

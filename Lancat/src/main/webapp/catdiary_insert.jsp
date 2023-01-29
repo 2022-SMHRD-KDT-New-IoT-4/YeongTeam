@@ -65,7 +65,7 @@ th, td {
 <!--Head End -->
 <!-- 육묘일기 작성하는 폼 -->
 <h2 align="center">육묘일기 작성하기</h2>
-<form action="Lancatinsert.do" method="post">
+<form action="Diary_Insert.do" method="post">
 <table border="1" width=500 align="center">
     <tr>
         <th colspan="2" height="50px">오늘 내 반려묘는 어떤 하루를 보냈나요?</th>

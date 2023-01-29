@@ -4,30 +4,42 @@
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
   <mapper namespace="com.smhrd.model.Cat_DiaryDAO">
   
+  <!-- !!!!!!!!!!! 일반계정 !!!!!!!!!!! -->
+  
+  <!--  육묘일기 등록 -->
+  <insert id="DiaryInsert" parameterType="Cat_DiaryDTO">
+	  INSERT INTO CAT_DIARY (D_TITLE,D_CONTENT,D_FILE,D_DT,ID) 
+	  VALUES(#{d_title},#{d_content},#{d_file},sysdate,#{id})
+  </insert>
+	
   <!-- 일반 계정일 때 전체 게시글 목록 -->
-  <select id="select" parameterType="Cat_DiaryDTO" resultType="Cat_DiaryDTO">
-  select *
-  from CAT_DIARY
-  where ID=#{id}
+  <select id="DiarySelect" parameterType="Cat_DiaryDTO" resultType="Cat_DiaryDTO">
+	  SELECT *
+	  FROM CAT_DIARY
+	  WHERE ID=#{id}
   </select>
   
   <!--  육묘일기 수정 -->
-  <update id="update" parameterType="Cat_DiaryDTO">
-  update CAT_DIARY
-  set d_title=#{d_title}, d_content=#{d_content}, d_file=#{d_file}, d_dt=#{d_dt}
-  where id=#{id}
-    and d_seq=#{d_seq}
+  <update id="DiaryUpdate" parameterType="Cat_DiaryDTO">
+	  UPDATE CAT_DIARY
+	  SET D_TITLE=#{d_title}, D_CONTENT=#{d_content}, D_FILE=#{d_file}, D_DT=#{d_dt}
+	  WHERE ID=#{id}
+	    AND D_SEQ=#{d_seq}
   </update>
   
-  <!-- admin 일 때 전체 게시글 목록  -->
-  <select id="selectAll" resultType="Cat_DiaryDTO">
-  select *
-  from CAT_DIARY
-  </select>
   
+	
+	
+ <!--  !!!!!!!!!!! 관리자계정 !!!!!!!!!!! -->
+
+  <!-- admin 일 때 전체 게시글 목록  -->
+  <select id="AdminSelectAll" resultType="Cat_DiaryDTO">
+	  select *
+	  from CAT_DIARY
+  </select>
   <!--  육묘일기 삭제 테이블 확인 -->
-  <select id="delete" resultType="Cat_DiaryDTO">
-  select *
-  from CAT_DIARY_DELETE
+  <select id="AdminDelete" resultType="Cat_DiaryDTO">
+	  select *
+	  from CAT_DIARY_DELETE
   </select>
   </mapper>

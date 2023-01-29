@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="com.smhrd.model.SensorDAO">
+  
+  
+     <insert id="insert" parameterType="SensorDTO">
+      INSERT INTO TLT_USE (ID,CAT_WT,POTTY_TYPE,GAS,IN_TIME,OUT_TIME,USE_TIME)
+      VALUES(#{id},#{cat_wt},#{potty_type},#{gas}, 
+      TO_DATE(#{in_time}, 'yyyy/mm/dd hh24:mi:ss'),
+      TO_DATE(#{out_time}, 'yyyy/mm/dd hh24:mi:ss'),
+      TO_DATE(#{use_time}, 'hh24:mi:ss'))
+   </insert>
+  
+  </mapper>

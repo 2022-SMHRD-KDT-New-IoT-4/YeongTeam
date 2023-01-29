@@ -11,9 +11,7 @@
 <body>
 
 <%
-
-
-List<Cat_DiaryDTO> list = (List)session.getAttribute("list");
+	List<Cat_DiaryDTO> list = (List)session.getAttribute("list");
 %>
      <div>
      <nav id="select">

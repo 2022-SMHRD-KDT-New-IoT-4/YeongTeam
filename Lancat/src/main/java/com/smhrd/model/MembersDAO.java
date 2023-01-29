@@ -13,6 +13,7 @@ import com.smhrd.db.SqlSessionManager;
 public class MembersDAO {
 
 	private SqlSessionFactory sqlSessionFactory = SqlSessionManager.getSqlSession();
+	// 회원가입 join
 	
 	public int join(MembersDTO dto) {
 		int row = 0;
@@ -27,6 +28,7 @@ public class MembersDAO {
 		return row;
 	}
 	
+	// 로그인 login
 	public MembersDTO login(MembersDTO dto) {
 
 		MembersDTO result = null;
@@ -41,17 +43,18 @@ public class MembersDAO {
 				
 		return result;
 	}
-public int update(MembersDTO dto) {
-
+	
+	// 회원정보수정 update
+	public int update(MembersDTO dto) {
 		
 		int row = 0;
-		SqlSession session = sqlSessionFactory.openSession(true);
+		SqlSession sqlSession = sqlSessionFactory.openSession(true);
 		try {
-			row = session.update("com.smhrd.model.MembersDAO.update", dto);
+			row = sqlSession.update("com.smhrd.model.MembersDAO.update", dto);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}finally {
-			session.close();
+			sqlSession.close();
 		}
 		
 		return 0;

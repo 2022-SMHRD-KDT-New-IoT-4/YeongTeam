@@ -1,37 +1,35 @@
 package com.smhrd.model;
 
 public class MembersDTO {
-
+	
+	// 필드
 	private String id;
 	private String pw;
-	private String Cat_Name;
-	private String Cat_Birth;
-	private int Cat_Wt;
+	private String cat_Name;
+	private String cat_Birth;
+	private int cat_Wt;
 	private String addr;
-	private String JoinDate;
-	private String M_Type;
+	private String joinDate;
+	private String m_Type;
+	
+	// 기본생성자
+	public MembersDTO() {
+	}
+	
+	// 필드값 다 들어있는 생성자
 	public MembersDTO(String id, String pw, String cat_Name, String cat_Birth, int cat_Wt, String addr, String joinDate,
 			String m_Type) {
-		super();
 		this.id = id;
 		this.pw = pw;
-		this.Cat_Name = cat_Name;
-		this.Cat_Birth = cat_Birth;
-		this.Cat_Wt = cat_Wt;
+		this.cat_Name = cat_Name;
+		this.cat_Birth = cat_Birth;
+		this.cat_Wt = cat_Wt;
 		this.addr = addr;
-		this.JoinDate = joinDate;
-		this.M_Type = m_Type;
-		
-		
+		this.joinDate = joinDate;
+		this.m_Type = m_Type;
 	}
 	
-	// 기본 생성자
-	public MembersDTO() {
-		
-	}
-	
-	
-	
+	// getter, setter
 	public String getId() {
 		return id;
 	}
@@ -45,22 +43,22 @@ public class MembersDTO {
 		this.pw = pw;
 	}
 	public String getCat_Name() {
-		return Cat_Name;
+		return cat_Name;
 	}
 	public void setCat_Name(String cat_Name) {
-		this.Cat_Name = cat_Name;
+		this.cat_Name = cat_Name;
 	}
 	public String getCat_Birth() {
-		return Cat_Birth;
+		return cat_Birth;
 	}
 	public void setCat_Birth(String cat_Birth) {
-		this.Cat_Birth = cat_Birth;
+		this.cat_Birth = cat_Birth;
 	}
 	public int getCat_Wt() {
-		return Cat_Wt;
+		return cat_Wt;
 	}
 	public void setCat_Wt(int cat_Wt) {
-		this.Cat_Wt = cat_Wt;
+		this.cat_Wt = cat_Wt;
 	}
 	public String getAddr() {
 		return addr;
@@ -69,17 +67,18 @@ public class MembersDTO {
 		this.addr = addr;
 	}
 	public String getJoinDate() {
-		return JoinDate;
+		return joinDate;
 	}
 	public void setJoinDate(String joinDate) {
-		this.JoinDate = joinDate;
+		this.joinDate = joinDate;
 	}
 	public String getM_Type() {
-		return M_Type;
+		return m_Type;
 	}
 	public void setM_Type(String m_Type) {
-		this.M_Type = m_Type;
+		this.m_Type = m_Type;
 	}
+	
 	
 	
 }

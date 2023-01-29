@@ -12,7 +12,7 @@
     <!--  MemberMapper파일에서 사용할 type들의 별명을 지정해주는 공간  -->
     <typeAlias type="com.smhrd.model.MembersDTO" alias="MembersDTO"/>
     <typeAlias type="com.smhrd.model.Cat_DiaryDTO" alias="Cat_DiaryDTO"/>
-    
+    <typeAlias type="com.smhrd.model.SensorDTO" alias="SensorDTO"/>
     </typeAliases>
 
 
@@ -51,7 +51,7 @@
   <!-- mapper파일이 생길 때마다 반드시 연결할 수 있도록 기술해줄 것 ! -->
   <mappers>
     <mapper resource="com/smhrd/db/Members_Mapper.xml"/>
-    <mapper resource="com/smhrd/db/LancatMapper.xml"/>
     <mapper resource="com/smhrd/db/Cat_Diary_Mapper.xml"/>
+    <mapper resource="com/smhrd/db/SensorMapper.xml"/>
   </mappers>
 </configuration>

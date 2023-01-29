@@ -14,32 +14,31 @@ import com.smhrd.model.MembersDTO;
 
 public class Diary_SelectAllProgram implements Command {
 
-
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// 개인 select all
-		
+
 		// id 가져오기
 		HttpSession session = request.getSession();
-		MembersDTO user = (MembersDTO)session.getAttribute("user");
+		MembersDTO user = (MembersDTO) session.getAttribute("user");
 		String id = user.getId();
-		// dto로 묶기
-		Cat_DiaryDTO dto  =new Cat_DiaryDTO();
-		dto.setId(id);
 		
+		// dto로 묶기
+		Cat_DiaryDTO dto = new Cat_DiaryDTO();
+		dto.setId(id);
+
 		// dao 부르기
 		Cat_DiaryDAO dao = new Cat_DiaryDAO();
-		
-		List<Cat_DiaryDTO> list = dao.select(dto);
-		
-		
-		if(list != null) {
+
+		List<Cat_DiaryDTO> list = dao.DiarySelect(dto);
+
+		if (list != null) {
 			session.setAttribute("list", list);
 		}
-		
-		return "catdiary_selectAll.jsp";				
-		
+
+		return "../catdiary_selectAll.jsp";
+
 	}
 
 }
