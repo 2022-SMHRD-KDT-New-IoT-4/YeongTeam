@@ -44,7 +44,7 @@
               <span class="icon-bar"></span>                        
             </button>
             <!-- 메인페이지 왼쪽 상단에 작성됨-->
-            <a class="navbar-brand" href="#myPage" >랜선집사들</a>
+            <a class="navbar-brand" href="Main.jsp" >랜선집사들</a>
             <img src="./image/ransom.png" width="29px"style="margin-top:10px;">
           </div>
           <div class="collapse navbar-collapse" id="myNavbar">
@@ -53,11 +53,14 @@
               아직 안정해져서 href 안바꿈
           브랜드스토리 제외하고는 로그인 시 확인가능 248/280/322-->
     
-          <li><a href="http://121.147.185.221:5500/CatDays/realMain.html">브랜드 스토리</a></li>
-          <li><a href="http://121.147.185.221:5500/CatDays/graphPage.html">마이펫케어</a></li>
-          <li><a href="http://121.147.185.221:5500/CatDays/diaryData.html">펫다이어리</a></li>
-          <li><a href="http://121.147.185.221:5500/CatDays/catGoods.html">반려묘용품</a></li>
-          <li><a href="http://121.147.185.221:5500/CatDays/catEncyclopedia_main_main.html">커뮤니티</a></li>
+          <li><a href="brandStory.jsp">브랜드 스토리</a></li>
+                    <!--JSP파일로 이동 시 경로 바꾸기-->
+                    <li><a href="graphPage.jsp">마이펫케어</a></li>
+                    <li><a href="./diary_calendar/calendar_main.jsp">펫다이어리</a></li>
+                    <li><a href="catGoods.jsp">반려묘용품</a></li>
+                    <li><a href="catEncyclopedia_main.jsp">커뮤니티</a></li>
+                    <!--로그인, 회원가입-->
+                    <li><a href="members_update.jsp">회원정보 수정</a></li>
             
           </ul>
         </div>

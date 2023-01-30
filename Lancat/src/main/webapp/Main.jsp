@@ -1,3 +1,4 @@
+<%@page import="com.smhrd.model.MembersDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -30,7 +31,7 @@
           <span class="icon-bar"></span>                        
         </button>
         <!-- 메인페이지 왼쪽 상단에 작성됨-->
-        <a class="navbar-brand" href="#mypage" >랜선집사들</a>
+        <a class="navbar-brand" href="Main.jsp" >랜선집사들</a>
         <img src="./image/ransom.png" width="29px"style="margin-top:10px;">
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
@@ -38,19 +39,42 @@
       <!-- 메인페이지 우측 상단의 이동란
           아직 안정해져서 href 안바꿈
       브랜드스토리 제외하고는 로그인 시 확인가능 248/280/322-->
-
-        <li><a href="Main.jsp">브랜드 스토리</a></li>
-        <!--JSP파일로 이동 시 경로 바꾸기-->
-        <li><a href="Main.jsp">마이펫케어</a></li>
-        <li><a href="./diary_calendar/calendar_main.jsp">펫다이어리</a></li>
-        <li><a href="Main.jsp">반려묘용품</a></li>
-        <li><a href="catEncyclopedia_main.jsp">커뮤니티</a></li>
-        <!--로그인, 회원가입-->
-        <li><a href="Login.jsp"><img src="./image/login.png" width="20px" height="20px;"></a></li>
-        <li><a href="Join.jsp"><img src="./image/join.png" width="25px" height="25px;"></a></li>
-
-        <!-- # 붙여서 스타일 넣어주어야 함! 넣고 빼기 정리필요 -->
-        <!--<li><a href="#contact">회원가입</a></li>-->
+		<%
+			MembersDTO user = (MembersDTO)request.getSession().getAttribute("user");
+		%>
+        <% if(user == null){ %>
+            <!-- 로그인 페이지로 이동? 아님 날릴까...-->
+	        <li><a href="brandStory.jsp">브랜드 스토리</a></li>
+	        <!--JSP파일로 이동 시 경로 바꾸기-->
+	        <li><a href="Login.jsp">마이펫케어</a></li>
+	        <li><a href="Login.jsp">펫다이어리</a></li>
+	        <li><a href="catGoods.jsp">반려묘용품</a></li>
+	        <li><a href="catEncyclopedia_main.jsp">커뮤니티</a></li>
+	        <!--로그인, 회원가입-->
+	        <li><a href="Login.jsp"><img src="./image/login.png" width="20px" height="20px;"></a></li>
+	        <li><a href="Join.jsp"><img src="./image/join.png" width="25px" height="25px;"></a></li>
+            <%}else{ 
+                // 로그인 성공
+                if(user.getId().equals("admin")){
+                    // 계정이 admin인지 확인 %>
+                    <li><a href="brandStory.jsp">브랜드 스토리</a></li>
+                    <!--JSP파일로 이동 시 경로 바꾸기-->
+                    <li><a href="catGoods.jsp">반려묘용품</a></li>
+                    <!--관리자페이지-->
+                    <li><a href="adminMain.jsp">관리자 페이지<img src="./img/adminpage.png" width="25px" height="25px;"></a></li>
+                   
+                <% }else{
+                    // 계정이 일반 계정인 경우  %>
+                    <li><a href="brandStory.jsp">브랜드 스토리</a></li>
+                    <!--JSP파일로 이동 시 경로 바꾸기-->
+                    <li><a href="graphPage.jsp">마이펫케어</a></li>
+                    <li><a href="./diary_calendar/calendar_main.jsp">펫다이어리</a></li>
+                    <li><a href="catGoods.jsp">반려묘용품</a></li>
+                    <li><a href="catEncyclopedia_main.jsp">커뮤니티</a></li>
+                    <!--로그인, 회원가입-->
+                    <li><a href="members_update.jsp">회원정보 수정</a></li>
+                <%}
+                }%>
 
       
       </ul>

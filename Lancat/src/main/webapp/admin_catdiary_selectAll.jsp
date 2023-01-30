@@ -39,18 +39,17 @@ List<Cat_DiaryDTO> list = (List)request.getAttribute("user");
              <span class="icon-bar"></span>
            </button> 
            <!-- 메인페이지 왼쪽 상단에 작성됨-->
-           <a class="navbar-brand" href="#mypage">랜선집사들</a>
+           <a class="navbar-brand" href="Main.jsp">랜선집사들</a>
            <img src="./img/ransom.png" width="29px" style="margin-top:10px;">
          </div>
          <div class="collapse navbar-collapse" id="myNavbar">
            <ul class="nav navbar-nav navbar-right"> 
    
-             <li><a href="#BrandStory">브랜드 스토리</a></li> 
-             <!--JSP파일로 이동 시 경로 바꾸기-->
-             <li><a href="http://121.147.185.221:5500/CatDays/MyPetCare.html">마이펫케어</a></li>
-             <li><a href="#MypetDiary">펫다이어리</a></li>
-             <li><a href="#pricing">반려묘용품</a></li>
-             <li><a href="#contact">커뮤니티</a></li> 
+           <li><a href="brandStory.jsp">브랜드 스토리</a></li>
+                    <!--JSP파일로 이동 시 경로 바꾸기-->
+              <li><a href="catGoods.jsp">반려묘용품</a></li>
+                    <!--관리자페이지-->
+              <li><a href="adminMain.jsp">관리자 페이지<img src="./img/adminpage.png" width="25px" height="25px;"></a></li>
            </ul>
          </div>
        </div>

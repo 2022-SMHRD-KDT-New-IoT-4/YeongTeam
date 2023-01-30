@@ -1,0 +1,69 @@
+.calendar {
+    margin: 20px 20px 10px 20px;
+    flex: 0.1;
+    border: 1px solid gray;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+.day {
+    flex: 0.125;
+    margin: 10px;
+    text-align: center;
+}
+
+
+.month {
+    flex: 0.875;
+    margin: 10px;
+}
+
+
+.diary {
+    margin: 10px 20px 20px 20px;
+    flex: 0.9;
+    overflow-y: scroll;
+}
+
+
+.diary-box {
+    border: 1px solid gray;
+    margin-bottom: 20px;
+    padding: 20px;
+    
+}
+
+
+.diary-date {
+    font-size: 0.75rem;
+}
+
+
+.diary-text {
+    text-align: center;
+}
+
+
+.secret-button {
+    width: 35%;
+    margin: 40px auto;
+}
+
+
+.secret-button button {
+    padding: 10px;
+    background-color: white;
+    color: white;
+    border: none;
+}
+.secret-button button:hover {
+    background-color: rgb(255, 70, 70);
+    transition: 800ms ease-in all;
+}
+
+
+.icon {
+    margin-right: 5px;
+}

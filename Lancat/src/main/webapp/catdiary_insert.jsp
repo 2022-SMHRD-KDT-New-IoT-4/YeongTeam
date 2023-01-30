@@ -40,17 +40,20 @@ th, td {
           <span class="icon-bar"></span>                        
         </button>
         <!-- 메인페이지 왼쪽 상단에 작성됨-->
-        <a class="navbar-brand" href="#myPage" >랜선집사들</a>
+        <a class="navbar-brand" href="Main.jsp" >랜선집사들</a>
         <img src="./image/ransom.png" width="29px"style="margin-top:10px;">
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav navbar-right">
       <!-- 메인페이지 우측 상단의 이동란-->
-          <li><a href="#BrandStory">브랜드 스토리</a></li>
-          <li><a href="#MypetCare">마이펫케어</a></li>
-          <li><a href="http://220.93.165.186:5500/mypetDiary.html">펫다이어리</a></li>
-          <li><a href="#pricing">반려묘용품</a></li>
-          <li><a href="#contact">커뮤니티</a></li>
+         <li><a href="brandStory.jsp">브랜드 스토리</a></li>
+         <!--JSP파일로 이동 시 경로 바꾸기-->
+         <li><a href="graphPage.jsp">마이펫케어</a></li>
+         <li><a href="./diary_calendar/calendar_main.jsp">펫다이어리</a></li>
+         <li><a href="catGoods.jsp">반려묘용품</a></li>
+         <li><a href="catEncyclopedia_main.jsp">커뮤니티</a></li>
+         <!--로그인, 회원가입-->
+         <li><a href="members_update.jsp">회원정보 수정</a></li>
         <!-- # 붙여서 스타일 넣어주어야 함! 넣고 빼기 정리필요 -->
         </ul>
       </div>
@@ -88,13 +91,13 @@ th, td {
         </td>
     </tr>
     <tr>
-        <td colspan="2" align=right>
+        <td colspan="2" align=left>
             <input type="submit" name="makePost" value="작성">
             <input type="file" name="d_file">
         </td>
     </tr>
 </table>
-<a href="Main.do" align="center">메인으로</a>
+<input type="submit" align=center" value="메인으로 이동">
 </form>
 <br>
 <br>

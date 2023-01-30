@@ -35,21 +35,22 @@
     		</button>
         
   <!-- 메인페이지 왼쪽 상단에 작성됨-->
-        	<a class="navbar-brand" href="#mypage" >랜선집사들</a>
+        	<a class="navbar-brand" href="Main.jsp" >랜선집사들</a>
         	<img src="./image/ransom.png" width="29px"style="margin-top:10px;">
 		</div>
 		<div class="collapse navbar-collapse" id="myNavbar">
         	<ul class="nav navbar-nav navbar-right">
       			<!-- 메인페이지 우측 상단의 이동란-->
-				<li><a href="#BrandStory">브랜드 스토리</a></li>
-        		<!--JSP파일로 이동 시 경로 바꾸기-->
-        		<li><a href="http://121.147.185.221:5500/CatDays/loingPage.html">마이펫케어</a></li>
-        		<li><a href="http://121.147.185.221:5500/CatDays/loingPage.html">펫다이어리</a></li>
-        		<li><a href="http://121.147.185.221:5500/CatDays/catGoods.html">반려묘용품</a></li>
-        		<li><a href="http://121.147.185.221:5500/CatDays/catEncyclopedia_main_main.html">커뮤니티</a></li>
-        		<!--로그인, 회원가입-->
-        		<li><a href="http://121.147.185.221:5500/CatDays/loingPage.html"><img src="./image/login.png" width="20px" height="20px;"></a></li>
-        		<li><a href="http://121.147.185.221:5500/CatDays/joinPage.html"><img src="./image/join.png" width="25px" height="25px;"></a></li>
+				 <!-- 로그인 페이지로 이동? 아님 날릴까...-->
+	        <li><a href="brandStory.jsp">브랜드 스토리</a></li>
+	        <!--JSP파일로 이동 시 경로 바꾸기-->
+	        <li><a href="Login.jsp">마이펫케어</a></li>
+	        <li><a href="Login.jsp">펫다이어리</a></li>
+	        <li><a href="catGoods.jsp">반려묘용품</a></li>
+	        <li><a href="catEncyclopedia_main.jsp">커뮤니티</a></li>
+	        <!--로그인, 회원가입-->
+	        <li><a href="Login.jsp"><img src="./image/login.png" width="20px" height="20px;"></a></li>
+	        <li><a href="Join.jsp"><img src="./image/join.png" width="25px" height="25px;"></a></li>
      		</ul>
     	</div>
 	</div>
