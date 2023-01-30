@@ -36,7 +36,7 @@
         
   <!-- 메인페이지 왼쪽 상단에 작성됨-->
         	<a class="navbar-brand" href="#mypage" >랜선집사들</a>
-        	<img src="./img/ransom.png" width="29px"style="margin-top:10px;">
+        	<img src="./image/ransom.png" width="29px"style="margin-top:10px;">
 		</div>
 		<div class="collapse navbar-collapse" id="myNavbar">
         	<ul class="nav navbar-nav navbar-right">
@@ -49,8 +49,8 @@
         		<li><a href="http://121.147.185.221:5500/CatDays/catEncyclopedia_main_main.html">커뮤니티</a></li>
         		<!--로그인, 회원가입-->
         		<li>        		
-        		<a href="http://121.147.185.221:5500/CatDays/loingPage.html"><img src="/CatDays/img/login.png" width="20px" height="20px;"></a></li>
-        		<li><a href="http://121.147.185.221:5500/CatDays/joinPage.html"><img src="/CatDays/img/join.png" width="25px" height="25px;"></a></li>
+        		<a href="http://121.147.185.221:5500/CatDays/loingPage.html"><img src="./image/login.png" width="20px" height="20px;"></a></li>
+        		<li><a href="http://121.147.185.221:5500/CatDays/joinPage.html"><img src="./image/join.png" width="25px" height="25px;"></a></li>
      		</ul>
     	</div>
 	</div>
@@ -68,9 +68,6 @@
 </div>
 
   <!-- 자바스크립트(유효성검사 해당) -->
-  <script src ="signUpjs3.js"></script> 
-  <!-- 다음 우편번호찾기 API -->
-  <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 <body>
 	<div id="wrapper" class="wrapper">
         <form action="Join.do" method="post">
@@ -78,7 +75,7 @@
            <header>
 				<div id="header">
 					<h1 class="h_loho">
-                    <span><img alt="" src="image/main.png"></span>
+                    <span><img alt="" src="./image/main.png"></span>
                  	</h1>
                 </div>
            </header>
