@@ -295,4 +295,14 @@ th, td {
     font-size: 18px;
 }
 
+/* 로그인 alert 창 css */
+Swal.fire {
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif; 
+}
+
+/*다이어리 삭제 경고창*/
+
+Swal.fire {
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif; 
+}
 

@@ -17,9 +17,13 @@ public class Members_UpdateProgram implements Command {
 			throws ServletException, IOException {
 		
 		String pw = request.getParameter("pw");
-		String Cat_Name = request.getParameter("cat_Name");
-		String Cat_Birth = request.getParameter("cat_Birth");
-		int Cat_Wt = Integer.parseInt(request.getParameter("cat_Wt"));
+		String cat_Name = request.getParameter("cat_Name");
+		String yy = request.getParameter("yy");
+		String mm = request.getParameter("mm");
+		String dd = request.getParameter("dd");
+		String cat_Birth = yy+"/"+mm+"/"+dd;
+		System.out.println(cat_Birth);
+		int cat_Wt = Integer.parseInt(request.getParameter("cat_Wt"));
 		String addr = request.getParameter("addr");
 		
 		
@@ -29,9 +33,9 @@ public class Members_UpdateProgram implements Command {
 		
 		MembersDTO dto = new MembersDTO();
 		dto.setPw(pw);
-		dto.setCat_Name(Cat_Name);
-		dto.setCat_Birth(Cat_Birth);
-		dto.setCat_Wt(Cat_Wt);
+		dto.setCat_Name(cat_Name);
+		dto.setCat_Birth(cat_Birth);
+		dto.setCat_Wt(cat_Wt);
 		dto.setAddr(addr);
 		dto.setId(id);
 		

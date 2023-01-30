@@ -9,15 +9,13 @@
 		<title>Forty by HTML5 UP</title>
 		<meta charset="UTF-8" />
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<link rel="stylesheet" href="assets/css/main.css" />
-		
 		<meta name="viewport" content="width=device-width, initial-scale=1">
   		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
   		<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
   		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  
+ 		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
  		<link rel = "stylesheet" href = "Main.css">
 </head>
 <!--★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ 로그인 페이지★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ -->
@@ -42,15 +40,15 @@
         	<ul class="nav navbar-nav navbar-right">
       			<!-- 메인페이지 우측 상단의 이동란-->
 				 <!-- 로그인 페이지로 이동? 아님 날릴까...-->
-	        <li><a href="brandStory.jsp">브랜드 스토리</a></li>
-	        <!--JSP파일로 이동 시 경로 바꾸기-->
-	        <li><a href="Login.jsp">마이펫케어</a></li>
-	        <li><a href="Login.jsp">펫다이어리</a></li>
-	        <li><a href="catGoods.jsp">반려묘용품</a></li>
-	        <li><a href="catEncyclopedia_main.jsp">커뮤니티</a></li>
-	        <!--로그인, 회원가입-->
-	        <li><a href="Login.jsp"><img src="./image/login.png" width="20px" height="20px;"></a></li>
-	        <li><a href="Join.jsp"><img src="./image/join.png" width="25px" height="25px;"></a></li>
+	       <li><a href="brandStory.jsp">브랜드 스토리</a></li>
+           <!--JSP파일로 이동 시 경로 바꾸기-->
+           <li><a href="Login.jsp">마이펫케어</a></li>
+           <li><a href="Login.jsp">펫다이어리</a></li>
+           <li><a href="catGoods.jsp">반려묘용품</a></li>
+           <li><a href="catEncyclopedia_main.jsp">커뮤니티</a></li>
+           <!--로그인, 회원가입-->
+           <li><a href="Login.jsp"><img src="./image/login.png" width="20px" height="20px;"></a></li>
+           <li><a href="Join.jsp"><img src="./image/join.png" width="25px" height="25px;"></a></li>
      		</ul>
     	</div>
 	</div>
@@ -58,16 +56,23 @@
 </body>	
 
 <!-- ------------------------------------------------------------------------------- -->
-<!-- 개인정보 수정페이지 -->
-<div class="jumbotron text-center">
+
 		<%
-         MembersDTO user = (MembersDTO)request.getSession().getAttribute("user");
-		 String id = "";
+         String fail = (String)request.getAttribute("fail");
+		 
          %>
-         <%if(user != null){ %>
-                <!--  // user로 묶은 것에서 email 가져오기 (로그인 성공시만)  -->
-                <% id = user.getId();
-                }%>	
+         <%if(fail != null){%>
+         	
+          	<script>
+	            Swal.fire({
+	            icon: "error",
+	            title: "로그인 &nbsp; 실패",
+	            text: "아이디와 비밀번호가 일치하지 않습니다.",
+	            });
+        	</script>
+          
+		 <%}%>	
+<div class="jumbotron text-center">
                 
     <!-- 홈페이지 이름 작성 -->
     <br><h2>로그인</h2><br>

@@ -37,7 +37,7 @@ public class Diary_SelectAllProgram implements Command {
 			session.setAttribute("list", list);
 		}
 
-		return "../catdiary_selectAll.jsp";
+		return "catdiary_selectAll.jsp";
 
 	}
 

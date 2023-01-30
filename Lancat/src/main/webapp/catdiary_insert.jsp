@@ -49,7 +49,7 @@ th, td {
          <li><a href="brandStory.jsp">브랜드 스토리</a></li>
          <!--JSP파일로 이동 시 경로 바꾸기-->
          <li><a href="graphPage.jsp">마이펫케어</a></li>
-         <li><a href="./diary_calendar/calendar_main.jsp">펫다이어리</a></li>
+         <li><a href="calendar_main.jsp">펫다이어리</a></li>
          <li><a href="catGoods.jsp">반려묘용품</a></li>
          <li><a href="catEncyclopedia_main.jsp">커뮤니티</a></li>
          <!--로그인, 회원가입-->
@@ -93,12 +93,13 @@ th, td {
     <tr>
         <td colspan="2" align=left>
             <input type="submit" name="makePost" value="작성">
-            <input type="file" name="d_file">
+            <input type="file" name="d_file" >
         </td>
     </tr>
 </table>
-<input type="submit" align=center" value="메인으로 이동">
 </form>
+<a class="btn btn-default pull" href = "Main.jsp">메인으로 이동</a>
+
 <br>
 <br>
 <br>

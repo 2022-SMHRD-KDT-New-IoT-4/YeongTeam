@@ -22,7 +22,7 @@
   <!-- 회원정보수정 update -->
   <update id="update" parameterType="MembersDTO">
 	  UPDATE MEMBERS
-	  SET pw=#{pw}, cat_Name=#{cat_Name}, Cat_Birth=#{cat_Birth}, Cat_Wt=#{cat_Wt}, addr=#{addr}
+	  SET pw=#{pw}, cat_Name=#{cat_Name}, Cat_Birth=to_date(#{cat_Birth},'YY-MM-DD'), Cat_Wt=#{cat_Wt}, addr=#{addr}
 	  WHERE ID = #{id}
   
   </update>

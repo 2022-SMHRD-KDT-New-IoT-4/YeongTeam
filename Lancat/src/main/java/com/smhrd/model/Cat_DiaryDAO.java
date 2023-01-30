@@ -47,24 +47,39 @@ public class Cat_DiaryDAO{
 	}
 
 	// 일반 계정 육묘일기 수정
-	public int DiaryUpdate(Cat_DiaryDTO dto) {
-		
-		int row =0;
-		
-		SqlSession sqlSession = sqlSessionFactory.openSession(true);
-		
-		try {
-			row = sqlSession.update("com.smhrd.model.Cat_DiaryDAO.DiaryUpdate", dto);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}finally {
-			sqlSession.close();
-		}
-		
-		return row;
-		
-				
-	}
+	   public int DiaryUpdate(Cat_DiaryDTO dto) {
+	      
+	      int row =0;
+	      
+	      SqlSession sqlSession = sqlSessionFactory.openSession(true);
+	      
+	      try {
+	         row = sqlSession.update("com.smhrd.model.Cat_DiaryDAO.DiaryUpdate", dto);
+	      } catch (Exception e) {
+	         e.printStackTrace();
+	      }finally {
+	         sqlSession.close();
+	      }
+	      
+	      return row;
+	      
+	   }
+	   
+	   // 일반 계정 육묘일기 삭제
+	   public int DiaryDelete(Cat_DiaryDTO dto) {
+	      int row = 0;
+	      SqlSession sqlSession = sqlSessionFactory.openSession(true);
+	      
+	      try {
+	         row = sqlSession.delete("com.smhrd.model.Cat_DiaryDAO.DiaryDelete", dto);
+	      } catch (Exception e) {
+	         e.printStackTrace();
+	      }finally {
+	         sqlSession.close();
+	      }
+	      
+	      return row;
+	   }
 
 	// admin 일 때 전체 게시글 목록 
 	public List<Cat_DiaryDTO> AdminSelectAll() {

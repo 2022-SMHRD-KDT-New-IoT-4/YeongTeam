@@ -56,8 +56,9 @@
                     <li><a href="brandStory.jsp">브랜드 스토리</a></li>
                     <!--JSP파일로 이동 시 경로 바꾸기-->
                     <li><a href="catGoods.jsp">반려묘용품</a></li>
+                    <li><a href="catEncyclopedia_main.jsp">커뮤니티</a></li>
                     <!--관리자페이지-->
-                    <li><a href="adminMain.jsp">관리자 페이지<img src="./img/adminpage.png" width="25px" height="25px;"></a></li>
+                    <li><a href="adminMain.jsp">관리자 페이지<img src="./image/adminpage.png" width="25px" height="25px;"></a></li>
                    
                 <% }else{
                     // 계정이 일반 계정인 경우  %>

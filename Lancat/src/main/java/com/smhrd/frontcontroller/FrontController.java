@@ -42,7 +42,7 @@ public class FrontController extends HttpServlet {
 		 map.put("Diary_Insert.do", new Diary_InsertProgram());
 		 map.put("Diary_Select.do", new Diary_SelectAllProgram());
 		 map.put("Diary_Update.do", new Diary_UpdateProgram());
-		 map.put("Diary_Delet.do", new Diary_DeleteProgram());
+		 map.put("Diary_Delete.do", new Diary_DeleteProgram());
 		 
 		 // ADMIN
 		 map.put("AdminDiary_Select.do", new Admin_DiarySelectAllProgram());

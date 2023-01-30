@@ -1,20 +1,14 @@
 package com.smhrd.model;
 
-
 import java.util.List;
-
-
-
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
-
 import com.smhrd.db.SqlSessionManager;
 
 public class MembersDAO {
 
 	private SqlSessionFactory sqlSessionFactory = SqlSessionManager.getSqlSession();
 	// 회원가입 join
-	
 	public int join(MembersDTO dto) {
 		int row = 0;
 		SqlSession sqlsession = sqlSessionFactory.openSession(true);
@@ -55,10 +49,8 @@ public class MembersDAO {
 			e.printStackTrace();
 		}finally {
 			sqlSession.close();
-		}
-		
+		}		
 		return 0;
 	}
-
 }
 

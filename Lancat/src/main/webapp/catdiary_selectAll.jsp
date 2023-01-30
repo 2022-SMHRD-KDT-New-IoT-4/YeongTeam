@@ -1,3 +1,5 @@
+<%@page import="com.smhrd.model.Cat_DiaryDTO"%>
+<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -12,6 +14,7 @@
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
   
   <link rel = "stylesheet" href = "Main.css">
 
@@ -37,14 +40,14 @@
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav navbar-right">
       <!-- 메인페이지 우측 상단의 이동란-->
-        <li><a href="brandStory.jsp">브랜드 스토리</a></li>
-        <!--JSP파일로 이동 시 경로 바꾸기-->
-        <li><a href="graphPage.jsp">마이펫케어</a></li>
-        <li><a href="./diary_calendar/calendar_main.jsp">펫다이어리</a></li>
-        <li><a href="catGoods.jsp">반려묘용품</a></li>
-        <li><a href="catEncyclopedia_main.jsp">커뮤니티</a></li>
-        <!--로그인, 회원가입-->
-        <li><a href="members_update.jsp">회원정보 수정</a></li>
+         <li><a href="brandStory.jsp">브랜드 스토리</a></li>
+         <!--JSP파일로 이동 시 경로 바꾸기-->
+         <li><a href="graphPage.jsp">마이펫케어</a></li>
+         <li><a href="calendar_main.jsp">펫다이어리</a></li>
+         <li><a href="catGoods.jsp">반려묘용품</a></li>
+         <li><a href="catEncyclopedia_main.jsp">커뮤니티</a></li>
+         <!--로그인, 회원가입-->
+         <li><a href="members_update.jsp">회원정보 수정</a></li>
         <!-- # 붙여서 스타일 넣어주어야 함! 넣고 빼기 정리필요 -->
       </ul>
     </div>
@@ -52,7 +55,7 @@
   
   <div class="jumbotron text-center">
     <!-- 홈페이지 이름 작성 -->
-    <h1>Cat Days  <img src="./img/title.png" width="100px"></h1> 
+    <h1>Cat Days  <img src="./image/title.png" width="100px"></h1> 
     <p>for my precious cat</p> 
     </div>
 <!--Head End -->
@@ -82,51 +85,57 @@
                                 </div>
                             </div>
                             <div class="diary">
+                            <%
+								List<Cat_DiaryDTO> list = (List)session.getAttribute("list");
+							%>
                             <form>
-                            <div class="diary-box">
-                                <div class="diary-date" id="bold-text">2023.01.01.
-                                  <input type="checkbox" name="choice" id="choice" style="align-items: flex-end;">  
+                            <%
+                             for(int i=0; i<list.size(); i++){%>
+                            	 <div class="diary-box">
+                                <div class="diary-date" id="bold-text"><%= list.get(i).getD_dt() %>
+                                  <input type="radio"  value="<%=i %>" name="update" id="choice" style="align-items: flex-end;">  
                                 </div>
                                 <div align="center">
                                     <img src="파일합치기용/img/cat1.jpg" width="300px">
                                 </div>
-                                <div class="diary-text" id="basic-text">아침에 해피와 늦잠을 자고 싶었는데 <br> 해피가 꾹꾹이로 깨워주었다.<br>난 정말 행복한 집사이다.<br><br>앞으로도 지금처럼<br>아프지말고 계속 건강했으면 좋겠다.<br><br>해피야 사랑해♥</div>
+                                <div class="diary-text" id="basic-text">
+                                	<%= list.get(i).getD_title() %>
+                                
+                                </div>
+                                <div class="diary-text" id="basic-text">
+                                	
+                                	<%= list.get(i).getD_content() %>
+                                </div>
                             </div>
+                           <% } %>
                             
-                            <div class="diary-box">
-                                <div class="diary-date" id="bold-text">2023.01.03
-                                    <input type="checkbox" name="choice" id="choice" style="align-items: flex-end;">
-                                </div>
-                                <div align="center">
-                                    <img src="파일합치기용/img/cat2.webp" width="300px">
-                                </div>
-                                <div class="diary-text" id="basic-text">해피 정기 건강검진일<br><br>정기검진일은 늘 무섭다.<br>해피가 조금 아프다고 한다.<br>내가 대신 아파줄 수 있으면..<br><br>해피야 아프지말고 언니랑 오래오래 있어줘</div>
-                            </div>
                             
-                            <div class="diary-box">
-                                <div class="diary-date" id="bold-text">2023.01.17
-                                    <input type="checkbox" name="choice" id="choice" style="align-items: flex-end;">
-                                </div>
-                                <div align="center">
-                                    <img src="파일합치기용/img/cat3.jpg" width="300px">
-                                </div>
-                                <div class="diary-text" id="basic-text">매일 해피를 두고 나서는 출근길<br>마음이 무겁다..<br><br>고양이는 외로움을 덜 탄다고 하지만<br>현관에서 기다리고 있는<br>해피의 모습을 볼 때 마다 마음이 너무 아프다.<br></div>
-                            </div>
                             
-                            <div class="diary-box">
-                                <div class="diary-date" id="bold-text">2023.01.19
-                                    <input type="checkbox" name="choice" id="choice" style="align-items: flex-end;">
-                                </div>
-                                <div align="center">
-                                    <img src="파일합치기용/img/cat4.jpg" width="300px">
-                                </div>
-                                <div class="diary-text" id="basic-text">해피와 함께 본가에 내려갔다.<br>해피가 멀미하지 않아서 다행이다.<br><br>부모님도 해피를 예뻐해주셨다.<br>우리집 사랑둥이 막내♡</div>
-                            </div>
+                            
+                            
                             
                             <div style="margin-top: 1900px; margin-right: 800px;">
-                                <input type="submit" value="삭제하기" formaction="Main.jsp">
+                            
+                            
+                                <input type="submit" value="삭제하기" formaction="Diary_Delete.do">  
+                           <%
+								String delete = (String)request.getAttribute("delete");
+							%>                              
+                         <%if(delete != null){ %>       
+                         <!-- 삭제 버튼 선택시 알림창 출력 -->
+                        <script>                             
+                         Swal.fire({
+                          position: 'top-end',
+                          icon: 'success',
+                          title: 'Your work has been saved',
+                          showConfirmButton: false,
+                          timer: 1500
+                        })
+                         </script>
+                        <%}%>
+                                
                                 <input type="submit" value="수정하기" formaction="catdiary_update.jsp">
-                                <input type="submit" value="이전페이지로 이동" formaction="Main.jsp">
+                                <input type="submit" value="이전페이지로 이동" formaction="calendar_main.jsp">
                             </div>
                         
                         </form>

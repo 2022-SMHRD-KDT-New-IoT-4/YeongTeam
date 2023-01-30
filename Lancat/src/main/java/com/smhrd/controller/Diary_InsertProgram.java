@@ -37,6 +37,6 @@ public class Diary_InsertProgram implements Command {
 			
 		}
 		
-		return "Main.jsp";
+		return "Diary_Select.do";
 	}
 }

@@ -35,7 +35,7 @@
     		<li><a href="brandStory.jsp">브랜드 스토리</a></li>
             <!--JSP파일로 이동 시 경로 바꾸기-->
             <li><a href="graphPage.jsp">마이펫케어</a></li>
-            <li><a href="./diary_calendar/calendar_main.jsp">펫다이어리</a></li>
+            <li><a href="calendar_main.jsp">펫다이어리</a></li>
             <li><a href="catGoods.jsp">반려묘용품</a></li>
             <li><a href="catEncyclopedia_main.jsp">커뮤니티</a></li>
             <!--로그인, 회원가입-->
@@ -64,7 +64,7 @@
   </head>
   <body>
      <div id="wrap" class="wrapper">
-        <form method ="post" name="join" id="join">
+        <form action = "Members_Update.do" method ="get">
           <!-- 개인정보수정 타이틀부분 -->
            <header>
                 <div id="header">
@@ -79,7 +79,7 @@
             <!-- 비밀번호 입력 -->
                  <div class="userInput">
                     <h3 class="list">비밀번호</h3>
-                    <span class="box int_id" ><input type="text" id="id" class="int check"
+                    <span class="box int_id" ><input type="text" name="pw" class="int check"
                        maxlength="20" placeholder="수정할 비밀번호를 입력하세요"></span>
                  </div>
             <!-- 주소 입력 -->
@@ -92,7 +92,7 @@
                  <div class="userInput">
                     <h3 class="list">반려묘 이름</h3>
                     <span class="box int_id">
-                        <input type="text" id="name" class="int check" maxlength="20" placeholder="반려묘이름을 작성해주세요">
+                        <input type="text" name="cat_Name" class="int check" maxlength="20" placeholder="반려묘이름을 작성해주세요">
                     </span>
                  </div>
               </div>
@@ -103,7 +103,7 @@
                    <div id="content">
                      <h3 class="list">반려묘 몸무게(kg)</h3>
                      <span class="box int_weight">
-                        <input type="text" name="weight" class="int" maxlength="5" placeholder="몸무게를 입력하세요.">kg
+                        <input type="text" name="cat_Wt" class="int" maxlength="5" placeholder="몸무게를 입력하세요.">kg
                      </span>
                    </div>
                  </div>
@@ -155,6 +155,7 @@
                     <button class="btn btn-primary" type="submit" style="border: none; background-color: 
                     rgb(189, 120, 212);">완료</button>
                     </span>
+                   </form>
                 </div>
                 <br>
                 <br>

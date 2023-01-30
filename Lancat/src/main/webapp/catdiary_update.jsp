@@ -1,3 +1,5 @@
+<%@page import="com.smhrd.model.Cat_DiaryDTO"%>
+<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -15,7 +17,7 @@
   
   <link rel = "stylesheet" href = "Main.css">
 
-  <link rel="stylesheet" href="./diaryData.css">
+  <link rel="stylesheet" href="catdiary_insert.css">
   <script src="https://kit.fontawesome.com/862f1afc4c.js" crossorigin="anonymous"></script>
 </head>
 
@@ -41,7 +43,7 @@
          <li><a href="brandStory.jsp">브랜드 스토리</a></li>
          <!--JSP파일로 이동 시 경로 바꾸기-->
          <li><a href="graphPage.jsp">마이펫케어</a></li>
-         <li><a href="./diary_calendar/calendar_main.jsp">펫다이어리</a></li>
+         <li><a href="calendar_main.jsp">펫다이어리</a></li>
          <li><a href="catGoods.jsp">반려묘용품</a></li>
          <li><a href="catEncyclopedia_main.jsp">커뮤니티</a></li>
          <!--로그인, 회원가입-->
@@ -53,20 +55,28 @@
   
   <div class="jumbotron text-center">
     <!-- 홈페이지 이름 작성 -->
-    <h1>Cat Days  <img src="./img/title.png" width="100px"></h1> 
+    <h1>Cat Days  <img src="./image/title.png" width="100px"></h1> 
     <p>for my precious cat</p> 
     </div>
 <!--Head End -->
 
-<style>
+	<style>
     th, td {
         text-align: center;
         font-size: 18px;
     }
     </style>
+   
     
     <!-- 육묘일기 작성하는 폼 -->
-    <h2 align="center">육묘일기 작성하기</h2>
+     <%
+		List<Cat_DiaryDTO> list = (List)session.getAttribute("list");
+		int index = Integer.parseInt(request.getParameter("update"));
+		Cat_DiaryDTO data = list.get(index);
+		session.setAttribute("update", data);
+	%>
+    <form action="Diary_Update.do" method="post">
+    <h2 align="center">육묘일기 수정하기</h2>
     <table border="1" width=500 align="center">
         <tr>
             <th colspan="2" height="50px">오늘 내 반려묘는 어떤 하루를 보냈나요?</th>
@@ -81,23 +91,25 @@
             </td>
             <td >
              <!--여기에 db 불러오는 코드 입력 작성했던 제목-->
-                <input type="text" placeholder="   제목을 입력하세요." maxlength=20 style="width:100%; height: 100%;">
+                <input type="text" name="d_title" value=<%=data.getD_title() %> maxlength=20 style="width:100%; height: 100%;">
             </td>
         </tr>
         <tr>
             <td colspan="2" height=400>
                 <!--여기에 db 불러오는 코드 입력 내용-->
-                <textarea placeholder="  내용을 입력하세요." style="width: 100%; height: 100%"></textarea>
+                <textarea name="d_content"  style="width: 100%; height: 100%"><%=data.getD_content() %></textarea>
             </td>
         </tr>
         <tr>
             <td colspan="2" align=right>
-              <a class="btn btn-default pull">업로드하기</a>
-              <a class="btn btn-default pull">사진첨부</a>
+            <input type="submit" name="makePost" value="업로드하기">
+            <input type="file" name="d_file" >
+              
             </td>
         </tr>
     </table>
-    <input type="submit" value="이전페이지로 이동" style="margin-top: 3%; margin-left: 47%;">
+    </form>
+   <a class="btn btn-default pull" href = "Diary_Select.do">이전페이지로 이동</a>
     <br>
     <br>
     <br>

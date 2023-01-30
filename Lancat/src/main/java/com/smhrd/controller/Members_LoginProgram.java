@@ -31,10 +31,14 @@ public class Members_LoginProgram implements Command {
 	    
 	    if(result != null) {
 	    	request.getSession().setAttribute("user", result);
+	    	return "Main.jsp";
+	    	
+	    }else{
+	    	request.setAttribute("fail", "fail");
+	    	return "Login.jsp";
+	    	
 	    	
 	    }
-	    
-	    	return "Main.jsp";
 	    	
 	    
 	    

@@ -19,12 +19,19 @@
 	  WHERE ID=#{id}
   </select>
   
-  <!--  육묘일기 수정 -->
+   <!--  육묘일기 수정 -->
   <update id="DiaryUpdate" parameterType="Cat_DiaryDTO">
-	  UPDATE CAT_DIARY
-	  SET D_TITLE=#{d_title}, D_CONTENT=#{d_content}, D_FILE=#{d_file}, D_DT=#{d_dt}
-	  WHERE ID=#{id}
-	    AND D_SEQ=#{d_seq}
+     UPDATE CAT_DIARY
+     SET D_TITLE=#{d_title}, D_CONTENT=#{d_content}, D_FILE=#{d_file}
+     WHERE ID=#{id}
+     AND D_SEQ=#{d_seq}
+  </update>
+  
+  <!--  육묘일기 삭제 -->
+  <update id="DiaryDelete" parameterType="Cat_DiaryDTO">
+        DELETE FROM CAT_DIARY 
+        WHERE ID=#{id}
+       AND D_SEQ=#{d_seq}
   </update>
   
   
