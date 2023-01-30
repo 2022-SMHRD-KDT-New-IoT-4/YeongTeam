@@ -82,7 +82,7 @@ public class InfoWrite extends HttpServlet {
 	      }
 	      
 	      dto.setIn_time(formatter.format(upTime));
-	      dto.setOut_time(formatter.format(upTime));
+	      dto.setOut_time(formatter.format(downTime));
 	      dto.setUse_time(DateTimeFormatter.ofPattern("HH:mm:ss").format(useTime));
 
 	      SensorDAO dao = new SensorDAO();
