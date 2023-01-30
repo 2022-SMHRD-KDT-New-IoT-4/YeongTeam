@@ -133,8 +133,8 @@
       <div style="width: 500px; height: 50px; border: 2px solid black; text-align: center; margin-left: 900px;">총 작성한 육묘일기 : 32건</div>
          <!-- 대강 넘어가는 것만 모려고 만든 폼태그 이동 확인 완 -->
          <form >
-            <input type="submit" formaction="catdiary_insert.jsp" name="write" value="육묘일기 작성하기" style="margin-top: 10%;">
-            <input type="submit" formaction="catdiary_selectAll.jsp"  name="read" value="육묘일기 둘러보기" style="margin-top: 10%;">
+            <input type="submit" formaction="../catdiary_insert.jsp" name="write" value="육묘일기 작성하기" style="margin-top: 10%;">
+            <input type="submit" formaction="../catdiary_selectAll.jsp"  name="read" value="육묘일기 둘러보기" style="margin-top: 10%;">
          </form>
          
          
