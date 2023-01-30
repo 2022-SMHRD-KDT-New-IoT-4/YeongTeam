@@ -47,8 +47,8 @@
 	        <li><a href="catGoods.jsp">반려묘용품</a></li>
 	        <li><a href="catEncyclopedia_main.jsp">커뮤니티</a></li>
 	        <!--로그인, 회원가입-->
-	        <li><a href="Login.jsp"><img src="/CatDays/img/login.png" width="20px" height="20px;"></a></li>
-	        <li><a href="Join.jsp"><img src="/CatDays/img/join.png" width="25px" height="25px;"></a></li>
+	         <li><a href="Login.jsp"><img src="./image/login.png" width="20px" height="20px;"></a></li>
+	        <li><a href="Join.jsp"><img src="./image/join.png" width="25px" height="25px;"></a></li>
             <%}else{ 
                 // 로그인 성공
                 if(user.getId().equals("admin")){
