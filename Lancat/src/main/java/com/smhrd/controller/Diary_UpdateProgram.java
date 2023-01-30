@@ -12,7 +12,7 @@ import com.smhrd.model.Cat_DiaryDAO;
 import com.smhrd.model.Cat_DiaryDTO;
 import com.smhrd.model.MembersDTO;
 
-@WebServlet("/UpdateProgram")
+@WebServlet("/Diary_UpdateProgram")
 public class Diary_UpdateProgram implements Command {
 
 	@Override
@@ -38,7 +38,7 @@ public class Diary_UpdateProgram implements Command {
 		int row = dao.DiaryUpdate(dto);
 		
 		if(row > 0) {
-			session.setAttribute("change", dto);
+			session.setAttribute("list", dto);
 		}
 		
 		return "catdiary_update.jsp";
