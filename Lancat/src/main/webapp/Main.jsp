@@ -31,7 +31,7 @@
         </button>
         <!-- 메인페이지 왼쪽 상단에 작성됨-->
         <a class="navbar-brand" href="#mypage" >랜선집사들</a>
-        <img src="./img/ransom.png" width="29px"style="margin-top:10px;">
+        <img src="./image/ransom.png" width="29px"style="margin-top:10px;">
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav navbar-right">
@@ -46,8 +46,8 @@
         <li><a href="Main.jsp">반려묘용품</a></li>
         <li><a href="catEncyclopedia_main.jsp">커뮤니티</a></li>
         <!--로그인, 회원가입-->
-        <li><a href="Login.jsp"><img src="/CatDays/img/login.png" width="20px" height="20px;"></a></li>
-        <li><a href="Join.jsp"><img src="/CatDays/img/join.png" width="25px" height="25px;"></a></li>
+        <li><a href="Login.jsp"><img src="./image/login.png" width="20px" height="20px;"></a></li>
+        <li><a href="Join.jsp"><img src="./image/join.png" width="25px" height="25px;"></a></li>
 
         <!-- # 붙여서 스타일 넣어주어야 함! 넣고 빼기 정리필요 -->
         <!--<li><a href="#contact">회원가입</a></li>-->
@@ -60,7 +60,7 @@
 
 <div class="jumbotron text-center">
   <!-- 홈페이지 이름 작성 -->
-  <h1>Cat Days  <img src="./img/title.png" width="100px"></h1> 
+  <h1>Cat Days  <img src="./image/title.png" width="100px"></h1> 
   <p>for my precious cat</p> 
 </div>
 
@@ -80,7 +80,7 @@
 
     <!-- 메인 첫번째 픽토그램! -->
     <div style="text-align: center;">
-      <img src="./img/cute_cat.png" width="250" height="250">
+      <img src="./image/cute_cat.png" width="250" height="250">
     </div>
   </div>
 </div>
@@ -90,7 +90,7 @@
     <div class="col-sm-4">
     <!-- 메인 두번째 픽토그램! -->
       <div style="text-align: center;">
-        <img src="./img/story.png" width="200" height="200">
+        <img src="./image/storyCat.png" width="200" height="200">
       </div>
     </div>
     <div class="col-sm-8">

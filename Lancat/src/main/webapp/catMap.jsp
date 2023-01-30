@@ -16,7 +16,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=7tyns3rmqr"></script>
 
-  <link rel="stylesheet" href="realMain.css">
+  <link rel="stylesheet" href="Main.css">
 </head> -->
 
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
@@ -32,7 +32,7 @@
         </button> 
         <!-- 메인페이지 왼쪽 상단에 작성됨-->
         <a class="navbar-brand" href="#mypage">랜선집사들</a>
-        <img src="./img/ransom.png" width="29px" style="margin-top:10px;">
+        <img src="./image/ransom.png" width="29px" style="margin-top:10px;">
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav navbar-right"> 
@@ -48,7 +48,7 @@
 
   <div class="jumbotron text-center"> 
     <!-- 홈페이지 이름 작성 -->
-    <h1>Cat Days <img src="./img/title.png" width="100px"></h1>
+    <h1>Cat Days <img src="./image/title.png" width="100px"></h1>
     <p>for my precious cat</p>
   </div>
 </body>   
@@ -106,7 +106,7 @@
   <div class="text-center">
     <ul class="pagination">
       <li><a href="#">1</a></li>
-      <li><a href="#"><img src="./img/catIcon.png"" alt="" width="24px"></a></li>
+      <li><a href="#"><img src="./image/catIcon.png"" alt="" width="24px"></a></li>
     </ul>
   </div>
  <!------------------------------------------------------> 
@@ -153,7 +153,7 @@
   <div class="text-center">
     <ul class="pagination">
       <li><a href="#">1</a></li>
-      <li><a href="#"><img src="./img/catIcon.png"" alt="" width="24px"></a></li>
+      <li><a href="#"><img src="./image/catIcon.png" alt="" width="24px"></a></li>
     </ul>
   </div>
 

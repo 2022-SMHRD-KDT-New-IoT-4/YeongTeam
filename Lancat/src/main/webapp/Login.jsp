@@ -36,7 +36,7 @@
         
   <!-- 메인페이지 왼쪽 상단에 작성됨-->
         	<a class="navbar-brand" href="#mypage" >랜선집사들</a>
-        	<img src="./img/ransom.png" width="29px"style="margin-top:10px;">
+        	<img src="./image/ransom.png" width="29px"style="margin-top:10px;">
 		</div>
 		<div class="collapse navbar-collapse" id="myNavbar">
         	<ul class="nav navbar-nav navbar-right">
@@ -48,8 +48,8 @@
         		<li><a href="http://121.147.185.221:5500/CatDays/catGoods.html">반려묘용품</a></li>
         		<li><a href="http://121.147.185.221:5500/CatDays/catEncyclopedia_main_main.html">커뮤니티</a></li>
         		<!--로그인, 회원가입-->
-        		<li><a href="http://121.147.185.221:5500/CatDays/loingPage.html"><img src="/CatDays/img/login.png" width="20px" height="20px;"></a></li>
-        		<li><a href="http://121.147.185.221:5500/CatDays/joinPage.html"><img src="/CatDays/img/join.png" width="25px" height="25px;"></a></li>
+        		<li><a href="http://121.147.185.221:5500/CatDays/loingPage.html"><img src="./image/login.png" width="20px" height="20px;"></a></li>
+        		<li><a href="http://121.147.185.221:5500/CatDays/joinPage.html"><img src="./image/join.png" width="25px" height="25px;"></a></li>
      		</ul>
     	</div>
 	</div>
@@ -71,54 +71,36 @@
     <!-- 홈페이지 이름 작성 -->
     <br><h2>로그인</h2><br>
     <div class="spanTag">
-      <span><%=id %>님 Cat Days에 오신걸 환영합니다! 🐾 </span> 
+      <span>CatDays와 함께 하세요! 🐾 </span> 
     </div>
 </div>
 <!-- ------------------------------------------------------------ -->
-<body style="background-color: rgb(245, 230, 251);">
-    <section class="login-form" style="background-color: rgb(245, 230, 251); ">
-        <div class="container py-10 h-100">
-          <div class="row d-flex justify-content-center align-items-center h-100">
-            <div class="col-xl-10">
-              <div class="card rounded-3 text-black">
-                <div class="row g-0">
-                  <div class="col-lg-6">
-                    <div class="card-body p-md-5 mx-md-4">
-                      <div class="text-center">          
-                      </div>
-                      <!-- 로그인 폼 -->
-                      <form action="Login.do" method="post">
-                      <br>
-                      <p>아이디를 입력하세요.</p>
-                        <div class="form-outline mb-4">
-                        	<input type="text" id="form2Example11" name="id" class="form-control" placeholder="Id"/>
-                        	<label class="form-label" for="form2Example11"></label>
-                        </div>
-                        <br>
-                      <p>비밀번호를 입력하세요.</p>
-                      	<div class="form-outline mb-4">
-                          <input type="password" id="form2Example22" name="pw" class="form-control" placeholder="Password" maxlength=10 style="width: 100%;"/>
-                          <label class="form-label" for="form2Example22"></label>
-                        </div>
-                        <br>
-                        <div class="text-center pt-1 mb-5 pb-1">
-                          <input type="submit" class="button fit" value="로그인" style="background: rgb(189, 120, 212); color: white; border: none; ">
-                          <br>
-                        </div>
-                     </div>
-      			
+<div class="container">
+		<div class="row_group">
+            <!-- 아이디 입력 -->
+            	<form action="Login.do" method="post">
+            	<div class="userInput">
+               		<h3 class="list">아이디</h3>
+               		<span class="box int_id" ><input type="text" id="id" name = "id" class="int check"
+                  	maxlength="20" placeholder="아이디를 입력하세요"></span>
+            	</div>
+            	<!-- 비밀번호 입력 -->
+                <div class="userInput">
+                    <h3 class="list">비밀번호</h3>
+                    <span class="box int_id" ><input type="password" id="pw" name = "pw" class="int check"
+                       maxlength="20" placeholder="비밀번호를 입력하세요"></span>
+                      <div class="col-12" style="margin-top: 2%;" align="center">
+                    <span>
+                    	<input type="submit" value="로그인" class="button fit" style="border: none; color: white;
+                    	background-color: rgb(189, 120, 212);">
+                    <br>
+                    <br>
+                    <br>
+                    </span>
+            		</div>
                       </form>
-      
-                    </div>
-                  </div>
-               
-                </div>
-              </div>
-            </div>
           </div>
-    
-
-      </section>
+ </div>
 
 </body>
 </html>

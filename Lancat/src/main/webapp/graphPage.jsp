@@ -45,7 +45,7 @@
             </button>
             <!-- 메인페이지 왼쪽 상단에 작성됨-->
             <a class="navbar-brand" href="#myPage" >랜선집사들</a>
-            <img src="./img/ransom.png" width="29px"style="margin-top:10px;">
+            <img src="./image/ransom.png" width="29px"style="margin-top:10px;">
           </div>
           <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">

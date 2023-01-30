@@ -33,7 +33,7 @@
             </button>
             <!-- 메인페이지 왼쪽 상단에 작성됨-->
             <a class="navbar-brand" href="#myPage" >랜선집사들</a>
-            <img src="./img/ransom.png" width="29px"style="margin-top:10px;">
+            <img src="./image/ransom.png" width="29px"style="margin-top:10px;">
           </div>
           <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">
@@ -48,8 +48,8 @@
             <li><a href="http://121.147.185.221:5500/CatDays/catGoods.html">반려묘용품</a></li>
             <li><a href="http://121.147.185.221:5500/CatDays/catEncyclopedia_main_main.html">커뮤니티</a></li>
             <!--로그인, 회원가입-->
-        <li><a href="#contact"><img src="/CatDays/img/login.png" width="20px" height="20px;"></a></li>
-        <li><a href="#contact"><img src="/CatDays/img/join.png" width="25px" height="25px;"></a></li>
+        <li><a href="#contact"><img src="./image/login.png" width="20px" height="20px;"></a></li>
+        <li><a href="#contact"><img src="./image/join.png" width="25px" height="25px;"></a></li>
           </ul>
         </div>
       </div>
@@ -69,20 +69,20 @@
 
     <div class="flex-first">
         <div class="flex-item" onclick="location.href='https://pethroom.com/product/detail.html?product_no=18&cate_no=205&display_group=1';">
-            <img src="/CatDays/img/goodsPage/sand.PNG" width="400" height="400">
+            <img src="./image/sand.PNG" width="400" height="400">
         <span><strong>Pethroom</strong></span>
         <p>더스트 프리 벤토나이트 오리지널</p></div>
 
         <div class="flex-item" onclick="location.href='https://pethroom.com/product/detail.html?product_no=165&cate_no=205&display_group=1';">
-            <img src="/CatDays/img/goodsPage/bentonite.PNG" width="400" height="400">
+            <img src="./image/bentonite.PNG" width="400" height="400">
             <span><strong>Pethroom</strong></span>
             <p>오도어 프리 벤토나이트 오리지널</p></div>
         <div class="flex-item color-gray">
-        <img src="/CatDays/img/goodsPage/Forest.PNG" width="400" height="400">
+        <img src="./image/Forest.PNG" width="400" height="400">
         <span><strong>Pethroom</strong></span>
         <p>오도어 프리 벤토나이트 포레스트</p></div>
         <div class="flex-item color-gray">
-            <img src="/CatDays/img/goodsPage/TOFU.PNG" width="400" height="400">
+            <img src="./image/TOFU.PNG" width="400" height="400">
             <span><strong>Pethroom</strong></span>
             <p>파인 크랙 두부 모래(오리지널/녹차)</p></div>
 
@@ -93,22 +93,22 @@
 
     <div class="flex-second">
         <div class="flex-item color-gray">
-        <img src="/CatDays/img/goodsPage/spray.PNG" width="400" height="400">
+        <img src="./image/spray.PNG" width="400" height="400">
         <span><strong>Pethroom</strong></span>
         <p>펫 닥터 스프레이 플러스</p></div>
 
         <div class="flex-item color-gray">
-        <img src="/CatDays/img/goodsPage/tissue.PNG" width="400" height="400">
+        <img src="./image/tissue.PNG" width="400" height="400">
         <span><strong>Pethroom</strong></span>
         <p>마일드 클린 티슈</p></div>
         
         <div class="flex-item color-gray">
-            <img src="/CatDays/img/goodsPage/scoop.PNG" width="400" height="400">
+            <img src="./image/scoop.PNG" width="400" height="400">
             <span><strong>Pethroom</striong></span>
             <p>올 캐치 스쿱(벤토/두부)</p></div>
 
         <div class="flex-item color-gray">
-            <img src="/CatDays/img/goodsPage/powder.PNG" width="400" height="400">
+            <img src="./image/powder.PNG" width="400" height="400">
             <span><strong>Pethroom</strong></span>
             <p>매직 캣 리터 파우더</p></div>
         
