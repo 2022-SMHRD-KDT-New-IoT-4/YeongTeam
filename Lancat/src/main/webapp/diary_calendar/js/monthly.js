@@ -257,7 +257,7 @@ Monthly 2.2.2 by Kevin Thornbloom is licensed under a Creative Commons Attributi
 							+ (doShowTitle ? "" : " monthly-event-continued")
 							)
 ///////////////////////////////////발바닥 이미지 넣는 곳!!!!///////////////////////////////////////////
-						+ "><span><img src='./image/foot.png' width='100em'>" + dayEndTags);
+						+ "><span><img src='./image/foot.png' width='80%'>" + dayEndTags);
 				// Add to event list
 				$(parent + ' .monthly-list-item[data-number="' + index + '"]')
 					.addClass("item-has-event")

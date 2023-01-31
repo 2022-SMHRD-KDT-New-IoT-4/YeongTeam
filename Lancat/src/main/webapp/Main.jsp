@@ -5,7 +5,7 @@
 <html lang="en">
 <head>
   <!-- Theme Made By www.w3schools.com -->
-  <title>랜선집사들 🐾Cat Days🐾</title>
+  <title>메인페이지</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -67,7 +67,7 @@
                     <li><a href="catGoods.jsp">반려묘용품</a></li>
                     <li><a href="catEncyclopedia_main.jsp">커뮤니티</a></li>
                     <!--관리자페이지-->
-                    <li><a href="adminMain.jsp">관리자 페이지<img src="./image/adminpage.png" width="25px" height="25px;"></a></li>
+                    <li><a href="adminMain.jsp"><img src="./image/adminpage.png" width="25px" height="25px;"></a></li>
                    
                 <% }else{
                     // 계정이 일반 계정인 경우  %>
@@ -134,6 +134,7 @@
 
   <!----------------------------------------------->
   <!-- 제품 사용한 후기, 기타 등등 넣으면 좋다/소중한 고양이를 위한 슬로건-->
+  <div id="review" class="container-fluid">
   <h2>Cat Days 후기😺</h2>
   <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
     <!-- Indicators -->

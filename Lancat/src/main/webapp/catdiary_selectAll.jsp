@@ -35,7 +35,7 @@
         </button>
         <!-- 메인페이지 왼쪽 상단에 작성됨-->
         <a class="navbar-brand" href="Main.jsp" >랜선집사들</a>
-        <img src="./img/ransom.png" width="29px"style="margin-top:10px;">
+        <img src="./image/ransom.png" width="29px"style="margin-top:10px;">
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav navbar-right">
@@ -58,6 +58,7 @@
     <h1>Cat Days  <img src="./image/title.png" width="100px"></h1> 
     <p>for my precious cat</p> 
     </div>
+</body>
 <!--Head End -->
 
 <body>
@@ -91,12 +92,12 @@
                             <form>
                             <%
                              for(int i=0; i<list.size(); i++){%>
-                            	 <div class="diary-box">
+                            <div class="diary-box">
                                 <div class="diary-date" id="bold-text"><%= list.get(i).getD_dt() %>
                                   <input type="radio"  value="<%=i %>" name="update" id="choice" style="align-items: flex-end;">  
                                 </div>
                                 <div align="center">
-                                    <img src="파일합치기용/img/cat1.jpg" width="300px">
+                                    <img src="./image/1.jpg" width="300px">
                                 </div>
                                 <div class="diary-text" id="basic-text">
                                 	<%= list.get(i).getD_title() %>
@@ -114,38 +115,34 @@
                             
                             
                             
-                            <div style="margin-top: 1900px; margin-right: 800px;">
                             
-                            
-                                <input type="submit" value="삭제하기" formaction="Diary_Delete.do">  
+                                <input type="submit" value="삭제하기" formaction="Diary_Delete.do" style="float: right">  
                            <%
 								String delete = (String)request.getAttribute("delete");
 							%>                              
                          <%if(delete != null){ %>       
                          <!-- 삭제 버튼 선택시 알림창 출력 -->
-                        <script>                             
+                        <script>
                          Swal.fire({
-                          position: 'top-end',
+                        /*  position: 'top-end', */
+                          position: 'center',
                           icon: 'success',
-                          title: 'Your work has been saved',
+                          title: '선택한 게시글이 삭제되었습니다',
                           showConfirmButton: false,
                           timer: 1500
                         })
                          </script>
                         <%}%>
                                 
-                                <input type="submit" value="수정하기" formaction="catdiary_update.jsp">
-                                <input type="submit" value="이전페이지로 이동" formaction="calendar_main.jsp">
-                            </div>
-                        
-                        </form>
+                                <input type="submit" value="수정하기" formaction="catdiary_update.jsp" style="float: right">
+                                <input type="submit" value="이전페이지로 이동" formaction="calendar_main.jsp" style="float: right"> 
+                                <br>
+                                <br>
+								</form>
                         </div>
                     </div>
                  </div>
                 </div>
-                <br>
-                <br>
-                <br>
             </div>
         </div>
     </div>

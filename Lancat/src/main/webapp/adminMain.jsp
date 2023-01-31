@@ -28,7 +28,7 @@
            </button> 
            <!-- 메인페이지 왼쪽 상단에 작성됨-->
            <a class="navbar-brand" href="Main.jsp">랜선집사들</a>
-           <img src="/CatDays/img/ransom.png" width="29px" style="margin-top:10px;">
+           <img src="./image/ransom.png" width="29px" style="margin-top:10px;">
          </div>
          <div class="collapse navbar-collapse" id="myNavbar">
            <ul class="nav navbar-nav navbar-right"> 
@@ -38,7 +38,7 @@
               <li><a href="catGoods.jsp">반려묘용품</a></li>
                     <!--관리자페이지-->
               <li><a href="catEncyclopedia_main.jsp">커뮤니티</a></li>
-             <li><a href="adminMain.jsp">관리자 페이지<img src="./image/adminpage.png" width="25px" height="25px;"></a></li>
+             <li><a href="adminMain.jsp"><img src="./image/adminpage.png" width="25px" height="25px;"></a></li>
            </ul>
          </div>
        </div>
@@ -46,7 +46,7 @@
    
      <div class="jumbotron text-center"> 
        <!-- 홈페이지 이름 작성 -->
-       <h1>Cat Days <img src="/CatDays/img/title.png" width="100px"></h1>
+       <h1>Cat Days <img src="./image/title.png" width="100px"></h1>
        <p>for my precious cat</p>
      </div>
 
@@ -146,7 +146,7 @@
         <li><a href="#">7</a></li>
         <li><a href="#">8</a></li>
         <li><a href="#">9</a></li>
-        <li><a href="#"><img src="./community/img/catIcon.png" alt="" width="24px"></a></li>
+        <li><a href="#"><img src="./image/catIcon.png" alt="" width="24px"></a></li>
       </ul>
     </div>
           

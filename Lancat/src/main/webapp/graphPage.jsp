@@ -9,18 +9,6 @@
 <title>고양이 IoT 화장실 데이터</title>
 <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="https://code.highcharts.com/modules/series/series-label.js"></script>
-
-    <link rel = "stylesheet" href = "Main.css">
-</head>
-<body>
-
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-      <!-- Theme Made By www.w3schools.com -->
-      <title>Bootstrap Theme Company Page</title>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
       <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
       <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
@@ -28,10 +16,8 @@
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
       
       <link rel = "stylesheet" href = "Main.css">
-    
-    
-    </head>
-    
+</head>
+
     <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
       <!-- 반응형 Nav var(Navigation Bar) 
           : 우리가 흔히 사용하는 메뉴(menu) 및 사이트로고, 여러링크 포함 -->
@@ -69,7 +55,6 @@
     
     <div class="jumbotron text-center">
       <!-- 홈페이지 이름 작성 -->
-      <br>
       <h2>반려묘케어</h2><br>
       <div class="spanTag">
         <!--★★★ 글씨 감성적인 문구 추가.....-->

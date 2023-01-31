@@ -6,7 +6,6 @@
 <head>
 <meta charset="UTF-8">
 <title>랜선집사들 🐾Cat Days🐾</title>
-      <title>Forty by HTML5 UP</title>
       <meta charset="UTF-8" />
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
       <link rel="stylesheet" href="assets/css/main.css" />
@@ -64,7 +63,7 @@
                     <li><a href="catGoods.jsp">반려묘용품</a></li>
                     <li><a href="catEncyclopedia_main.jsp">커뮤니티</a></li>
                     <!--관리자페이지-->
-                    <li><a href="adminMain.jsp">관리자 페이지<img src="./image/adminpage.png" width="25px" height="25px;"></a></li>
+                    <li><a href="adminMain.jsp"><img src="./image/adminpage.png" width="25px" height="25px;"></a></li>
                    
                 <% }else{
                     // 계정이 일반 계정인 경우  %>
@@ -85,11 +84,10 @@
     
     <div class="jumbotron text-center">
       <!-- 홈페이지 이름 작성 -->
-      <br>
       <h2>반려묘용품</h2><br>
       <div class="spanTag">
         <!--★★★ 글씨 사이즈를 바꾸고 싶어요.....-->
-        <span><strong>Pethroom와 함께하는 Best Goods 페이지</strong></span> 
+        <h3>Pethroom와 함께하는 Best Goods 페이지</h3> 
       </div>
     </div>
 
@@ -141,6 +139,25 @@
             <p>매직 캣 리터 파우더</p></div>
         
     </div>
+    		<!------------------------------------------------------>
+    		
+		<div class="text-center">
+			<ul class="pagination">
+				<li><a href="#">1</a></li>
+				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li><a href="#">4</a></li>
+				<li><a href="#">5</a></li>
+				<li><a href="#">6</a></li>
+				<li><a href="#">7</a></li>
+				<li><a href="#">8</a></li>
+				<li><a href="#">9</a></li>
+				<li><a href="#"><img src="./image/catIcon.png" alt=""
+						width="24px"></a></li>
+			</ul>
+		</div>
+    
+    
 
 </body>
 </html>

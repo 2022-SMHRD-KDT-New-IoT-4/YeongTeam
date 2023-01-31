@@ -35,7 +35,7 @@
         </button>
         <!-- 메인페이지 왼쪽 상단에 작성됨-->
         <a class="navbar-brand" href="Main.jsp" >랜선집사들</a>
-        <img src="./img/ransom.png" width="29px"style="margin-top:10px;">
+        <img src="./image/ransom.png" width="29px"style="margin-top:10px;">
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav navbar-right">
@@ -102,14 +102,17 @@
         </tr>
         <tr>
             <td colspan="2" align=right>
-            <input type="submit" name="makePost" value="업로드하기">
             <input type="file" name="d_file" >
               
             </td>
         </tr>
     </table>
     </form>
-   <a class="btn btn-default pull" href = "Diary_Select.do">이전페이지로 이동</a>
+    <div>
+	<br>
+       <input type="submit" value="메인으로 이동하기" formaction="Main.jsp" style="float: right">
+		<input type="submit" name="makePost" value="업로드 하기" style="float: right"> 
+	</div>
     <br>
     <br>
     <br>

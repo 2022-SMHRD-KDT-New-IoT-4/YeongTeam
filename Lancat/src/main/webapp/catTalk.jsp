@@ -60,7 +60,7 @@
                     <li><a href="catGoods.jsp">반려묘용품</a></li>
                     <li><a href="catEncyclopedia_main.jsp">커뮤니티</a></li>
                     <!--관리자페이지-->
-                    <li><a href="adminMain.jsp">관리자 페이지<img src="./image/adminpage.png" width="25px" height="25px;"></a></li>
+                    <li><a href="adminMain.jsp"><img src="./image/adminpage.png" width="25px" height="25px;"></a></li>
                    
                 <% }else{
                     // 계정이 일반 계정인 경우  %>
@@ -112,6 +112,7 @@
       <!---------------------------------------------------->
 
 <!--반려묘 건강고민 페이지-->
+<br>
 <div class="container">
     <table class="table table-striped" align="center">
       <thead>
@@ -213,7 +214,7 @@
         <li><a href="#">7</a></li>
         <li><a href="#">8</a></li>
         <li><a href="#">9</a></li>
-        <li><a href="#"><img src="./img/catIcon.png" alt="" width="24px"></a></li>
+        <li><a href="#"><img src="./image/catIcon.png" alt="" width="24px"></a></li>
       </ul>
     </div>
   </div> 
