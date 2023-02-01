@@ -38,14 +38,12 @@
 
 	<!-- 육묘일기 달 별 갯수 -->
 	<select id="DiaryCount" parameterType="Cat_DiaryDTO" resultType="int">
-		select count(*) as count
+		select count(*) 
 		from cat_diary
 		where
-		SUBSTR(d_dt,0,8) BETWEEN (TO_CHAR(TRUNC(SYSDATE,'MM'),'YYYYMMDD') ) AND
-		(LAST_DAY(SYSDATE))
+		SUBSTR(d_dt,0,8) BETWEEN (TRUNC(SYSDATE,'MM') ) AND	(LAST_DAY(SYSDATE))
 		and id=#{id}
-		GROUP BY
-		to_char(d_dt, 'YYYYMM')
+		
 	</select>
   
   

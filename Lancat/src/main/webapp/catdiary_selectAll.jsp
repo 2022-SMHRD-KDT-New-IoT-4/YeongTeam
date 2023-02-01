@@ -93,16 +93,18 @@
                                 <div class="diary-date" id="bold-text"><%= list.get(i).getD_dt() %>
                                   <input type="radio"  value="<%=i %>" name="update" id="choice" style="align-items: flex-end;">  
                                 </div>
+                                <%if(list.get(i).getD_file() !=null){ %>
                                 <div align="center">
-                                    <img src="./image/1.jpg" width="300px">
+                                    <img src="<%=list.get(i).getD_file() %>" width="300px">
                                 </div>
+                                <% } %>
                                 <div class="diary-text" id="basic-text">
                                 	<%= list.get(i).getD_title() %>
                                 
                                 </div>
                                 <div class="diary-text" id="basic-text">
                                 	
-                                	<%= list.get(i).getD_content() %>
+                                	<%= list.get(i).getD_content().replace("\r\n","<br>") %>
                                 </div>
                             </div>
                            <% } %>

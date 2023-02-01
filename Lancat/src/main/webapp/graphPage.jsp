@@ -1,3 +1,5 @@
+<%@page import="java.util.ArrayList"%>
+<%@page import="com.smhrd.model.MembersDTO"%>
 <%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
 <%@page import="com.smhrd.model.SensorDTO"%>
 <%@page import="java.util.List"%>
@@ -18,6 +20,7 @@
       <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
       
       <link rel = "stylesheet" href = "Main.css">
 </head>
@@ -55,77 +58,109 @@
       </div>
     </nav>
     
-    <div class="jumbotron text-center">
+      <div class="jumbotron text-center">
       <!-- 홈페이지 이름 작성 -->
-      <br><h2>반려묘케어</h2><br>
+      <br>
+      <h2>반려묘케어</h2><br>
+
+      <%
+      MembersDTO user = (MembersDTO)session.getAttribute("user");
+      List<SensorDTO> tltList = (List<SensorDTO>)session.getAttribute("tltList");
+      List<String> dayList = (List<String>)session.getAttribute("dayList");
+      ArrayList<String> list = new ArrayList<String>();
+      
+      // 고양이 몸무게
+      float[] wt = new float[dayList.size()];
+      // 화장실 소변횟수
+      int[] pee_cnt = new int[dayList.size()];
+      // 화장실 대변횟수
+      int[] poo_cnt = new int[dayList.size()];
+      // 체류시간
+      int[] useTime = new int[dayList.size()];
+      // 총 화장실 이용횟수 
+      int[] tlt_cnt = new int[dayList.size()];
+      // 날짜
+      String yy = dayList.get(0).substring(0, 4);
+      String[] day = new String[dayList.size()];
+      
+      int gasCnt = 0;
+      float gasAvg = 0;
+      
+      for(int i = 0; i < dayList.size(); i++){
+         String mm = dayList.get(i).substring(dayList.get(i).length()-5, dayList.get(i).length()-3);
+         String dd = dayList.get(i).substring(dayList.get(i).length()-2, dayList.get(i).length());
+         day[i] = "'" + mm + dd + "'";
+      }
+      
+      // 화장실 사용정보 -> data
+      for(SensorDTO s : tltList){
+         for(int i = 0; i < dayList.size(); i++){
+            if(s.getIn_time().contains(dayList.get(i))){
+               wt[i] += s.getCat_wt();
+               if(s.getPotty_type().equals("소변")){
+                  pee_cnt[i]++;
+                  useTime[i] += Integer.parseInt(s.getUse_time().substring(s.getUse_time().length()-2, s.getUse_time().length()));
+               }else{
+                  poo_cnt[i]++;
+                  gasAvg += s.getGas();
+                  gasCnt++;
+               }
+               tlt_cnt[i]++;
+            }
+         }
+      }
+      // 대변상태에 문제가 생겼는지 확인
+      gasAvg /= gasCnt;
+      for(SensorDTO s : tltList){
+         if((gasAvg+10) < s.getGas()){
+            list.add(s.getIn_time().substring(0, 10));
+         }
+      }
+      // 다듬는 과정
+      for(int i = 0; i < dayList.size(); i++){
+         wt[i] /= tlt_cnt[i];
+         useTime[i] /= pee_cnt[i];
+      }
+   %>
+
+      
+      
       <div class="spanTag">
-        <span>🐱 (이)의 건강 상태를 확인해보세요! 🐱</span>
-        <br>
-		<br> 
+      
+        <!--★★★ 글씨 감성적인 문구 추가.....-->
+        <h3><%=user.getCat_Name() %>(이)의 상태를 확인해보세요! 😺</h3> 
+         <%
+            String ment = "";
+            if(list != null){ 
+               for(String str : list){
+                  ment += "'" + str + "'";
+               } 
+            }
+            
+            %>
+            <% if(ment != null){ 
+               System.out.println(ment + "체크");
+               String name = "'" + user.getCat_Name() + "'";
+            %>
+              <script>
+                   Swal.fire({
+                   icon : "error",
+                   title :<%=name.toString() %> + "(이)의 상태에 변화가 생겼어요! 😿" ,
+                   text : <%=ment.toString() %> + " 날짜의 건강 상태를 확인해보세요!",
+                   });
+              </script>               
+            
+            <%}%>
+               
       </div>
     </div>
-    
-    <!-- 고양이 몸에 이상이 생겼을 때 알림창 출력 : 위치 변경 부탁드려요 -->
-    <script>
-	catsick({
-		icon : "error",
-		title : "건강이상 감지",
-		// text 안쪽에 고양이 이름 가져와주세요!
-		text : " (이)의 배변활동에서 이상이 감지되었습니다. 확인해주세요.",
-	});
-	</script>
-    <!-- --------------------------------------------------------- -->
-    
-    
-<%
-		List<SensorDTO> tltList = (List<SensorDTO>)session.getAttribute("tltList");
-		List<String> dayList = (List<String>)session.getAttribute("dayList");
-		
-		// 고양이 몸무게
-		float[] wt = new float[dayList.size()];
-		// 화장실 소변횟수
-		int[] pee_cnt = new int[dayList.size()];
-		// 체류시간
-		int[] useTime = new int[dayList.size()];
-		// 총 화장실 이용횟수 
-		int[] tlt_cnt = new int[dayList.size()];
-		// 날짜
-		String yy = dayList.get(0).substring(0, 4);
-		String[] day = new String[dayList.size()];
-		
-		for(int i = 0; i < dayList.size(); i++){
-			String mm = dayList.get(i).substring(dayList.get(i).length()-5, dayList.get(i).length()-3);
-			String dd = dayList.get(i).substring(dayList.get(i).length()-2, dayList.get(i).length());
-			day[i] = "'" + mm + dd + "'";
-		}
-		
-		// 화장실 사용정보 -> data
-		for(SensorDTO s : tltList){
-			for(int i = 0; i < dayList.size(); i++){
-				if(s.getIn_time().contains(dayList.get(i))){
-					wt[i] += s.getCat_wt();
-					if(s.getPotty_type().equals("소변")){
-						pee_cnt[i]++;
-						useTime[i] += Integer.parseInt(s.getUse_time().substring(s.getUse_time().length()-2, s.getUse_time().length()));
-					}
-					tlt_cnt[i]++;
-				}
-			}
-		}
-		
-		// 다듬는 과정
-		for(int i = 0; i < dayList.size(); i++){
-			wt[i] /= tlt_cnt[i];
-			useTime[i] /= pee_cnt[i];
-		}
-		
-	%>
+   
 
 
-  <!-- 화장실 데이터 차트 (데이터 임의로 넣어둠!)-->
+    <!-- 화장실 데이터 차트 (데이터 임의로 넣어둠!)-->
 
     <div id="poop-graph"></div>
-<script>
+   <script>
 
    Highcharts.chart('poop-graph',{
     title:{
@@ -140,7 +175,7 @@
         title:{
             text:''
         },
-        max:30,
+        max:20,
         min:0
     },
 
@@ -179,7 +214,7 @@
     },
     {
         name: '일일 대변횟수',
-        data:<%=Arrays.toString(pee_cnt) %>,
+        data:<%=Arrays.toString(poo_cnt) %>,
         zones:[
             {
             color:'red'
@@ -193,7 +228,7 @@
 
 
 
-</script>
+   </script>
 
 </body>
-</html>  
+</html>
