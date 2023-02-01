@@ -24,11 +24,12 @@
 	</select>
 	
 	<!-- 일주일동안의 날짜 가져오기 -->
-	<select id="tltDaySelect" parameterType="SensorDTO" resultType="String">
-		SELECT DISTINCT TO_CHAR(IN_TIME, 'yyyy-mm-dd')
-		FROM TLT_USE
-		WHERE TO_CHAR(IN_TIME, 'MM/dd') >= TO_CHAR(SYSDATE-7, 'MM/dd')
-		AND ID=#{id}
-	</select>
+   <select id="tltDaySelect" parameterType="SensorDTO" resultType="String">
+      SELECT DISTINCT TO_CHAR(IN_TIME, 'yyyy-mm-dd')
+      FROM TLT_USE
+      WHERE TO_CHAR(IN_TIME, 'MM/dd') >= TO_CHAR(SYSDATE-7, 'MM/dd')
+      AND ID=#{id}
+      ORDER BY TO_CHAR(IN_TIME, 'yyyy-mm-dd')
+   </select>
   
   </mapper>
