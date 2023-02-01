@@ -72,7 +72,7 @@ if (fail != null) {
 
 <script>
 	Swal.fire({
-		icon : "error",
+		type : "error",
 		title : "로그인 &nbsp; 실패",
 		text : "아이디와 비밀번호가 일치하지 않습니다.",
 	});

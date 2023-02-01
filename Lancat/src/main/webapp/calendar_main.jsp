@@ -86,39 +86,57 @@
    "monthly": [
       {
       "id": 1,
-      "name": 'foot',
-      "startdate": "2023-01-19",
-      "enddate": "2023-01-19",
+      "name": "foot",
+      "startdate": "2023-01-02",
       "color": "#FFFFFF"
       },
       {
       "id": 2,
-      "name": "Test encompasses month",
-      "startdate": "2023-01-01",
-      "enddate": "2023-01-01",
-      "starttime": "12:00",
-      "endtime": "2:00",
+      "name": "foot",
+      "startdate": "2023-01-05",
       "color": "#FFFFFF"
       },
       {
       "id": 3,
-      "name": "Test single day",
-      "startdate": "2023-01-17",
-      "enddate": "",
-      "starttime": "",
-      "endtime": "",
+      "name": "foot",
+      "startdate": "2023-01-10",
       "color": "#FFFFFF"
-      // "url": "https://www.google.com/" 
       },
       {
       "id": 4,
-      "name": "Test",
-      "startdate": "2023-01-03",
-      "enddate": "2023-01-03",
-      "starttime": "12:00",
-      "endtime": "2:00",
-      "color": "#FFFFFF",
-      // "url": ""
+      "name": "foot",
+      "startdate": "2023-01-18",
+      "color": "#FFFFFF"
+      },
+      {
+      "id": 5,
+      "name": "foot",
+      "startdate": "2023-01-23",
+      "color": "#FFFFFF"
+      },
+      {
+      "id": 6,
+      "name": "foot",
+      "startdate": "2023-01-30",
+      "color": "#FFFFFF"
+      },
+      {
+      "id": 7,
+      "name": "foot",
+      "startdate": "2023-01-31",
+      "color": "#FFFFFF"
+      },
+      {
+      "id": 8,
+      "name": "foot",
+      "startdate": "2023-02-01",
+      "color": "#FFFFFF"
+      },
+      {
+      "id": 9,
+      "name": "foot",
+      "startdate": "2023-02-02",
+      "color": "#FFFFFF"
       }
    ]};
 

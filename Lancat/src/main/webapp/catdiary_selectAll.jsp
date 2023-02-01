@@ -123,7 +123,7 @@
                          <!-- 삭제 버튼 선택시 알림창 출력 -->
                         <script>
                     	Swal.fire({
-                    		icon : "error",
+                    		type : "success",
                     		title : "게시글삭제 &nbsp; 성공",
                     		text : "선택한 게시글이 삭제되었습니다",
                     	});
