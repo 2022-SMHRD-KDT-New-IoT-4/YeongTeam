@@ -4,7 +4,6 @@
     <!DOCTYPE html>
     <html lang="en">
     <head>
-      <!-- Theme Made By www.w3schools.com -->
       <title>랜선집사들 🐾Cat Days🐾</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -31,8 +30,7 @@
               <span class="icon-bar"></span>                        
             </button>
             <!-- 메인페이지 왼쪽 상단에 작성됨-->
-             <a class="navbar-brand" href="Main.jsp">랜선집사들</a>
-        <img src="./image/ransom.png" width="29px" style="margin-top:10px;">
+             <a class="navbar-brand" href="Main.jsp">랜선집사들</a><img src="./image/ransom.png" width="29px" style="margin-top:10px;">
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav navbar-right"> 
@@ -40,9 +38,7 @@
          MembersDTO user = (MembersDTO)request.getSession().getAttribute("user");
       %>
         <% if(user == null){ %>
-            <!-- 로그인 페이지로 이동? 아님 날릴까...-->
-           <li><a href="brandStory.jsp">브랜드 스토리</a></li>
-           <!--JSP파일로 이동 시 경로 바꾸기-->
+           <li><a href="Main.do">브랜드 스토리</a></li>
            <li><a href="Login.jsp">마이펫케어</a></li>
            <li><a href="Login.jsp">펫다이어리</a></li>
            <li><a href="catGoods.jsp">반려묘용품</a></li>
@@ -55,22 +51,19 @@
                 // 로그인 성공
                 if(user.getId().equals("admin")){
                     // 계정이 admin인지 확인 %>
-                    <li><a href="brandStory.jsp">브랜드 스토리</a></li>
-                    <!--JSP파일로 이동 시 경로 바꾸기-->
+                    <li><a href="Main.do">브랜드 스토리</a></li>
                     <li><a href="catGoods.jsp">반려묘용품</a></li>
                     <li><a href="catEncyclopedia_main.jsp">커뮤니티</a></li>
                     <!--관리자페이지-->
-                    <li><a href="adminMain.jsp">관리자 페이지<img src="./image/adminpage.png" width="25px" height="25px;"></a></li>
+                    <li><a href="AdminMembers_SelectAll.do"><img src="./image/adminpage.png" width="25px" height="25px;"></a></li>
                    
                 <% }else{
                     // 계정이 일반 계정인 경우  %>
-                    <li><a href="brandStory.jsp">브랜드 스토리</a></li>
-                    <!--JSP파일로 이동 시 경로 바꾸기-->
-                    <li><a href="graphPage.jsp">마이펫케어</a></li>
-                    <li><a href="calendar_main.jsp">펫다이어리</a></li>
+                    <li><a href="Main.do">브랜드 스토리</a></li>
+                    <li><a href="Tltuse_Select.do">마이펫케어</a></li>
+                    <li><a href="Calender_Main.do">펫다이어리</a></li>
                     <li><a href="catGoods.jsp">반려묘용품</a></li>
                     <li><a href="catEncyclopedia_main.jsp">커뮤니티</a></li>
-                    <!--로그인, 회원가입-->
                     <li><a href="members_update.jsp">회원정보 수정</a></li>
                 <%}
                 }%>
@@ -112,8 +105,9 @@
       <!---------------------------------------------------->
 
 <!--반려묘 건강고민 페이지-->
+<br>
 <div class="container">
-    <table class="table table-striped" align="center">
+    <table class="table table-striped" align="center" style="width: 500em">
       <thead>
           <tr><h2>반려묘 건강고민</h2>
               <th>No.</th>
@@ -213,7 +207,7 @@
         <li><a href="#">7</a></li>
         <li><a href="#">8</a></li>
         <li><a href="#">9</a></li>
-        <li><a href="#"><img src="./img/catIcon.png" alt="" width="24px"></a></li>
+        <li><a href="#"><img src="./image/catIcon.png" alt="" width="24px"></a></li>
       </ul>
     </div>
   </div> 

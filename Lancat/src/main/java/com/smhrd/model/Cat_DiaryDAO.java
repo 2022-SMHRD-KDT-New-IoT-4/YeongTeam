@@ -7,94 +7,87 @@ import org.apache.ibatis.session.SqlSessionFactory;
 
 import com.smhrd.db.SqlSessionManager;
 
-public class Cat_DiaryDAO{
+public class Cat_DiaryDAO {
 
-	
 	private SqlSessionFactory sqlSessionFactory = SqlSessionManager.getSqlSession();
-	// 육묘일기 insert
+
 	public int DiaryInsert(Cat_DiaryDTO dto) {
-		
+
 		int row = 0;
-		
+
 		SqlSession sqlSession = sqlSessionFactory.openSession(true);
 		try {
-			sqlSession.insert("com.smhrd.model.Cat_DiaryDAO.DiaryInsert",dto);
+			sqlSession.insert("com.smhrd.model.Cat_DiaryDAO.DiaryInsert", dto);
 		} catch (Exception e) {
 			e.printStackTrace();
-		}finally {
+		} finally {
 			sqlSession.close();
 		}
-		
+
 		return row;
 	}
+
 	// 일반 계정일 때 전체 게시글 목록
-	public List<Cat_DiaryDTO> DiarySelect(Cat_DiaryDTO dto){
-		
+	public List<Cat_DiaryDTO> DiarySelect(Cat_DiaryDTO dto) {
+
 		List<Cat_DiaryDTO> list = null;
 		SqlSession sqlSession = sqlSessionFactory.openSession(true);
-		
+
 		try {
-			list = sqlSession.selectList("com.smhrd.model.Cat_DiaryDAO.DiarySelect",dto);
+			list = sqlSession.selectList("com.smhrd.model.Cat_DiaryDAO.DiarySelect", dto);
 		} catch (Exception e) {
 			e.printStackTrace();
-		}finally {
+		} finally {
 			sqlSession.close();
 		}
-		
-		
 		return list;
-		
 	}
 
 	// 일반 계정 육묘일기 수정
-	   public int DiaryUpdate(Cat_DiaryDTO dto) {
-	      
-	      int row =0;
-	      
-	      SqlSession sqlSession = sqlSessionFactory.openSession(true);
-	      
-	      try {
-	         row = sqlSession.update("com.smhrd.model.Cat_DiaryDAO.DiaryUpdate", dto);
-	      } catch (Exception e) {
-	         e.printStackTrace();
-	      }finally {
-	         sqlSession.close();
-	      }
-	      
-	      return row;
-	      
-	   }
-	   
-	   // 일반 계정 육묘일기 삭제
-	   public int DiaryDelete(Cat_DiaryDTO dto) {
-	      int row = 0;
-	      SqlSession sqlSession = sqlSessionFactory.openSession(true);
-	      
-	      try {
-	         row = sqlSession.delete("com.smhrd.model.Cat_DiaryDAO.DiaryDelete", dto);
-	      } catch (Exception e) {
-	         e.printStackTrace();
-	      }finally {
-	         sqlSession.close();
-	      }
-	      
-	      return row;
-	   }
+	public int DiaryUpdate(Cat_DiaryDTO dto) {
+		int row = 0;
 
-	// admin 일 때 전체 게시글 목록 
+		SqlSession sqlSession = sqlSessionFactory.openSession(true);
+
+		try {
+			row = sqlSession.update("com.smhrd.model.Cat_DiaryDAO.DiaryUpdate", dto);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			sqlSession.close();
+		}
+		return row;
+	}
+
+	// 일반 계정 육묘일기 삭제
+	public int DiaryDelete(Cat_DiaryDTO dto) {
+		int row = 0;
+		SqlSession sqlSession = sqlSessionFactory.openSession(true);
+
+		try {
+			row = sqlSession.delete("com.smhrd.model.Cat_DiaryDAO.DiaryDelete", dto);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			sqlSession.close();
+		}
+
+		return row;
+	}
+
+	// admin 일 때 전체 게시글 목록
 	public List<Cat_DiaryDTO> AdminSelectAll() {
 		List<Cat_DiaryDTO> list = null;
 		SqlSession sqlSession = sqlSessionFactory.openSession(true);
-		
+
 		try {
 			list = sqlSession.selectList("com.smhrd.model.Cat_DiaryDAO.AdminSelectAll");
 		} catch (Exception e) {
 			e.printStackTrace();
-		}finally {
+		} finally {
 			sqlSession.close();
 		}
-		
-		
+
 		return list;
 	}
 
@@ -102,21 +95,31 @@ public class Cat_DiaryDAO{
 	public List<Cat_DiaryDTO> AdminDelete() {
 		List<Cat_DiaryDTO> list = null;
 		SqlSession sqlSession = sqlSessionFactory.openSession(true);
-		
+
 		try {
 			list = sqlSession.selectList("com.smhrd.model.Cat_DiaryDAO.AdminDelete");
 		} catch (Exception e) {
 			e.printStackTrace();
-		}finally {
+		} finally {
 			sqlSession.close();
 		}
-		
-		
+
 		return list;
 	}
+	// 다이어리 이번 달 카운트
+	public int DiaryCount(Cat_DiaryDTO dto) {
+		int count = 0;
+		SqlSession sqlSession = sqlSessionFactory.openSession(true);
 
+		try {
+			count = sqlSession.selectOne("com.smhrd.model.Cat_DiaryDAO.DiaryCount", dto);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			sqlSession.close();
+		}
+		return count;
 
+	}
 
-
-	
 }

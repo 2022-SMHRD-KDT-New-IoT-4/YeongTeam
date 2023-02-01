@@ -403,7 +403,7 @@ establish the rules based on the calendar element width rather than the device w
 		display: block;
 		margin: 0 0 1px 0;
 		width: auto;
-		height: 8em;
+		height : 100%;
 		line-height: 1.2em;
 		padding: 0.125em 0 0.1em 0.125em;
 		border-radius: 0;
@@ -427,5 +427,24 @@ establish the rules based on the calendar element width rather than the device w
 		overflow: hidden;
 		text-overflow: ellipsis;
 	}
+	
+	/* 이번달 작성한 육묘일기 및 총 작성한 육묘일기 태그*/
+	.content{
+    max-width: 800px;
+    margin: 0 auto;
+	}
+.flexbox > *{
+    flex-grow: 0;
+}
+	.item{
+    min-height: 200px;
+    flex-basis: 150px;
+    flex-grow: 1;
+	}
+	
+	
+	
+	
+	
 
 }

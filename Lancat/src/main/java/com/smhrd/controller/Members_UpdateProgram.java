@@ -47,7 +47,7 @@ public class Members_UpdateProgram implements Command {
 			session.setAttribute("user",dto);
 		}
 		
-		return "Main.jsp";
+		return "Main.do";
 	}
 
 }

@@ -6,7 +6,6 @@
 <head>
 <meta charset="UTF-8">
 <title>랜선집사들 🐾Cat Days🐾</title>
-		<title>Forty by HTML5 UP</title>
 		<meta charset="UTF-8" />
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -63,14 +62,14 @@
                     <li><a href="catGoods.jsp">반려묘용품</a></li>
                     <li><a href="catEncyclopedia_main.jsp">커뮤니티</a></li>
                     <!--관리자페이지-->
-                    <li><a href="adminMain.jsp">관리자 페이지<img src="./image/adminpage.png" width="25px" height="25px;"></a></li>
+                    <li><a href="adminMain.jsp"><img src="./image/adminpage.png" width="25px" height="25px;"></a></li>
                    
                 <% }else{
                     // 계정이 일반 계정인 경우  %>
                     <li><a href="brandStory.jsp">브랜드 스토리</a></li>
                     <!--JSP파일로 이동 시 경로 바꾸기-->
                     <li><a href="graphPage.jsp">마이펫케어</a></li>
-                    <li><a href="./diary_calendar/calendar_main.jsp">펫다이어리</a></li>
+                    <li><a href="calendar_main.jsp">펫다이어리</a></li>
                     <li><a href="catGoods.jsp">반려묘용품</a></li>
                     <li><a href="catEncyclopedia_main.jsp">커뮤니티</a></li>
                     <!--로그인, 회원가입-->
@@ -128,6 +127,7 @@
 
   <!----------------------------------------------->
   <!-- 제품 사용한 후기, 기타 등등 넣으면 좋다/소중한 고양이를 위한 슬로건-->
+	<div id="review" class="container-fluid">
 	<h2>Cat Days 후기😺</h2>
  	<div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
     <!-- Indicators -->
@@ -157,6 +157,7 @@
       <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
       <span class="sr-only">Next</span>
     </a>
+	</div>
 	</div>
 
 

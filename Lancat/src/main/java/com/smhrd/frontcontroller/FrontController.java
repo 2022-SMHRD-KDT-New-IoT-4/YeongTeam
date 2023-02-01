@@ -13,12 +13,15 @@ import javax.servlet.http.HttpServletResponse;
 import com.smhrd.controller.Command;
 import com.smhrd.controller.Diary_DeleteProgram;
 import com.smhrd.controller.Diary_InsertProgram;
+import com.smhrd.controller.AdminMembers_SelectAllProgram;
 import com.smhrd.controller.Admin_DiaryDeleteProgram;
 import com.smhrd.controller.Admin_DiarySelectAllProgram;
+import com.smhrd.controller.Calender_MainProgram;
 import com.smhrd.controller.Members_JoinProgram;
 import com.smhrd.controller.Members_LoginProgram;
 import com.smhrd.controller.MainProgram;
 import com.smhrd.controller.Members_UpdateProgram;
+import com.smhrd.controller.Tltuse_SelectProgram;
 import com.smhrd.controller.Diary_SelectAllProgram;
 import com.smhrd.controller.Diary_UpdateProgram;
 
@@ -43,10 +46,15 @@ public class FrontController extends HttpServlet {
 		 map.put("Diary_Select.do", new Diary_SelectAllProgram());
 		 map.put("Diary_Update.do", new Diary_UpdateProgram());
 		 map.put("Diary_Delete.do", new Diary_DeleteProgram());
+		 map.put("Calender_Main.do", new Calender_MainProgram());
 		 
 		 // ADMIN
 		 map.put("AdminDiary_Select.do", new Admin_DiarySelectAllProgram());
 		 map.put("AdminDiary_Delete.do", new Admin_DiaryDeleteProgram());
+		 map.put("AdminMembers_SelectAll.do", new AdminMembers_SelectAllProgram());
+		 
+		 // TLT_USE
+		 map.put("Tltuse_Select.do", new Tltuse_SelectProgram());
 	 }
 	 
 	 
@@ -62,9 +70,6 @@ public class FrontController extends HttpServlet {
 	System.out.println("요청 uri: "+uri);
 	String path = request.getContextPath();
 	String finalUrl = uri.substring(path.length()+1);
-	if(finalUrl.length()>20) {
-		finalUrl = finalUrl.substring(15);
-	}
 	System.out.println("잘라낸 url: "+finalUrl);
 	
 	

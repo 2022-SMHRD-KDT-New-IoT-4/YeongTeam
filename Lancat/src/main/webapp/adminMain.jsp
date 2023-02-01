@@ -1,3 +1,5 @@
+<%@page import="com.smhrd.model.MembersDTO"%>
+<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -28,17 +30,15 @@
            </button> 
            <!-- 메인페이지 왼쪽 상단에 작성됨-->
            <a class="navbar-brand" href="Main.jsp">랜선집사들</a>
-           <img src="/CatDays/img/ransom.png" width="29px" style="margin-top:10px;">
+           <img src="./image/ransom.png" width="29px" style="margin-top:10px;">
          </div>
          <div class="collapse navbar-collapse" id="myNavbar">
            <ul class="nav navbar-nav navbar-right"> 
-   
-              <li><a href="brandStory.jsp">브랜드 스토리</a></li>
-                    <!--JSP파일로 이동 시 경로 바꾸기-->
-              <li><a href="catGoods.jsp">반려묘용품</a></li>
-                    <!--관리자페이지-->
-              <li><a href="catEncyclopedia_main.jsp">커뮤니티</a></li>
-             <li><a href="adminMain.jsp">관리자 페이지<img src="./image/adminpage.png" width="25px" height="25px;"></a></li>
+   			<li><a href="Main.do">브랜드 스토리</a></li>
+            <li><a href="catGoods.jsp">반려묘용품</a></li>
+            <li><a href="catEncyclopedia_main.jsp">커뮤니티</a></li>
+            <!--관리자페이지-->
+            <li><a href="AdminMembers_SelectAll.do"><img src="./image/adminpage.png" width="25px" height="25px;"></a></li>
            </ul>
          </div>
        </div>
@@ -46,7 +46,7 @@
    
      <div class="jumbotron text-center"> 
        <!-- 홈페이지 이름 작성 -->
-       <h1>Cat Days <img src="/CatDays/img/title.png" width="100px"></h1>
+       <h1>Cat Days <img src="./image/title.png" width="100px"></h1>
        <p>for my precious cat</p>
      </div>
 
@@ -69,6 +69,9 @@
             </ul>
         </div>
     </nav>
+    <%
+	 	List<MembersDTO> list = (List<MembersDTO>)request.getSession().getAttribute("memberlist");
+	%>
 
 <!--회원목록 조회 페이지-->
 <br>
@@ -86,51 +89,18 @@
               </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>5</td>
-              <td>ccccccatttt</td>
-              <td>광주광역시 동구 학동</td>
-              <td>2023.01.25.</td>
-              <td>샛별이</td>
-              <td>2020.07.12.</td>
-              <td>4.1kg</td>
-            </tr>
-            <tr>
-              <td>4</td>
-              <td>dreamyDragon</td>
-              <td>광주광역시 서구 풍암동</td>
-              <td>2023.01.25.</td>
-              <td>몽룡이</td>
-              <td>2021.03.14.</td>
-              <td>5.6kg</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>220.mari</td>
-              <td>광주광역시 광산구 수완동</td>
-              <td>2023.01.25.</td>
-              <td>마리</td>
-              <td>2014.09.16.</td>
-              <td>6.2kg</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>220.lio</td>
-              <td>광주광역시 광산구 수완동</td>
-              <td>2023.01.25.</td>
-              <td>리오</td>
-              <td>2022.04.13.</td>
-              <td>5.4kg</td>
-            </tr>
-            <tr>
-              <td>1</td>
-              <td>admin</td>
-              <td>광주광역시 남구 송암동</td>
-              <td>2022.12.29.</td>
-              <td>해피</td>
-              <td>2020.11.15.</td>
-              <td>3kg</td>
-            </tr>
+          <% int n = 1;
+          	for(MembersDTO dto :list){
+				out.print("<tr>");
+				out.print("<td>"+ n++ +"</td>");
+				out.print("<td>"+dto.getId()+"</td>");
+				out.print("<td>"+dto.getAddr()+"</td>");
+				out.print("<td>"+dto.getJoinDate()+"</td>");
+				out.print("<td>"+dto.getCat_Name()+"</td>");
+				out.print("<td>"+dto.getCat_Birth()+"</td>");
+				out.print("<td>"+dto.getCat_Wt()+"</td>");
+				out.print("</tr>");
+				} %>
           </tbody>
         </table>
     </div> 
@@ -146,7 +116,7 @@
         <li><a href="#">7</a></li>
         <li><a href="#">8</a></li>
         <li><a href="#">9</a></li>
-        <li><a href="#"><img src="./community/img/catIcon.png" alt="" width="24px"></a></li>
+        <li><a href="#"><img src="./image/catIcon.png" alt="" width="24px"></a></li>
       </ul>
     </div>
           

@@ -5,12 +5,30 @@
   <mapper namespace="com.smhrd.model.SensorDAO">
   
   
-     <insert id="insert" parameterType="SensorDTO">
-      INSERT INTO TLT_USE (ID,CAT_WT,POTTY_TYPE,GAS,IN_TIME,OUT_TIME,USE_TIME)
-      VALUES(#{id},#{cat_wt},#{potty_type},#{gas}, 
-      TO_DATE(#{in_time}, 'yyyy/mm/dd hh24:mi:ss'),
-      TO_DATE(#{out_time}, 'yyyy/mm/dd hh24:mi:ss'),
-      TO_DATE(#{use_time}, 'hh24:mi:ss'))
-   </insert>
+     <!-- 아두이노로 받아온 정보 저장 -->
+	<insert id="insert" parameterType="SensorDTO">
+		INSERT INTO TLT_USE (ID,CAT_WT,POTTY_TYPE,GAS,IN_TIME,OUT_TIME,USE_TIME)
+		VALUES(#{id},#{cat_wt},#{potty_type},#{gas},
+		TO_DATE(#{in_time}, 'yyyy/mm/dd hh24:mi:ss'),
+		TO_DATE(#{out_time}, 'yyyy/mm/dd hh24:mi:ss'),
+		TO_DATE(#{use_time}, 'hh24:mi:ss'))
+	</insert>
+	 
+	<!-- 일주일동안의 화장실 사용정보 select -->
+	<select id="tltSelect" parameterType="SensorDTO" resultType="SensorDTO">
+		SELECT ID,CAT_WT,POTTY_TYPE,GAS,IN_TIME,OUT_TIME,USE_TIME 
+		FROM TLT_USE 
+		WHERE ID=#{id}
+		AND TO_CHAR(IN_TIME, 'MM/dd') >= TO_CHAR(SYSDATE-7,'MM/dd')
+        ORDER BY IN_TIME
+	</select>
+	
+	<!-- 일주일동안의 날짜 가져오기 -->
+	<select id="tltDaySelect" parameterType="SensorDTO" resultType="String">
+		SELECT DISTINCT TO_CHAR(IN_TIME, 'yyyy-mm-dd')
+		FROM TLT_USE
+		WHERE TO_CHAR(IN_TIME, 'MM/dd') >= TO_CHAR(SYSDATE-7, 'MM/dd')
+		AND ID=#{id}
+	</select>
   
   </mapper>

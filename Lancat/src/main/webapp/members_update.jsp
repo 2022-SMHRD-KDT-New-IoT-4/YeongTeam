@@ -32,14 +32,12 @@
          </div>
          <div class="collapse navbar-collapse" id="myNavbar">
            <ul class="nav navbar-nav navbar-right"> 
-    		<li><a href="brandStory.jsp">브랜드 스토리</a></li>
-            <!--JSP파일로 이동 시 경로 바꾸기-->
-            <li><a href="graphPage.jsp">마이펫케어</a></li>
-            <li><a href="calendar_main.jsp">펫다이어리</a></li>
-            <li><a href="catGoods.jsp">반려묘용품</a></li>
-            <li><a href="catEncyclopedia_main.jsp">커뮤니티</a></li>
-            <!--로그인, 회원가입-->
-            <li><a href="members_update.jsp">회원정보 수정</a></li>
+	    	    <li><a href="Main.do">브랜드 스토리</a></li>
+                <li><a href="Tltuse_Select.do">마이펫케어</a></li>
+                <li><a href="Calender_Main.do">펫다이어리</a></li>
+                <li><a href="catGoods.jsp">반려묘용품</a></li>
+                <li><a href="catEncyclopedia_main.jsp">커뮤니티</a></li>
+                <li><a href="members_update.jsp">회원정보 수정</a></li>
            </ul>
          </div>
        </div>
@@ -49,10 +47,11 @@
 <!-- 개인정보 수정페이지 -->
 <div class="jumbotron text-center">
     <!-- 홈페이지 이름 작성 -->
-    <br>
-    <h2>개인정보 수정</h2><br>
+    <br><h2>회원정보 수정</h2><br>
     <div class="spanTag">
-      <span>아래 내용을 빠짐없이 기재해주세요. 🐾 </span> 
+      <span>아래 내용을 빠짐없이 기재해주세요🐾 </span>
+      	<br>
+		<br> 
     </div>
   </div>
 
@@ -80,7 +79,7 @@
                  <div class="userInput">
                     <h3 class="list">비밀번호</h3>
                     <span class="box int_id" ><input type="text" name="pw" class="int check"
-                       maxlength="20" placeholder="수정할 비밀번호를 입력하세요"></span>
+                       maxlength="20" placeholder="변경할 비밀번호를 입력하세요"></span>
                  </div>
             <!-- 주소 입력 -->
                  <div class="userInput">
@@ -88,11 +87,11 @@
                     <input type="text" name="addr" id="addr" placeholder="주소를 입력하세요">
                 </div>
             <!-- 반려묘이름 입력 -->
-            <h3 class="list" style="padding: 5%;" align="center">고양이 정보 등록 🐾</h3>
+            <h2 class="list" style="padding: 5%;" align="center">고양이 정보 수정 🐾</h2>
                  <div class="userInput">
                     <h3 class="list">반려묘 이름</h3>
                     <span class="box int_id">
-                        <input type="text" name="cat_Name" class="int check" maxlength="20" placeholder="반려묘이름을 작성해주세요">
+                        <input type="text" name="cat_Name" class="int check" maxlength="20" placeholder="반려묘 이름을 입력하세요">
                     </span>
                  </div>
               </div>
@@ -103,7 +102,7 @@
                    <div id="content">
                      <h3 class="list">반려묘 몸무게(kg)</h3>
                      <span class="box int_weight">
-                        <input type="text" name="cat_Wt" class="int" maxlength="5" placeholder="몸무게를 입력하세요.">kg
+                        <input type="text" name="cat_Wt" class="int" maxlength="5" placeholder="몸무게를 입력하세요">kg
                      </span>
                    </div>
                  </div>

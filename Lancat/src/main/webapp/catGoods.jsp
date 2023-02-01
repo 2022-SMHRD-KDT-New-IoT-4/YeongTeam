@@ -6,7 +6,6 @@
 <head>
 <meta charset="UTF-8">
 <title>랜선집사들 🐾Cat Days🐾</title>
-      <title>Forty by HTML5 UP</title>
       <meta charset="UTF-8" />
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
       <link rel="stylesheet" href="assets/css/main.css" />
@@ -38,43 +37,37 @@
           </div>
           <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">
-          <!-- 메인페이지 우측 상단의 이동란
-              아직 안정해져서 href 안바꿈
-          브랜드스토리 제외하고는 로그인 시 확인가능 248/280/322-->
-    <%
+          <!-- 메인페이지 우측 상단의 이동란-->
+    	<%
 			MembersDTO user = (MembersDTO)request.getSession().getAttribute("user");
 		%>
-        <% if(user == null){ %>
-            <!-- 로그인 페이지로 이동? 아님 날릴까...-->
-	        <li><a href="brandStory.jsp">브랜드 스토리</a></li>
-	        <!--JSP파일로 이동 시 경로 바꾸기-->
-	        <li><a href="Login.jsp">마이펫케어</a></li>
-	        <li><a href="Login.jsp">펫다이어리</a></li>
-	        <li><a href="catGoods.jsp">반려묘용품</a></li>
-	        <li><a href="catEncyclopedia_main.jsp">커뮤니티</a></li>
-	        <!--로그인, 회원가입-->
-	        <li><a href="Login.jsp"><img src="./image/login.png" width="20px" height="20px;"></a></li>
-	        <li><a href="Join.jsp"><img src="./image/join.png" width="25px" height="25px;"></a></li>
+	        <% if(user == null){ %>
+	           <li><a href="Main.do">브랜드 스토리</a></li>
+	           <li><a href="Login.jsp">마이펫케어</a></li>
+	           <li><a href="Login.jsp">펫다이어리</a></li>
+	           <li><a href="catGoods.jsp">반려묘용품</a></li>
+	           <li><a href="catEncyclopedia_main.jsp">커뮤니티</a></li>
+	           <!--로그인, 회원가입-->
+	           <li><a href="Login.jsp"><img src="./image/login.png" width="20px" height="20px;"></a></li>
+	           <li><a href="Join.jsp"><img src="./image/join.png" width="25px" height="25px;"></a></li>
+                   
             <%}else{ 
                 // 로그인 성공
                 if(user.getId().equals("admin")){
                     // 계정이 admin인지 확인 %>
-                    <li><a href="brandStory.jsp">브랜드 스토리</a></li>
-                    <!--JSP파일로 이동 시 경로 바꾸기-->
+                    <li><a href="Main.do">브랜드 스토리</a></li>
                     <li><a href="catGoods.jsp">반려묘용품</a></li>
                     <li><a href="catEncyclopedia_main.jsp">커뮤니티</a></li>
                     <!--관리자페이지-->
-                    <li><a href="adminMain.jsp">관리자 페이지<img src="./image/adminpage.png" width="25px" height="25px;"></a></li>
+                    <li><a href="AdminMembers_SelectAll.do"><img src="./image/adminpage.png" width="25px" height="25px;"></a></li>
                    
                 <% }else{
                     // 계정이 일반 계정인 경우  %>
-                    <li><a href="brandStory.jsp">브랜드 스토리</a></li>
-                    <!--JSP파일로 이동 시 경로 바꾸기-->
-                    <li><a href="graphPage.jsp">마이펫케어</a></li>
-                    <li><a href="calendar_main.jsp">펫다이어리</a></li>
+                    <li><a href="Main.do">브랜드 스토리</a></li>
+                    <li><a href="Tltuse_Select.do">마이펫케어</a></li>
+                    <li><a href="Calender_Main.do">펫다이어리</a></li>
                     <li><a href="catGoods.jsp">반려묘용품</a></li>
                     <li><a href="catEncyclopedia_main.jsp">커뮤니티</a></li>
-                    <!--로그인, 회원가입-->
                     <li><a href="members_update.jsp">회원정보 수정</a></li>
                 <%}
                 }%>
@@ -82,19 +75,21 @@
         </div>
       </div>
     </nav>
+    </body>
     
     <div class="jumbotron text-center">
       <!-- 홈페이지 이름 작성 -->
-      <br>
-      <h2>반려묘용품</h2><br>
+      <br><h2>반려묘용품</h2><br>
       <div class="spanTag">
-        <!--★★★ 글씨 사이즈를 바꾸고 싶어요.....-->
-        <span><strong>Pethroom와 함께하는 Best Goods 페이지</strong></span> 
+      	<span>Pethroom와 함께하는 Best Goods 페이지🐾 </span>
+      	<br>
+		<br>
       </div>
     </div>
 
 
 
+ <body> 
     <div class="flex-first">
         <div class="flex-item" onclick="location.href='https://pethroom.com/product/detail.html?product_no=18&cate_no=205&display_group=1';">
             <img src="./image/sand.PNG" width="400" height="400">
@@ -141,6 +136,25 @@
             <p>매직 캣 리터 파우더</p></div>
         
     </div>
+    		<!------------------------------------------------------>
+    		
+		<div class="text-center">
+			<ul class="pagination">
+				<li><a href="#">1</a></li>
+				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li><a href="#">4</a></li>
+				<li><a href="#">5</a></li>
+				<li><a href="#">6</a></li>
+				<li><a href="#">7</a></li>
+				<li><a href="#">8</a></li>
+				<li><a href="#">9</a></li>
+				<li><a href="#"><img src="./image/catIcon.png" alt=""
+						width="24px"></a></li>
+			</ul>
+		</div>
+    
+    
 
 </body>
 </html>

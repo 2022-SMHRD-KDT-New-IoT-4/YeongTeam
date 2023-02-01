@@ -20,24 +20,24 @@ public class Diary_DeleteProgram implements Command {
 			throws ServletException, IOException {
 		
 		HttpSession session = request.getSession();
-	      int index = Integer.parseInt(request.getParameter("update"));
-	      System.out.println(index);
-	      List<Cat_DiaryDTO> delete = (List<Cat_DiaryDTO>)session.getAttribute("list");
-	      
-	      Cat_DiaryDTO dto = delete.get(index);
-	      
-	      Cat_DiaryDAO dao = new Cat_DiaryDAO();
-	      
-	      dao.DiaryDelete(dto);
-	      
-	      List<Cat_DiaryDTO> list = (List<Cat_DiaryDTO>)dao.DiarySelect(dto);
-	      
-	      if (list != null) {
-	         request.setAttribute("delete", "delete");
-	      }
+		int index = Integer.parseInt(request.getParameter("update"));
+		System.out.println(index);
+		List<Cat_DiaryDTO> delete = (List<Cat_DiaryDTO>) session.getAttribute("list");
 
-	      return "Diary_Select.do";
-	   }
+		Cat_DiaryDTO dto = delete.get(index);
+
+		Cat_DiaryDAO dao = new Cat_DiaryDAO();
+
+		dao.DiaryDelete(dto);
+
+		List<Cat_DiaryDTO> list = (List<Cat_DiaryDTO>) dao.DiarySelect(dto);
+
+		if (list != null) {
+			request.setAttribute("delete", "delete");
+		}
+
+		return "Diary_Select.do";
+	}
 		
 		
 	}

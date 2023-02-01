@@ -30,7 +30,7 @@ public class Members_JoinProgram implements Command {
 		
 		int row = dao.join(dto);
 		
-		return "Main.jsp";
+		return "Main.do";
 			
 	}
 
