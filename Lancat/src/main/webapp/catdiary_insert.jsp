@@ -63,36 +63,39 @@ th, td {
 
 	<div class="jumbotron text-center">
 		<!-- 홈페이지 이름 작성 -->
-		<h1>
-			Cat Days <img src="./image/title.png" width="100px">
-		</h1>
+		<h1>Cat Days <img src="./image/title.png" width="100px"></h1>
 		<p>for my precious cat</p>
 	</div>
 	<!--Head End -->
 	<!-- 육묘일기 작성하는 폼 -->
-	<h2 align="center">육묘일기 작성하기</h2>
+	<div style="width: 500px; text-align: center; margin-left: 700px">
 	<form action="Diary_Insert.do" method="post">
+	<h2 align="center">육묘일기 작성하기</h2>
 		<table border="1" width=500 align="center">
 			<tr>
 				<th colspan="2" height="50px">오늘 내 반려묘는 어떤 하루를 보냈나요?</th>
 			</tr>
 			<tr>
-				<td width=60><select>
+				<td width=65>
+					<select style="width: 100%;">
 						<option>기쁨</option>
 						<option>슬픔</option>
 						<option>아픔</option>
-				</select></td>
-				<td><input type="text" name="d_title"
-					placeholder="   제목을 입력하세요." maxlength=20 style="width: 100%">
+					</select>
+				</td>
+				<td>
+					<input type="text" name="d_title" placeholder="   제목을 입력하세요." maxlength=20 style="width: 100%">
 				</td>
 			</tr>
 			<tr>
-				<td colspan="2" height=400><textarea name="d_content"
-						placeholder="  내용을 입력하세요." style="width: 100%; height: 100%"></textarea>
+				<td colspan="2" height=400>
+					<textarea name="d_content" placeholder="  내용을 입력하세요." style="width: 100%; height: 100%"></textarea>
 				</td>
 			</tr>
 			<tr>
-				<td colspan="2" align=left><input type="file" name="d_file"></td>
+				<td colspan="2" align=left>
+					<input type="file" name="d_file">
+				</td>
 			</tr>
 		</table>
 
@@ -102,6 +105,7 @@ th, td {
 		<input type="submit" name="makePost" formaction="Diary_Insert.do" value="업로드 하기" style="float: right"> 
 	</div>
 	</form>
+	</div>
 	<br>
 	<br>
 	<br>

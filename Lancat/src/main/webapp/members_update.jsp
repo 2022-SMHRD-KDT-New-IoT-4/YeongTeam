@@ -47,9 +47,11 @@
 <!-- 개인정보 수정페이지 -->
 <div class="jumbotron text-center">
     <!-- 홈페이지 이름 작성 -->
-    <h2>회원정보 수정</h2><br><br>
+    <br><h2>회원정보 수정</h2><br>
     <div class="spanTag">
-      <span>아래 내용을 빠짐없이 기재해주세요🐾 </span> 
+      <span>아래 내용을 빠짐없이 기재해주세요🐾 </span>
+      	<br>
+		<br> 
     </div>
   </div>
 

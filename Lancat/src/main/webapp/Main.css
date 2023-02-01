@@ -308,11 +308,8 @@ th, td {
   font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif; 
 }
 
-/* 로그인, 회원가입 폼 크기 맞추기 
-userInput {
-	width: 1140px;
-	height: 180px;
-}*/
-
-
+/* 고양이 건강이상 알림 경고창*/
+.catsick {
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif; 
+}
 

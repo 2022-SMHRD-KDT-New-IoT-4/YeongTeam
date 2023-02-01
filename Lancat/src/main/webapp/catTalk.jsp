@@ -4,7 +4,6 @@
     <!DOCTYPE html>
     <html lang="en">
     <head>
-      <!-- Theme Made By www.w3schools.com -->
       <title>랜선집사들 🐾Cat Days🐾</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -31,8 +30,7 @@
               <span class="icon-bar"></span>                        
             </button>
             <!-- 메인페이지 왼쪽 상단에 작성됨-->
-             <a class="navbar-brand" href="Main.jsp">랜선집사들</a>
-        <img src="./image/ransom.png" width="29px" style="margin-top:10px;">
+             <a class="navbar-brand" href="Main.jsp">랜선집사들</a><img src="./image/ransom.png" width="29px" style="margin-top:10px;">
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav navbar-right"> 
@@ -109,7 +107,7 @@
 <!--반려묘 건강고민 페이지-->
 <br>
 <div class="container">
-    <table class="table table-striped" align="center">
+    <table class="table table-striped" align="center" style="width: 500em">
       <thead>
           <tr><h2>반려묘 건강고민</h2>
               <th>No.</th>

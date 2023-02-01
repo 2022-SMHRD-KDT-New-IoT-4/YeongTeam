@@ -62,24 +62,24 @@
     <div class="bookcover">
         <div class="bookdot">
             <div class="page">
-                <div class="column2">
-                    <div style="width: 800px; height: 80px; margin-left: 650px;">
+                <div class="column2"  align="center">
+                    <div style="width: 800px; height: 80px;">
+                   <!--  <div style="width: 800px; height: 80px; margin-left: 650px;">  -->
                         <!--diary-->
-                        <div class="main-content">
+                        <div class="main-content" align="left">
                             <div class="calendar">
-                                <div class="day" id="bold-text">01.25<br>WED</div>
+                                <div class="day" id="bold-text">02.01<br>WED</div>
                                 <div class="month" id="basic-text">
-                                    <span style="color: red;">1</span> 
-                                    <span>2 3 4 5 6 </span> 
-                                    <span style="color: blue;">7</span> 
-                                    <span style="color: red;">8</span> 9 10 11 12 13 
-                                    <span style="color: blue;">14</span> 
-                                    <span style="color: red;">15</span>  16 17 18 19 20 
-                                    <span style="color: blue;">21</span> 
-                                    <span style="color: red;">22</span> 23 24 25 26 27 
-                                    <span style="color: blue;">28</span> 
-                                    <span style="color: red;">29</span> 
-                                    <span>30 31</span>
+                                    <span>1 2 3</span> 
+                                    <span style="color: blue;">4</span> 
+                                    <span style="color: red;">5</span> 6 7 8 9 10
+                                    <span style="color: blue;">11</span> 
+                                    <span style="color: red;">12</span> 13 14 15 16 17 
+                                    <span style="color: blue;">18</span> 
+                                    <span style="color: red;">19</span> 20 21 22 23 24
+                                    <span style="color: blue;">25</span>
+                                    <span style="color: red;">26</span> 
+                                    <span>27 28</span>
                                 </div>
                             </div>
                             <div class="diary">
@@ -120,15 +120,25 @@
                          <%if(delete != null){ %>       
                          <!-- 삭제 버튼 선택시 알림창 출력 -->
                         <script>
-                         Swal.fire({
-                        /*  position: 'top-end', */
+                    	Swal.fire({
+                    		icon : "error",
+                    		title : "게시글삭제 &nbsp; 성공",
+                    		text : "선택한 게시글이 삭제되었습니다",
+                    	});
+                    	 </script>
+                    	 
+                        <!-- 
+                         deleteAlarm({
+                          position: 'top-end', -> 이거 적용하지 않음
                           position: 'center',
                           icon: 'success',
                           title: '선택한 게시글이 삭제되었습니다',
                           showConfirmButton: false,
                           timer: 1500
                         })
-                         </script>
+                        -->
+ 
+                         
                         <%}%>
                                 
                                 <input type="submit" value="수정하기" formaction="catdiary_update.jsp" style="float: right">

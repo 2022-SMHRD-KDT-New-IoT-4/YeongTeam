@@ -5,25 +5,19 @@
 <html lang="en">
 
 <head>
-<title>community_내주변 동물병원 찾아보기</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<link href="https://fonts.googleapis.com/css?family=Montserrat"
-	rel="stylesheet" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Lato"
-	rel="stylesheet" type="text/css">
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<script type="text/javascript"
-	src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=7tyns3rmqr"></script>
-
-<link rel="stylesheet" href="Main.css">
+	<title>community_내주변 동물병원 찾아보기</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=7tyns3rmqr"></script>
+	
+	<link rel="stylesheet" href="Main.css">
 </head>
 
 <body id="myPage" data-spy="scroll" data-target=".navbar"
@@ -84,9 +78,7 @@
 
 	<div class="jumbotron text-center">
 		<!-- 홈페이지 이름 작성 -->
-		<h1>
-			Cat Days <img src="./image/title.png" width="100px">
-		</h1>
+		<h1>Cat Days <img src="./image/title.png" width="100px"></h1>
 		<p>for my precious cat</p>
 	</div>
 </body>
@@ -149,6 +141,14 @@
 		<div class="text-center">
 			<ul class="pagination">
 				<li><a href="#">1</a></li>
+				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li><a href="#">4</a></li>
+				<li><a href="#">5</a></li>
+				<li><a href="#">6</a></li>
+				<li><a href="#">7</a></li>
+				<li><a href="#">8</a></li>
+				<li><a href="#">9</a></li>
 				<li><a href="#"><img src="./image/catIcon.png" " alt=""
 						width="24px"></a></li>
 			</ul>
@@ -206,19 +206,79 @@
 
 
 	<script>
+/////// 진우씨 지도 API 코드 시작지점//////////////////////////
+	 $(function() {
+       
+       initMap();
+       
+    });
+    
+
+    function initMap() { 
+       
+       var areaArr = new Array();  // 지역을 담는 배열 ( 지역명/위도경도 )
+       areaArr.push(
+             /*지역구 이름*/         /*위도*/               /*경도*/            
+           {location : '청담동물병원' , lat : '35.122823' , lng : '126.917700'},  // 청담동물병원
+           {location : '루나동물병원' , lat : '35.126001' , lng : '126.912470'},  // 루나동물병원
+           {location : 'VI센트럴동물병원' , lat : '35.122229' , lng : '126.916033'},  // 루나동물병원
+          
+       );
+ 
+    
+   let markers = new Array(); // 마커 정보를 담는 배열
+   let infoWindows = new Array(); // 정보창을 담는 배열
+/////////////////진우씨 지도 API 코드 마지막 지점 /////////////////////	
+	
+	
+/////////위도, 경도 위치 고정 코드 삽입////
+///봉선동 이마트 주소 : 위도는 35.12245524274845, 경도는 126.91605228309336 입니다    
 		var map = new naver.maps.Map('map', {
 			center : new naver.maps.LatLng(35.12245524274845,
 					126.91605228309336),
-			zoom : 17
+			zoom : 15
 		});
+ //////////////////////진우씨 두번째 코드 삽입 시작
+		   for (var i = 0; i < areaArr.length; i++) {
+			      // 지역을 담은 배열의 길이만큼 for문으로 마커와 정보창을 채워주자 !
 
-		var marker = new naver.maps.Marker({
-			position : new naver.maps.LatLng(35.12245524274845,
-					126.91605228309336),
-			map : map
-		});
+			       var marker = new naver.maps.Marker({
+			           map: map,
+			           title: areaArr[i].location, // 지역구 이름 
+			           position: new naver.maps.LatLng(areaArr[i].lat , areaArr[i].lng) // 지역구의 위도 경도 넣기 
+			       });
+			       
+			       /* 정보창 */
+			       var infoWindow = new naver.maps.InfoWindow({
+			           content: '<div style="width:200px;text-align:center;padding:10px;"><b>' + areaArr[i].location + '</b><br> - 네이버 지도 - </div>'
+			       }); // 클릭했을 때 띄워줄 정보 HTML 작성
+			       
+			       markers.push(marker); // 생성한 마커를 배열에 담는다.
+			       infoWindows.push(infoWindow); // 생성한 정보창을 배열에 담는다.
+			   }
+			    
+			    
+			    function getClickHandler(seq) {
+			      
+			            return function(e) {  // 마커를 클릭하는 부분
+			                var marker = markers[seq], // 클릭한 마커의 시퀀스로 찾는다.
+			                    infoWindow = infoWindows[seq]; // 클릭한 마커의 시퀀스로 찾는다
 
-		var map = new naver.maps.Map('map', mapOptions);
+			                if (infoWindow.getMap()) {
+			                    infoWindow.close();
+			                } else {
+			                    infoWindow.open(map, marker); // 표출
+			                }
+			          }
+			       }
+			    
+			    for (var i=0, ii=markers.length; i<ii; i++) {
+			       console.log(markers[i] , getClickHandler(i));
+			        naver.maps.Event.addListener(markers[i], 'click', getClickHandler(i)); // 클릭한 마커 핸들러
+			    }
+			}
+			  var map = new naver.maps.Map('map', mapOptions);
+//////////////////////////////////////////////////////
 
 		///////////마커 위에 텍스트 출력 코드
 		var HOME_PATH = window.HOME_PATH || '.';
@@ -231,8 +291,11 @@
 			position : cityhall
 		});
 
-		var contentString = [ '<div class="iw_inner">', '   <h3>　회사명</h3>',
-				'   <p>　주소　<br />', '    　전화번호 <br />', '</div>'
+		var contentString = [ '<div class="iw_inner">',
+							'   <h3>　회사명</h3>',
+							'   <p>　주소　<br />', 
+							'    　전화번호 <br />', 
+							'</div>'
 
 		].join('');
 
@@ -250,13 +313,6 @@
 
 		infowindow.open(map, marker);
 
-		/////////위도, 경도 위치 고정 코드 삽입////
-		///봉선동 이마트 주소 : 위도는 35.12245524274845, 경도는 126.91605228309336 입니다    
-		var map = new naver.maps.Map('map', {
-			center : new naver.maps.LatLng(35.12245524274845,
-					126.91605228309336),
-			zoom : 15
-		});
 	</script>
 </body>
 </html>

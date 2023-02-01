@@ -62,6 +62,8 @@
     <br><h2>회원가입</h2><br>
     <div class="spanTag">
       <span>집사님 환영합니다. Cat Days와 함께해요 🐾 </span> 
+    	<br>
+		<br>
     </div>
 </div>
 

@@ -37,10 +37,8 @@
           </div>
           <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">
-          <!-- 메인페이지 우측 상단의 이동란
-              아직 안정해져서 href 안바꿈
-          브랜드스토리 제외하고는 로그인 시 확인가능 248/280/322-->
-    <%
+          <!-- 메인페이지 우측 상단의 이동란-->
+    	<%
 			MembersDTO user = (MembersDTO)request.getSession().getAttribute("user");
 		%>
 	        <% if(user == null){ %>
@@ -77,18 +75,21 @@
         </div>
       </div>
     </nav>
+    </body>
     
     <div class="jumbotron text-center">
       <!-- 홈페이지 이름 작성 -->
-      <h2>반려묘용품</h2><br>
+      <br><h2>반려묘용품</h2><br>
       <div class="spanTag">
-        <!--★★★ 글씨 사이즈를 바꾸고 싶어요.....-->
-        <h3>Pethroom와 함께하는 Best Goods 페이지</h3> 
+      	<span>Pethroom와 함께하는 Best Goods 페이지🐾 </span>
+      	<br>
+		<br>
       </div>
     </div>
 
 
 
+ <body> 
     <div class="flex-first">
         <div class="flex-item" onclick="location.href='https://pethroom.com/product/detail.html?product_no=18&cate_no=205&display_group=1';">
             <img src="./image/sand.PNG" width="400" height="400">

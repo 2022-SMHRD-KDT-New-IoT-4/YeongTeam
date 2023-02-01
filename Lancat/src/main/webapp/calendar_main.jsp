@@ -68,9 +68,11 @@
     
     <div class="jumbotron text-center">
       <!-- 홈페이지 이름 작성 -->
-      <h2>My Pet Diary</h2><br>
+      <br><h2>My Pet Diary</h2><br>
       <div class="spanTag">
-		<h3 align="center">오늘 당신의 반려묘는 어떤 하루를 보냈나요?</h3> 
+		<span align="center">오늘 당신의 반려묘는 어떤 하루를 보냈나요?</span> 
+      	<br>
+		<br>
       </div>
     </div>
   
