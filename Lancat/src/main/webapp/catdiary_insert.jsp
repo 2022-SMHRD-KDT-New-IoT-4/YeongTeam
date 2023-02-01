@@ -50,16 +50,12 @@ th, td {
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav navbar-right">
-					<!-- 메인페이지 우측 상단의 이동란-->
-					<li><a href="brandStory.jsp">브랜드 스토리</a></li>
-					<!--JSP파일로 이동 시 경로 바꾸기-->
-					<li><a href="graphPage.jsp">마이펫케어</a></li>
-					<li><a href="calendar_main.jsp">펫다이어리</a></li>
-					<li><a href="catGoods.jsp">반려묘용품</a></li>
-					<li><a href="catEncyclopedia_main.jsp">커뮤니티</a></li>
-					<!--로그인, 회원가입-->
-					<li><a href="members_update.jsp">회원정보 수정</a></li>
-					<!-- # 붙여서 스타일 넣어주어야 함! 넣고 빼기 정리필요 -->
+					<li><a href="Main.do">브랜드 스토리</a></li>
+			        <li><a href="Tltuse_Select.do">마이펫케어</a></li>
+			        <li><a href="Calender_Main.do">펫다이어리</a></li>
+			        <li><a href="catGoods.jsp">반려묘용품</a></li>
+			        <li><a href="catEncyclopedia_main.jsp">커뮤니티</a></li>
+			        <li><a href="members_update.jsp">회원정보 수정</a></li>
 				</ul>
 			</div>
 		</div>
@@ -99,13 +95,13 @@ th, td {
 				<td colspan="2" align=left><input type="file" name="d_file"></td>
 			</tr>
 		</table>
-	</form>
 
 	<div>
 	<br>
-		<input type="submit" value="메인으로 이동하기" formaction="Main.jsp" style="float: right">
-		<input type="submit" name="makePost" value="업로드 하기" style="float: right"> 
+		<input type="submit" value="메인으로 이동하기" formaction="Main.do" style="float: right">
+		<input type="submit" name="makePost" formaction="Diary_Insert.do" value="업로드 하기" style="float: right"> 
 	</div>
+	</form>
 	<br>
 	<br>
 	<br>

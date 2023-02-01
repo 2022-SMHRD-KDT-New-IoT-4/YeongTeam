@@ -29,9 +29,10 @@
   
   <!-- admin 일때 전체 회원목록 select-->
   <select id="Select" resultType="MembersDTO">
-	  SELECT *
+	  SELECT id, pw, cat_name, TO_CHAR(cat_birth, 'yyyy-mm-dd') as cat_birth, cat_wt, addr, joindate
 	  FROM MEMBERS
 	  WHERE id != 'admin'
+	  ORDER BY joindate DESC
   </select>
   
   </mapper>

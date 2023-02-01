@@ -54,14 +54,12 @@
               아직 안정해져서 href 안바꿈
           브랜드스토리 제외하고는 로그인 시 확인가능 248/280/322-->
     
-         <li><a href="brandStory.jsp">브랜드 스토리</a></li>
-         <!--JSP파일로 이동 시 경로 바꾸기-->
-         <li><a href="graphPage.jsp">마이펫케어</a></li>
-         <li><a href="calendar_main.jsp">펫다이어리</a></li>
-         <li><a href="catGoods.jsp">반려묘용품</a></li>
-         <li><a href="catEncyclopedia_main.jsp">커뮤니티</a></li>
-         <!--로그인, 회원가입-->
-         <li><a href="members_update.jsp">회원정보 수정</a></li>
+	         <li><a href="Main.do">브랜드 스토리</a></li>
+	         <li><a href="Tltuse_Select.do">마이펫케어</a></li>
+	         <li><a href="Calender_Main.do">펫다이어리</a></li>
+	         <li><a href="catGoods.jsp">반려묘용품</a></li>
+	         <li><a href="catEncyclopedia_main.jsp">커뮤니티</a></li>
+	         <li><a href="members_update.jsp">회원정보 수정</a></li>
             
           </ul>
         </div>
@@ -133,12 +131,16 @@
    
    <br>
    <br>
+    <%
+		List<Cat_DiaryDTO> list = (List)session.getAttribute("list");
+		int count = (int)session.getAttribute("count");
+	%>
       <!-- <div style="width: 500px; height: 50px; border: 2px solid black; text-align: center; margin-left: 900px;">이번 달 작성한 육묘일기  :  4건</div>
       <div style="width: 500px; height: 50px; border: 2px solid black; text-align: center; margin-left: 900px;">총 작성한 육묘일기  :  32건  -->
       <section class="content" align="center">
       <div class="flexbox"  style="border: 2px">
-      	<h2>이번 달 작성한 육묘일기  :  4건</h2>
-      	<h2>총 작성한 육묘일기  :  32건</h2>
+      	<h2>이번 달 작성한 육묘일기  :  <%=count %>건</h2>
+      	<h2>총 작성한 육묘일기  :  <%=list.size() %>건</h2>
   	  </div>  
   	  </section>
          <!-- 대강 넘어가는 것만 모려고 만든 폼태그 이동 확인 완 -->

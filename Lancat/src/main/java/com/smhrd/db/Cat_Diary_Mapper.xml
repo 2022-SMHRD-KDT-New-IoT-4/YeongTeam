@@ -13,11 +13,13 @@
   </insert>
 	
   <!-- 일반 계정일 때 전체 게시글 목록 -->
-  <select id="DiarySelect" parameterType="Cat_DiaryDTO" resultType="Cat_DiaryDTO">
-	  SELECT *
-	  FROM CAT_DIARY
-	  WHERE ID=#{id}
-  </select>
+	<select id="DiarySelect" parameterType="Cat_DiaryDTO"
+		resultType="Cat_DiaryDTO">
+		SELECT *
+		FROM CAT_DIARY
+		WHERE ID=#{id}
+		ORDER BY D_DT DESC
+	</select>
   
    <!--  육묘일기 수정 -->
   <update id="DiaryUpdate" parameterType="Cat_DiaryDTO">
@@ -27,12 +29,24 @@
      AND D_SEQ=#{d_seq}
   </update>
   
-  <!--  육묘일기 삭제 -->
-  <update id="DiaryDelete" parameterType="Cat_DiaryDTO">
-        DELETE FROM CAT_DIARY 
-        WHERE ID=#{id}
-       AND D_SEQ=#{d_seq}
-  </update>
+  <!-- 육묘일기 삭제 -->
+	<delete id="DiaryDelete" parameterType="Cat_DiaryDTO">
+		DELETE FROM CAT_DIARY
+		WHERE ID=#{id}
+		AND D_SEQ=#{d_seq}
+	</delete>
+
+	<!-- 육묘일기 달 별 갯수 -->
+	<select id="DiaryCount" parameterType="Cat_DiaryDTO" resultType="int">
+		select count(*) as count
+		from cat_diary
+		where
+		SUBSTR(d_dt,0,8) BETWEEN (TO_CHAR(TRUNC(SYSDATE,'MM'),'YYYYMMDD') ) AND
+		(LAST_DAY(SYSDATE))
+		and id=#{id}
+		GROUP BY
+		to_char(d_dt, 'YYYYMM')
+	</select>
   
   
 	
