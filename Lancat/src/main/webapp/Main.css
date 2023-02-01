@@ -298,13 +298,21 @@ th, td {
 }
 
 /* 로그인 alert 창 css */
-Swal.fire {
+.Swal.fire {
   font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif; 
 }
 
 /*다이어리 삭제 경고창*/
 
-Swal.fire {
+.Swal.fire {
   font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif; 
 }
+
+/* 로그인, 회원가입 폼 크기 맞추기 
+userInput {
+	width: 1140px;
+	height: 180px;
+}*/
+
+
 

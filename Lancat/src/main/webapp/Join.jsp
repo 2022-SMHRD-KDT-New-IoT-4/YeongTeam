@@ -130,11 +130,9 @@
                     <br>
                     <br>
                     <br>
-                    </span>
+                </span>
             </div>
 		</form>        
-	</div>
-	
-			
+	</div>	
 </body>
 </html>

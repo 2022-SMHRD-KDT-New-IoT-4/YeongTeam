@@ -59,18 +59,18 @@
     border: none;
 }
 
-/*
+
 .secret-button button:hover {
     background-color: rgb(255, 70, 70);
     transition: 800ms ease-in all;
 }
-*/
+
 
 .icon {
     margin-right: 5px;
 }
 
 /* 삭제 알림창 출력*/
-body {
+Swal.fire {
   font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif; 
 }
