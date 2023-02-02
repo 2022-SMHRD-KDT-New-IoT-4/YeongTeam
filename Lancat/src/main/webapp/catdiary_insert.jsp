@@ -68,7 +68,7 @@ th, td {
 	</div>
 	<!--Head End -->
 	<!-- 육묘일기 작성하는 폼 -->
-	<div style="width: 500px; text-align: center; margin-left: 700px">
+	<div class="makepost" style="width: 500px; text-align: center; margin-left: 700px">
 	<form action="Diary_Insert.do" method="post">
 	<h2 align="center">육묘일기 작성하기</h2>
 		<table border="1" width=500 align="center">
@@ -101,8 +101,8 @@ th, td {
 
 	<div>
 	<br>
-		<input type="submit" value="메인으로 이동하기" formaction="Main.do" style="float: right">
-		<input type="submit" name="makePost" formaction="Diary_Insert.do" value="업로드 하기" style="float: right"> 
+		<input class="btn btn-primary" type="submit" value="메인으로 이동하기" formaction="Main.do" style="none; background-color: rgb(189, 120, 212); float: right;">
+		<input class="btn btn-primary" type="submit" name="makePost" formaction="Diary_Insert.do" value="업로드 하기" style="none; background-color: rgb(189, 120, 212); float: right;"> 
 	</div>
 	</form>
 	</div>

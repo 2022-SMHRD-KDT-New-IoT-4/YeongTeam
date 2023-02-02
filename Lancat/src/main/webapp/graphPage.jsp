@@ -144,7 +144,7 @@
             %>
               <script>
               Swal.fire({
-                   type : "error",
+                   type : "warning",
                    title :<%=name.toString() %> + "(이)의 상태에 변화가 생겼어요! 😿" ,
                    text : <%=ment.toString() %> + " 날짜의 건강 상태를 확인해보세요!",
                    });
