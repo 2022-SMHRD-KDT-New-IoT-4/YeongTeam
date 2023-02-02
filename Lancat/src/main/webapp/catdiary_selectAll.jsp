@@ -117,7 +117,7 @@
                             
                             
                             
-                                <input type="submit" value="삭제하기" formaction="Diary_Delete.do" style="float: right">  
+                                <input class="btn btn-primary" type="submit" value="삭제하기" formaction="Diary_Delete.do" style="none; background-color: rgb(189, 120, 212); float: right;">  
                            <%
 								String delete = (String)request.getAttribute("delete");
 							%>                              
@@ -145,8 +145,8 @@
                          
                         <%}%>
                                 
-                                <input type="submit" value="수정하기" formaction="catdiary_update.jsp" style="float: right">
-                                <input type="submit" value="이전페이지로 이동" formaction="calendar_main.jsp" style="float: right"> 
+                                <input class="btn btn-primary" type="submit" value="수정하기" formaction="catdiary_update.jsp" style="none; background-color: rgb(189, 120, 212); float: right;">
+                                <input class="btn btn-primary" type="submit" value="이전페이지로 이동" formaction="calendar_main.jsp" style="none; background-color: rgb(189, 120, 212); float: right;">
                                 <br>
                                 <br>
 								</form>
