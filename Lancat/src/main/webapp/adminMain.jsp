@@ -64,8 +64,8 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                <li><a href="adminMain.jsp">회원목록 조회</a></li> <!-- 메인 페이지 -->
-               <li><a href="admin_catdiary_delete.jsp">삭제된 육묘일기 데이터 관리</a></li>
-               <li><a href="admin_catdiary_selectAll.jsp">육묘일기 관리</a></li>
+               <li><a href="AdminDiary_Delete.do">삭제된 육묘일기 데이터 관리</a></li>
+               <li><a href="AdminDiary_Select.do">육묘일기 관리</a></li>
             </ul>
         </div>
     </nav>

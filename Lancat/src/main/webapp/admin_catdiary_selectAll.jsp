@@ -40,7 +40,7 @@ List<Cat_DiaryDTO> list = (List)request.getAttribute("user");
            </button> 
            <!-- 메인페이지 왼쪽 상단에 작성됨-->
            <a class="navbar-brand" href="Main.jsp">랜선집사들</a>
-           <img src="./img/ransom.png" width="29px" style="margin-top:10px;">
+           <img src="./image/ransom.png" width="29px" style="margin-top:10px;">
          </div>
          <div class="collapse navbar-collapse" id="myNavbar">
            <ul class="nav navbar-nav navbar-right"> 
@@ -56,7 +56,7 @@ List<Cat_DiaryDTO> list = (List)request.getAttribute("user");
    
      <div class="jumbotron text-center"> 
        <!-- 홈페이지 이름 작성 -->
-       <h1>Cat Days <img src="./img/title.png" width="100px"></h1>
+       <h1>Cat Days <img src="./image/title.png" width="100px"></h1>
        <p>for my precious cat</p>
      </div>
 
@@ -73,9 +73,9 @@ List<Cat_DiaryDTO> list = (List)request.getAttribute("user");
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a href="#">회원목록 조회</a></li> <!-- 메인 페이지 -->
-                <li><a href="#">삭제된 육묘일기 데이터 관리</a></li>
-                <li><a href="#">육묘일기 관리</a></li>
+               <li><a href="adminMain.jsp">회원목록 조회</a></li> <!-- 메인 페이지 -->
+               <li><a href="AdminDiary_Delete.do">삭제된 육묘일기 데이터 관리</a></li>
+               <li><a href="AdminDiary_Select.do">육묘일기 관리</a></li>
             </ul>
         </div>
     </nav>
@@ -84,6 +84,7 @@ List<Cat_DiaryDTO> list = (List)request.getAttribute("user");
 <br>
     <div class="container" id="selectAll">
     <form action="#" method="post">
+    <div class = "admin_container">
         <table class="table table-striped" align="center">
           <thead>
               <tr><h2>육묘일기 관리</h2>
@@ -112,6 +113,7 @@ List<Cat_DiaryDTO> list = (List)request.getAttribute("user");
       %>
           </tbody>
         </table>
+        </div>
     </div> 
 <br>
 <br>

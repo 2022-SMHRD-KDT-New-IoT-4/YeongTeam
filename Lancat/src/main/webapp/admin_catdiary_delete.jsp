@@ -31,15 +31,15 @@
            </button> 
            <!-- 메인페이지 왼쪽 상단에 작성됨-->
            <a class="navbar-brand" href="Main.jsp">랜선집사들</a>
-           <img src="../img/ransom.png" width="29px" style="margin-top:10px;">
+           <img src="./image/ransom.png" width="29px" style="margin-top:10px;">
          </div>
          <div class="collapse navbar-collapse" id="myNavbar">
            <ul class="nav navbar-nav navbar-right"> 
-             <li><a href="Main.do">브랜드 스토리</a></li>
-             <li><a href="catGoods.jsp">반려묘용품</a></li>
-             <li><a href="catEncyclopedia_main.jsp">커뮤니티</a></li>
-             <!--관리자페이지-->
-             <li><a href="AdminMembers_SelectAll.do"><img src="./image/adminpage.png" width="25px" height="25px;"></a></li>
+   			<li><a href="Main.do">브랜드 스토리</a></li>
+            <li><a href="catGoods.jsp">반려묘용품</a></li>
+            <li><a href="catEncyclopedia_main.jsp">커뮤니티</a></li>
+            <!--관리자페이지-->
+            <li><a href="AdminMembers_SelectAll.do"><img src="./image/adminpage.png" width="25px" height="25px;"></a></li>
            </ul>
          </div>
        </div>
@@ -47,7 +47,7 @@
    
      <div class="jumbotron text-center"> 
        <!-- 홈페이지 이름 작성 -->
-       <h1>Cat Days <img src="../img/title.png" width="100px"></h1>
+       <h1>Cat Days <img src="./image/title.png" width="100px"></h1>
        <p>for my precious cat</p>
      </div>
 
@@ -64,17 +64,17 @@
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a href="adminMain.jsp">회원목록 조회</a></li> <!-- 메인 페이지 -->
-                <li><a href="admin_catdiary_delete.jsp">삭제된 육묘일기 데이터 관리</a></li>
-                <li><a href="admin_catdiary_selectAll.jsp">육묘일기 관리</a></li>
+               <li><a href="adminMain.jsp">회원목록 조회</a></li> <!-- 메인 페이지 -->
+               <li><a href="AdminDiary_Delete.do">삭제된 육묘일기 데이터 관리</a></li>
+               <li><a href="AdminDiary_Select.do">육묘일기 관리</a></li>
             </ul>
         </div>
     </nav>
-
 <!--삭제된 데이터 관리 페이지-->
 <br>
     <div class="container" id="delete">
 		<form action="#" method="post">
+		<div class = "admin_container">
         	<table class="table table-striped">
           		<thead>
               		<tr><h2>삭제된 육묘일기 데이터 관리</h2>
@@ -107,6 +107,7 @@
       %>
       		</tbody>
       	</table>
+      	</div>
       	<a href="Main.do" >메인으로</a>
       </div>
 	<br>
