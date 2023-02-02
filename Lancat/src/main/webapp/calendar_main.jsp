@@ -9,7 +9,13 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>육묘일기 캘린더 메인</title>
-<link rel="stylesheet" href="${pageContext.request.contextPath}/diary_calendar/css/monthly.css">
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/diary_calendar/css/monthly.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel = "stylesheet" href = "Main.css">
    
    <style type="text/css">
       body {
@@ -23,15 +29,20 @@
          max-width: 80em;
          border: 1px solid #666;
       }
+      
+
+input, textarea {
+
+appearance: none;
+
+-webkit-appearance: none;
+
+-webkit-border-radius: 0;
+
+}
+      
    </style>
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-	
-     <link rel = "stylesheet" href = "Main.css">
-    </head>
+</head>
     
     <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
       <!-- 반응형 Nav var(Navigation Bar) 
@@ -164,11 +175,11 @@
   	  </div>  
   	  </section>
          <!-- 대강 넘어가는 것만 모려고 만든 폼태그 이동 확인 완 -->
-         <form action="#" method="post" >
-            <!--  <input type="submit" formaction="catdiary_insert.jsp" name="write" value="육묘일기 작성하기" style="margin-top: 10%;">
-            <input type="submit" formaction="Diary_Select.do"  name="read" value="육묘일기 둘러보기" style="margin-top: 10%;"> -->
-            <input type="submit" formaction="catdiary_insert.jsp" name="write" value="육묘일기 작성하기">
-            <input type="submit" formaction="Diary_Select.do"  name="read" value="육묘일기 둘러보기">
+         <form action="#" method="post">
+         	<div align="center">
+            	<input class="btn btn-primary" type="submit" formaction="catdiary_insert.jsp" name="write" value="육묘일기 작성하기" style="none; background-color: rgb(189, 120, 212);">
+            	<input class="btn btn-primary" type="submit" formaction="Diary_Select.do"  name="read" value="육묘일기 둘러보기" style="none; background-color: rgb(189, 120, 212);">
+            </div>
          </form>
          <br>
          <br>
