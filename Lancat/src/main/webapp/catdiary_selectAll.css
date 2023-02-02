@@ -85,27 +85,28 @@ Swal.fire {
 
 @media screen and (max-width: 768px) {
 	/* 모바일에 사용될 스트일 시트를 여기에 작성합니다. */
-.calendar {
-width: auto;
-    
-}
-.change{
-width: auto;
-height : 100%;
-}
-
-
-.diary-box {
-    border: 1px solid gray;
-    margin-bottom: 1em;
-    padding: 1em;
-    
-}
-.diary-title{
-	text-align: center;
-	font-weight: bold;
-	font-size: 17px;
-}
+	.change{
+	width: auto;
+	height : 100%;
+	}
+	.calendar {
+	width: auto;
+	    
+	}
+	
+	
+	.diary-box {
+	    border: 1px solid gray;
+	    margin-bottom: 1em;
+	    padding: 1em;
+	    
+	}
+	
+	.diary-title{
+		text-align: center;
+		font-weight: bold;
+		font-size: 17px;
+	}
 
 
 
