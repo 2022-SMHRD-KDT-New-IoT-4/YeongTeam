@@ -14,7 +14,10 @@
     text-align: center;
 }
 
-
+.change{
+	width: 800px; 
+	height: 80px;
+}
 .month {
     flex: 0.875;
     margin: 10px;
@@ -41,10 +44,15 @@
 }
 
 
-.diary-text {
+.diary-text { 
     text-align: center;
 }
 
+.diary-title{
+	text-align: center;
+	font-weight: bold;
+	font-size: 17px;
+}
 
 .secret-button {
     width: 35%;
@@ -74,3 +82,43 @@
 Swal.fire {
   font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif; 
 }
+
+@media screen and (max-width: 768px) {
+	/* 모바일에 사용될 스트일 시트를 여기에 작성합니다. */
+	.change{
+	width: auto;
+	height : 100%;
+	}
+	.calendar {
+	width: auto;
+	    
+	}
+	
+	
+	.diary-box {
+	    border: 1px solid gray;
+	    margin-bottom: 1em;
+	    padding: 1em;
+	    
+	}
+	
+	.diary-title{
+		text-align: center;
+		font-weight: bold;
+		font-size: 17px;
+	}
+
+
+
+
+}
+	
+
+
+
+	
+	
+	
+	
+	
+	

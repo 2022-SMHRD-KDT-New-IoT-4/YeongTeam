@@ -16,11 +16,13 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
   
-  <link rel = "stylesheet" href = "Main.css">
-
+ 
+  <link rel ="stylesheet" href ="Main.css">
   <link rel="stylesheet" href="catdiary_selectAll.css">
+
   <script src="https://kit.fontawesome.com/862f1afc4c.js" crossorigin="anonymous"></script>
 </head>
+
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
   <!-- 반응형 Nav var(Navigation Bar) 
       : 우리가 흔히 사용하는 메뉴(menu) 및 사이트로고, 여러링크 포함 -->
@@ -63,7 +65,7 @@
         <div class="bookdot">
             <div class="page">
                 <div class="column2"  align="center">
-                    <div style="width: 800px; height: 80px;">
+                    <div class="change" >
                    <!--  <div style="width: 800px; height: 80px; margin-left: 650px;">  -->
                         <!--diary-->
                         <div class="main-content" align="left">
@@ -98,7 +100,7 @@
                                     <img src="<%=list.get(i).getD_file() %>" width="300px">
                                 </div>
                                 <% } %>
-                                <div class="diary-text" id="basic-text">
+                                <div class="diary-title"  >
                                 	<%= list.get(i).getD_title() %>
                                 
                                 </div>
